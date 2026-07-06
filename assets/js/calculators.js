@@ -6,8 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ageForm) {
         ageForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const dob = new Date(document.getElementById('dob').value);
-            const target = new Date(document.getElementById('target-date').value);
+            const dobEl = document.getElementById('dob');
+            const targetEl = document.getElementById('target-date');
+            if (!dobEl || !targetEl) return;
+
+            const dob = new Date(dobEl.value);
+            const target = new Date(targetEl.value);
             if (dob > target) { alert("Date of birth cannot be after the target date."); return; }
             let years = target.getFullYear() - dob.getFullYear();
             let months = target.getMonth() - dob.getMonth();
@@ -18,16 +22,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 days += prevMonth.getDate();
             }
             if (months < 0) { years--; months += 12; }
-            document.getElementById('res-years').textContent = years;
-            document.getElementById('res-months').textContent = months;
-            document.getElementById('res-days').textContent = days;
+            
+            const yrEl = document.getElementById('res-years');
+            const moEl = document.getElementById('res-months');
+            const dyEl = document.getElementById('res-days');
+            if (yrEl) yrEl.textContent = years;
+            if (moEl) moEl.textContent = months;
+            if (dyEl) dyEl.textContent = days;
+
             const diffTime = Math.abs(target - dob);
             const totalDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-            document.getElementById('tot-months').textContent = ((years * 12) + months).toLocaleString();
-            document.getElementById('tot-weeks').textContent = Math.floor(totalDays / 7).toLocaleString();
-            document.getElementById('tot-days').textContent = totalDays.toLocaleString();
-            document.getElementById('tot-hours').textContent = (totalDays * 24).toLocaleString();
-            document.getElementById('age-result').classList.remove('d-none');
+            
+            const totMo = document.getElementById('tot-months');
+            const totWe = document.getElementById('tot-weeks');
+            const totDy = document.getElementById('tot-days');
+            const totHo = document.getElementById('tot-hours');
+            
+            if (totMo) totMo.textContent = ((years * 12) + months).toLocaleString();
+            if (totWe) totWe.textContent = Math.floor(totalDays / 7).toLocaleString();
+            if (totDy) totDy.textContent = totalDays.toLocaleString();
+            if (totHo) totHo.textContent = (totalDays * 24).toLocaleString();
+            
+            const resSection = document.getElementById('age-result');
+            if (resSection) resSection.classList.remove('d-none');
         });
     }
 
@@ -39,34 +56,50 @@ document.addEventListener('DOMContentLoaded', () => {
         const inputs = { amount: document.getElementById('loan-amount-input'), rate: document.getElementById('interest-rate-input'), tenure: document.getElementById('loan-tenure-input') };
         const labels = { amount: document.getElementById('amount-val'), rate: document.getElementById('interest-val'), tenure: document.getElementById('tenure-val') };
         const tenureType = document.getElementById('tenure-type');
-        function calculateEMI() {
-            const p = parseFloat(inputs.amount.value);
-            const r = parseFloat(inputs.rate.value) / 12 / 100;
-            let n = parseFloat(inputs.tenure.value);
-            if (tenureType.value === 'years') n = n * 12;
-            let emi = 0, totalInterest = 0, totalAmount = p;
-            if (p > 0 && r > 0 && n > 0) {
-                emi = p * r * (Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1));
-                totalAmount = emi * n;
-                totalInterest = totalAmount - p;
-            } else if (p > 0 && n > 0) { emi = p / n; }
-            document.getElementById('emi-result').textContent = formatter.format(emi);
-            document.getElementById('principal-result').textContent = formatter.format(p);
-            document.getElementById('interest-total-result').textContent = formatter.format(totalInterest);
-            document.getElementById('total-amount-result').textContent = formatter.format(totalAmount);
-            updateChart('emiPieChart', ['Principal', 'Interest'], [p, totalInterest], emiChart, (chart) => emiChart = chart);
+        
+        if (ranges.amount && ranges.rate && ranges.tenure && inputs.amount && inputs.rate && inputs.tenure) {
+            function calculateEMI() {
+                const p = parseFloat(inputs.amount.value) || 0;
+                const r = (parseFloat(inputs.rate.value) || 0) / 12 / 100;
+                let n = parseFloat(inputs.tenure.value) || 0;
+                if (tenureType && tenureType.value === 'years') n = n * 12;
+                let emi = 0, totalInterest = 0, totalAmount = p;
+                if (p > 0 && r > 0 && n > 0) {
+                    emi = p * r * (Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1));
+                    totalAmount = emi * n;
+                    totalInterest = totalAmount - p;
+                } else if (p > 0 && n > 0) { emi = p / n; }
+                
+                const emiRes = document.getElementById('emi-result');
+                const prinRes = document.getElementById('principal-result');
+                const intRes = document.getElementById('interest-total-result');
+                const totRes = document.getElementById('total-amount-result');
+                
+                if (emiRes) emiRes.textContent = formatter.format(emi);
+                if (prinRes) prinRes.textContent = formatter.format(p);
+                if (intRes) intRes.textContent = formatter.format(totalInterest);
+                if (totRes) totRes.textContent = formatter.format(totalAmount);
+                
+                if (document.getElementById('emiPieChart')) {
+                    updateChart('emiPieChart', ['Principal', 'Interest'], [p, totalInterest], emiChart, (chart) => emiChart = chart);
+                }
+            }
+            ['amount', 'rate', 'tenure'].forEach(key => {
+                if (ranges[key] && inputs[key]) {
+                    ranges[key].addEventListener('input', (e) => { inputs[key].value = e.target.value; updateEMILabels(); calculateEMI(); });
+                    inputs[key].addEventListener('input', (e) => { ranges[key].value = e.target.value; updateEMILabels(); calculateEMI(); });
+                }
+            });
+            if (tenureType) {
+                tenureType.addEventListener('change', () => { updateEMILabels(); calculateEMI(); });
+            }
+            function updateEMILabels() {
+                if (labels.amount) labels.amount.textContent = formatter.format(inputs.amount.value);
+                if (labels.rate) labels.rate.textContent = inputs.rate.value + ' %';
+                if (labels.tenure) labels.tenure.textContent = inputs.tenure.value + ' ' + (tenureType && tenureType.value === 'years' ? 'Years' : 'Months');
+            }
+            updateEMILabels(); calculateEMI();
         }
-        ['amount', 'rate', 'tenure'].forEach(key => {
-            ranges[key].addEventListener('input', (e) => { inputs[key].value = e.target.value; updateEMILabels(); calculateEMI(); });
-            inputs[key].addEventListener('input', (e) => { ranges[key].value = e.target.value; updateEMILabels(); calculateEMI(); });
-        });
-        tenureType.addEventListener('change', () => { updateEMILabels(); calculateEMI(); });
-        function updateEMILabels() {
-            labels.amount.textContent = formatter.format(inputs.amount.value);
-            labels.rate.textContent = inputs.rate.value + ' %';
-            labels.tenure.textContent = inputs.tenure.value + ' ' + (tenureType.value === 'years' ? 'Years' : 'Months');
-        }
-        updateEMILabels(); calculateEMI();
     }
 
     // --- BMI Calculator ---
@@ -74,27 +107,42 @@ document.addEventListener('DOMContentLoaded', () => {
     if (bmiForm) {
         bmiForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const isMetric = document.getElementById('metric-tab').classList.contains('active');
+            const metricTab = document.getElementById('metric-tab');
+            const isMetric = metricTab ? metricTab.classList.contains('active') : true;
             let bmi = 0;
             if (isMetric) {
-                const height = parseFloat(document.getElementById('height-cm').value) / 100;
-                const weight = parseFloat(document.getElementById('weight-kg').value);
-                if(height > 0 && weight > 0) bmi = weight / (height * height);
+                const heightEl = document.getElementById('height-cm');
+                const weightEl = document.getElementById('weight-kg');
+                if (heightEl && weightEl) {
+                    const height = parseFloat(heightEl.value) / 100;
+                    const weight = parseFloat(weightEl.value);
+                    if(height > 0 && weight > 0) bmi = weight / (height * height);
+                }
             } else {
-                const ft = parseFloat(document.getElementById('height-ft').value) || 0;
-                const inches = parseFloat(document.getElementById('height-in').value) || 0;
-                const weight = parseFloat(document.getElementById('weight-lbs').value);
-                const totalInches = (ft * 12) + inches;
-                if(totalInches > 0 && weight > 0) bmi = 703 * weight / (totalInches * totalInches);
+                const ftEl = document.getElementById('height-ft');
+                const inEl = document.getElementById('height-in');
+                const lbsEl = document.getElementById('weight-lbs');
+                if (ftEl && inEl && lbsEl) {
+                    const ft = parseFloat(ftEl.value) || 0;
+                    const inches = parseFloat(inEl.value) || 0;
+                    const weight = parseFloat(lbsEl.value);
+                    const totalInches = (ft * 12) + inches;
+                    if(totalInches > 0 && weight > 0) bmi = 703 * weight / (totalInches * totalInches);
+                }
             }
             if (bmi > 0) {
-                document.getElementById('bmi-score').textContent = bmi.toFixed(1);
+                const scoreEl = document.getElementById('bmi-score');
+                if (scoreEl) scoreEl.textContent = bmi.toFixed(1);
+                
                 const catEl = document.getElementById('bmi-category');
-                if (bmi < 18.5) { catEl.className = 'badge rounded-pill fs-5 mb-4 px-4 py-2 bg-info'; catEl.textContent = 'Underweight'; }
-                else if (bmi < 25) { catEl.className = 'badge rounded-pill fs-5 mb-4 px-4 py-2 bg-success'; catEl.textContent = 'Normal'; }
-                else if (bmi < 30) { catEl.className = 'badge rounded-pill fs-5 mb-4 px-4 py-2 bg-warning text-dark'; catEl.textContent = 'Overweight'; }
-                else { catEl.className = 'badge rounded-pill fs-5 mb-4 px-4 py-2 bg-danger'; catEl.textContent = 'Obese'; }
-                document.getElementById('bmi-result-section').classList.remove('d-none');
+                if (catEl) {
+                    if (bmi < 18.5) { catEl.className = 'badge rounded-pill fs-5 mb-4 px-4 py-2 bg-info'; catEl.textContent = 'Underweight'; }
+                    else if (bmi < 25) { catEl.className = 'badge rounded-pill fs-5 mb-4 px-4 py-2 bg-success'; catEl.textContent = 'Normal'; }
+                    else if (bmi < 30) { catEl.className = 'badge rounded-pill fs-5 mb-4 px-4 py-2 bg-warning text-dark'; catEl.textContent = 'Overweight'; }
+                    else { catEl.className = 'badge rounded-pill fs-5 mb-4 px-4 py-2 bg-danger'; catEl.textContent = 'Obese'; }
+                }
+                const resSection = document.getElementById('bmi-result-section');
+                if (resSection) resSection.classList.remove('d-none');
             }
         });
     }
@@ -107,8 +155,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const y = parseFloat(document.getElementById('perc-y1').value);
             const res = (x / 100) * y;
             const el = document.getElementById('perc-res-1');
-            el.textContent = `${x}% of ${y} is ${res}`;
-            el.classList.remove('d-none');
+            if (el) {
+                el.textContent = `${x}% of ${y} is ${res}`;
+                el.classList.remove('d-none');
+            }
         });
         document.getElementById('perc-form-2').addEventListener('submit', (e) => {
             e.preventDefault();
@@ -116,8 +166,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const y = parseFloat(document.getElementById('perc-y2').value);
             const res = (x / y) * 100;
             const el = document.getElementById('perc-res-2');
-            el.textContent = `${x} is ${res.toFixed(2)}% of ${y}`;
-            el.classList.remove('d-none');
+            if (el) {
+                el.textContent = `${x} is ${res.toFixed(2)}% of ${y}`;
+                el.classList.remove('d-none');
+            }
         });
         document.getElementById('perc-form-3').addEventListener('submit', (e) => {
             e.preventDefault();
@@ -126,9 +178,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const diff = y - x;
             const res = (diff / x) * 100;
             const el = document.getElementById('perc-res-3');
-            const type = res >= 0 ? 'Increase' : 'Decrease';
-            el.textContent = `${Math.abs(res).toFixed(2)}% ${type}`;
-            el.classList.remove('d-none');
+            if (el) {
+                const type = res >= 0 ? 'Increase' : 'Decrease';
+                el.textContent = `${Math.abs(res).toFixed(2)}% ${type}`;
+                el.classList.remove('d-none');
+            }
         });
     }
 
@@ -139,7 +193,8 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const amount = parseFloat(document.getElementById('gst-amount').value);
             const rate = parseFloat(document.getElementById('gst-rate').value);
-            const type = document.querySelector('input[name="gst-type"]:checked').value;
+            const typeRadio = document.querySelector('input[name="gst-type"]:checked');
+            const type = typeRadio ? typeRadio.value : 'add';
             let net = 0, gst = 0, gross = 0;
             if (type === 'add') {
                 net = amount;
@@ -150,10 +205,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 net = amount * (100 / (100 + rate));
                 gst = gross - net;
             }
-            document.getElementById('res-net').textContent = formatter.format(net);
-            document.getElementById('res-gst').textContent = formatter.format(gst);
-            document.getElementById('res-gross').textContent = formatter.format(gross);
-            document.getElementById('gst-result').classList.remove('d-none');
+            const netRes = document.getElementById('res-net');
+            const gstRes = document.getElementById('res-gst');
+            const grossRes = document.getElementById('res-gross');
+            
+            if (netRes) netRes.textContent = formatter.format(net);
+            if (gstRes) gstRes.textContent = formatter.format(gst);
+            if (grossRes) grossRes.textContent = formatter.format(gross);
+            
+            const resSection = document.getElementById('gst-result');
+            if (resSection) resSection.classList.remove('d-none');
         });
     }
 
@@ -165,31 +226,41 @@ document.addEventListener('DOMContentLoaded', () => {
         const inputs = { amount: document.getElementById('sip-amount-input'), rate: document.getElementById('sip-rate-input'), time: document.getElementById('sip-time-input') };
         const labels = { amount: document.getElementById('sip-amount-val'), rate: document.getElementById('sip-rate-val'), time: document.getElementById('sip-time-val') };
         
-        function calculateSIP() {
-            const P = parseFloat(inputs.amount.value);
-            const r = parseFloat(inputs.rate.value) / 100 / 12;
-            const n = parseFloat(inputs.time.value) * 12;
-            const investedAmount = P * n;
-            const estimatedReturns = P * ((Math.pow(1 + r, n) - 1) / r) * (1 + r);
-            const totalReturns = estimatedReturns - investedAmount;
+        if (ranges.amount && ranges.rate && ranges.time && inputs.amount && inputs.rate && inputs.time) {
+            function calculateSIP() {
+                const P = parseFloat(inputs.amount.value) || 0;
+                const r = (parseFloat(inputs.rate.value) || 0) / 100 / 12;
+                const n = (parseFloat(inputs.time.value) || 0) * 12;
+                const investedAmount = P * n;
+                const estimatedReturns = P * ((Math.pow(1 + r, n) - 1) / r) * (1 + r);
+                const totalReturns = estimatedReturns - investedAmount;
+                
+                const totVal = document.getElementById('sip-total-value');
+                const totInv = document.getElementById('sip-invested');
+                const totRet = document.getElementById('sip-returns');
+                
+                if (totVal) totVal.textContent = formatter.format(estimatedReturns);
+                if (totInv) totInv.textContent = formatter.format(investedAmount);
+                if (totRet) totRet.textContent = formatter.format(totalReturns);
+                
+                if (document.getElementById('sipPieChart')) {
+                    updateChart('sipPieChart', ['Invested', 'Returns'], [investedAmount, totalReturns], sipChart, (chart) => sipChart = chart);
+                }
+            }
             
-            document.getElementById('sip-total-value').textContent = formatter.format(estimatedReturns);
-            document.getElementById('sip-invested').textContent = formatter.format(investedAmount);
-            document.getElementById('sip-returns').textContent = formatter.format(totalReturns);
-            
-            updateChart('sipPieChart', ['Invested', 'Returns'], [investedAmount, totalReturns], sipChart, (chart) => sipChart = chart);
+            ['amount', 'rate', 'time'].forEach(key => {
+                if (ranges[key] && inputs[key]) {
+                    ranges[key].addEventListener('input', (e) => { inputs[key].value = e.target.value; updateSIPLabels(); calculateSIP(); });
+                    inputs[key].addEventListener('input', (e) => { ranges[key].value = e.target.value; updateSIPLabels(); calculateSIP(); });
+                }
+            });
+            function updateSIPLabels() {
+                if (labels.amount) labels.amount.textContent = formatter.format(inputs.amount.value);
+                if (labels.rate) labels.rate.textContent = inputs.rate.value + ' %';
+                if (labels.time) labels.time.textContent = inputs.time.value + ' Years';
+            }
+            updateSIPLabels(); calculateSIP();
         }
-        
-        ['amount', 'rate', 'time'].forEach(key => {
-            ranges[key].addEventListener('input', (e) => { inputs[key].value = e.target.value; updateSIPLabels(); calculateSIP(); });
-            inputs[key].addEventListener('input', (e) => { ranges[key].value = e.target.value; updateSIPLabels(); calculateSIP(); });
-        });
-        function updateSIPLabels() {
-            labels.amount.textContent = formatter.format(inputs.amount.value);
-            labels.rate.textContent = inputs.rate.value + ' %';
-            labels.time.textContent = inputs.time.value + ' Years';
-        }
-        updateSIPLabels(); calculateSIP();
     }
 
     // --- Simple Interest ---
@@ -197,13 +268,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (siForm) {
         siForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const p = parseFloat(document.getElementById('si-p').value);
-            const r = parseFloat(document.getElementById('si-r').value);
-            const t = parseFloat(document.getElementById('si-t').value);
+            const p = parseFloat(document.getElementById('si-p').value) || 0;
+            const r = parseFloat(document.getElementById('si-r').value) || 0;
+            const t = parseFloat(document.getElementById('si-t').value) || 0;
             const interest = (p * r * t) / 100;
-            document.getElementById('si-res-i').textContent = formatter.format(interest);
-            document.getElementById('si-res-a').textContent = formatter.format(p + interest);
-            document.getElementById('si-result').classList.remove('d-none');
+            
+            const resI = document.getElementById('si-res-i');
+            const resA = document.getElementById('si-res-a');
+            if (resI) resI.textContent = formatter.format(interest);
+            if (resA) resA.textContent = formatter.format(p + interest);
+            
+            const resSection = document.getElementById('si-result');
+            if (resSection) resSection.classList.remove('d-none');
         });
     }
 
@@ -212,15 +288,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ciForm) {
         ciForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const p = parseFloat(document.getElementById('ci-p').value);
-            const r = parseFloat(document.getElementById('ci-r').value) / 100;
-            const t = parseFloat(document.getElementById('ci-t').value);
-            const n = parseFloat(document.getElementById('ci-n').value);
+            const p = parseFloat(document.getElementById('ci-p').value) || 0;
+            const r = (parseFloat(document.getElementById('ci-r').value) || 0) / 100;
+            const t = parseFloat(document.getElementById('ci-t').value) || 0;
+            const n = parseFloat(document.getElementById('ci-n').value) || 1;
             const amount = p * Math.pow((1 + (r / n)), (n * t));
             const interest = amount - p;
-            document.getElementById('ci-res-i').textContent = formatter.format(interest);
-            document.getElementById('ci-res-a').textContent = formatter.format(amount);
-            document.getElementById('ci-result').classList.remove('d-none');
+            
+            const resI = document.getElementById('ci-res-i');
+            const resA = document.getElementById('ci-res-a');
+            if (resI) resI.textContent = formatter.format(interest);
+            if (resA) resA.textContent = formatter.format(amount);
+            
+            const resSection = document.getElementById('ci-result');
+            if (resSection) resSection.classList.remove('d-none');
         });
     }
 
@@ -229,18 +310,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if (fdForm) {
         fdForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const p = parseFloat(document.getElementById('fd-p').value);
-            const r = parseFloat(document.getElementById('fd-r').value) / 100;
-            let t = parseFloat(document.getElementById('fd-t').value);
-            const tType = document.getElementById('fd-t-type').value;
+            const p = parseFloat(document.getElementById('fd-p').value) || 0;
+            const r = (parseFloat(document.getElementById('fd-r').value) || 0) / 100;
+            let t = parseFloat(document.getElementById('fd-t').value) || 0;
+            const tTypeEl = document.getElementById('fd-t-type');
+            const tType = tTypeEl ? tTypeEl.value : 'years';
             if(tType === 'months') t = t / 12;
             if(tType === 'days') t = t / 365;
-            // standard quarterly compounding for FDs
+            
             const amount = p * Math.pow((1 + (r / 4)), (4 * t));
             const interest = amount - p;
-            document.getElementById('fd-res-i').textContent = formatter.format(interest);
-            document.getElementById('fd-res-a').textContent = formatter.format(amount);
-            document.getElementById('fd-result').classList.remove('d-none');
+            
+            const resI = document.getElementById('fd-res-i');
+            const resA = document.getElementById('fd-res-a');
+            if (resI) resI.textContent = formatter.format(interest);
+            if (resA) resA.textContent = formatter.format(amount);
+            
+            const resSection = document.getElementById('fd-result');
+            if (resSection) resSection.classList.remove('d-none');
         });
     }
 
@@ -255,13 +342,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const combined = name1 + name2;
             for(let i=0; i<combined.length; i++) { sum += combined.charCodeAt(i); }
             const score = (sum % 101); // 0-100
-            document.getElementById('love-score').textContent = score + '%';
-            let msg = '';
-            if(score > 80) msg = "A match made in heaven! 💕";
-            else if(score > 50) msg = "Looking good! Keep the spark alive. 💖";
-            else msg = "Maybe just good friends? 😅";
-            document.getElementById('love-msg').textContent = msg;
-            document.getElementById('love-result').classList.remove('d-none');
+            
+            const scoreEl = document.getElementById('love-score');
+            const msgEl = document.getElementById('love-msg');
+            if (scoreEl) scoreEl.textContent = score + '%';
+            if (msgEl) {
+                let msg = '';
+                if(score > 80) msg = "A match made in heaven! 💕";
+                else if(score > 50) msg = "Looking good! Keep the spark alive. 💖";
+                else msg = "Maybe just good friends? 😅";
+                msgEl.textContent = msg;
+            }
+            const resSection = document.getElementById('love-result');
+            if (resSection) resSection.classList.remove('d-none');
         });
     }
 
@@ -270,20 +363,27 @@ document.addEventListener('DOMContentLoaded', () => {
     if (calForm) {
         calForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const age = parseFloat(document.getElementById('cal-age').value);
+            const age = parseFloat(document.getElementById('cal-age').value) || 0;
             const gender = document.getElementById('cal-gender').value;
-            const height = parseFloat(document.getElementById('cal-height').value);
-            const weight = parseFloat(document.getElementById('cal-weight').value);
-            const activity = parseFloat(document.getElementById('cal-activity').value);
-            // Mifflin-St Jeor Equation
+            const height = parseFloat(document.getElementById('cal-height').value) || 0;
+            const weight = parseFloat(document.getElementById('cal-weight').value) || 0;
+            const activity = parseFloat(document.getElementById('cal-activity').value) || 1.2;
+            
             let bmr = (10 * weight) + (6.25 * height) - (5 * age);
             if (gender === 'male') bmr += 5;
             else bmr -= 161;
             const maintenance = bmr * activity;
-            document.getElementById('cal-maintain').textContent = Math.round(maintenance);
-            document.getElementById('cal-loss1').textContent = Math.round(maintenance - 250); // 0.25kg loss
-            document.getElementById('cal-loss2').textContent = Math.round(maintenance - 500); // 0.5kg loss
-            document.getElementById('calorie-result').classList.remove('d-none');
+            
+            const maintainEl = document.getElementById('cal-maintain');
+            const loss1El = document.getElementById('cal-loss1');
+            const loss2El = document.getElementById('cal-loss2');
+            
+            if (maintainEl) maintainEl.textContent = Math.round(maintenance);
+            if (loss1El) loss1El.textContent = Math.round(maintenance - 250);
+            if (loss2El) loss2El.textContent = Math.round(maintenance - 500);
+            
+            const resSection = document.getElementById('calorie-result');
+            if (resSection) resSection.classList.remove('d-none');
         });
     }
 
@@ -292,23 +392,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if (taxForm) {
         taxForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            let income = parseFloat(document.getElementById('tax-income').value);
-            // new regime 23-24
-            let taxable = income - 50000; // standard deduction
+            let income = parseFloat(document.getElementById('tax-income').value) || 0;
+            let taxable = income - 50000;
             let tax = 0;
             if (taxable <= 700000) {
-                tax = 0; // rebate 87A
+                tax = 0;
             } else {
                 if(taxable > 300000) tax += Math.min(300000, taxable - 300000) * 0.05;
                 if(taxable > 600000) tax += Math.min(300000, taxable - 600000) * 0.10;
                 if(taxable > 900000) tax += Math.min(300000, taxable - 900000) * 0.15;
                 if(taxable > 1200000) tax += Math.min(300000, taxable - 1200000) * 0.20;
                 if(taxable > 1500000) tax += (taxable - 1500000) * 0.30;
-                // Add cess 4%
                 tax += tax * 0.04;
             }
-            document.getElementById('tax-payable').textContent = formatter.format(Math.max(0, tax));
-            document.getElementById('tax-result').classList.remove('d-none');
+            const payableEl = document.getElementById('tax-payable');
+            if (payableEl) payableEl.textContent = formatter.format(Math.max(0, tax));
+            
+            const resSection = document.getElementById('tax-result');
+            if (resSection) resSection.classList.remove('d-none');
         });
     }
 

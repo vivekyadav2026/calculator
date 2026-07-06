@@ -19,7 +19,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?php echo URLROOT; ?>/assets/css/style.css?v=1.2">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/assets/css/style.css?v=1.5">
 </head>
 <body>
     <!-- Navbar -->
@@ -36,38 +36,51 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo URLROOT; ?>">Home</a>
                     </li>
+                    
+                    <!-- Finance Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Calculators
+                        <a class="nav-link dropdown-toggle" href="#" id="financeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Finance
                         </a>
-                        <div class="dropdown-menu p-4 border-0 shadow-lg rounded-4" aria-labelledby="navbarDropdown" style="min-width: 450px;">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <h6 class="dropdown-header text-primary fw-bold px-0 mb-2">Finance &amp; Taxes</h6>
-                                    <a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/emi">EMI Calculator</a>
-                                    <a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/home_loan">Home Loan Calculator</a>
-                                    <a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/car_loan">Car Loan Calculator</a>
-                                    <a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/personal_loan">Personal Loan Calculator</a>
-                                    <a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/sip">SIP Calculator</a>
-                                    <a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/fd">FD Calculator</a>
-                                    <a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/compound_interest">Compound Interest</a>
-                                    <a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/simple_interest">Simple Interest</a>
-                                    <a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/income_tax">Income Tax Calculator</a>
-                                    <a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/gst">GST Calculator</a>
-                                </div>
-                                <div class="col-md-6">
-                                    <h6 class="dropdown-header text-success fw-bold px-0 mb-2">Health &amp; Fitness</h6>
-                                    <a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/bmi">BMI Calculator</a>
-                                    <a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/calorie">Calorie Calculator</a>
-                                    
-                                    <h6 class="dropdown-header text-warning fw-bold px-0 mt-3 mb-2">Others &amp; Math</h6>
-                                    <a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/percentage">Percentage Calculator</a>
-                                    <a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/age">Age Calculator</a>
-                                    <a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/love">Love Calculator</a>
-                                </div>
-                            </div>
-                        </div>
+                        <ul class="dropdown-menu p-3 border-0 shadow-lg rounded-4" aria-labelledby="financeDropdown" style="min-width: 240px;">
+                            <li><a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/emi">EMI Calculator</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/home_loan">Home Loan Calculator</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/car_loan">Car Loan Calculator</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/personal_loan">Personal Loan Calculator</a></li>
+                            <li><hr class="dropdown-divider my-2"></li>
+                            <li><a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/sip">SIP Calculator</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/fd">FD Calculator</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/compound_interest">Compound Interest</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/simple_interest">Simple Interest</a></li>
+                            <li><hr class="dropdown-divider my-2"></li>
+                            <li><a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/income_tax">Income Tax Calculator</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/gst">GST Calculator</a></li>
+                        </ul>
                     </li>
+
+                    <!-- Health Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="healthDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Health
+                        </a>
+                        <ul class="dropdown-menu p-3 border-0 shadow-lg rounded-4" aria-labelledby="healthDropdown" style="min-width: 200px;">
+                            <li><a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/bmi">BMI Calculator</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/calorie">Calorie Calculator</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Math & Tools Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="mathDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Math &amp; Tools
+                        </a>
+                        <ul class="dropdown-menu p-3 border-0 shadow-lg rounded-4" aria-labelledby="mathDropdown" style="min-width: 200px;">
+                            <li><a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/percentage">Percentage Calculator</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/age">Age Calculator</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2" href="<?php echo URLROOT; ?>/calculators/love">Love Calculator</a></li>
+                        </ul>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo URLROOT; ?>/blog">Blog</a>
                     </li>

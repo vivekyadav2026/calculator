@@ -16,6 +16,79 @@ const calculatorsList = [
     { name: 'Calorie Calculator', url: '/calculators/calorie' }
 ];
 
+// -----------------------------------------------------------------
+// GLOBAL UTILITY FUNCTIONS FOR PREMIUM UI
+// -----------------------------------------------------------------
+
+/**
+ * Animate numeric counter value dynamically
+ * @param {HTMLElement} element - Target element to animate
+ * @param {number} start - Starting numeric value
+ * @param {number} end - Target value
+ * @param {number} duration - Animation duration in milliseconds
+ * @param {function} formatFn - Optional formatter function (e.g. currency formatting)
+ */
+function animateNumber(element, start, end, duration = 800, formatFn = null) {
+    if (!element) return;
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const currentVal = start + progress * (end - start);
+        
+        element.textContent = formatFn ? formatFn(currentVal) : Math.round(currentVal).toLocaleString('en-IN');
+        
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        } else {
+            element.textContent = formatFn ? formatFn(end) : Math.round(end).toLocaleString('en-IN');
+        }
+    };
+    window.requestAnimationFrame(step);
+}
+
+/**
+ * Export table data to CSV file
+ * @param {string} tableId - ID of target HTML table
+ * @param {string} filename - Output file name
+ */
+function exportTableToCSV(tableId, filename = 'export.csv') {
+    const table = document.getElementById(tableId);
+    if (!table) return;
+
+    let csvContent = "data:text/csv;charset=utf-8,";
+    const rows = table.querySelectorAll('tr');
+
+    rows.forEach(row => {
+        const cols = row.querySelectorAll('td, th');
+        const rowData = [];
+        cols.forEach(col => {
+            let text = col.innerText.replace(/₹/g, '').replace(/,/g, '').trim();
+            rowData.push('"' + text + '"');
+        });
+        csvContent += rowData.join(",") + "\r\n";
+    });
+
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", filename);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+/**
+ * Trigger browser print optimized for PDF export
+ */
+function exportTableToPDF() {
+    window.print();
+}
+
+// -----------------------------------------------------------------
+// INITIALIZATION
+// -----------------------------------------------------------------
+
 document.addEventListener('DOMContentLoaded', () => {
     // Theme Toggle
     const themeToggleBtns = document.querySelectorAll('#theme-toggle, #theme-toggle-mobile');
@@ -45,11 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const icon = btn.querySelector('i');
                 if (!icon) return;
                 if (theme === 'dark') {
-                    icon.classList.remove('bi-moon-stars');
-                    icon.classList.add('bi-sun');
+                    icon.className = 'bi bi-sun';
                 } else {
-                    icon.classList.remove('bi-sun');
-                    icon.classList.add('bi-moon-stars');
+                    icon.className = 'bi bi-moon-stars';
                 }
             });
         }
@@ -93,4 +164,27 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Setup input slider interactions dynamically
+    const sliders = document.querySelectorAll('.premium-slider-input');
+    sliders.forEach(slider => {
+        const valueId = slider.getAttribute('data-value-id');
+        const valIndicator = document.getElementById(valueId);
+        
+        const updateSliderVal = () => {
+            if (valIndicator) {
+                // If it is percentage
+                if (slider.id.includes('rate') || slider.id.includes('interest')) {
+                    valIndicator.textContent = slider.value + ' %';
+                } else if (slider.id.includes('tenure') || slider.id.includes('time') || slider.id.includes('year')) {
+                    valIndicator.textContent = slider.value + ' Yr';
+                } else {
+                    valIndicator.textContent = '₹ ' + parseInt(slider.value).toLocaleString('en-IN');
+                }
+            }
+        };
+
+        slider.addEventListener('input', updateSliderVal);
+        updateSliderVal();
+    });
 });
