@@ -21,16 +21,16 @@
         <!-- Column 1: Financial & Banking -->
         <div class="col-md-6 col-xl-3">
             <div class="category-card h-100">
-                <div class="category-icon-wrapper">
+                <div class="category-icon-wrapper" style="color: #4F46E5;">
                     <i class="bi bi-bank fs-4"></i>
                 </div>
-                <h3 class="category-title" id="financial">Financial & Banking</h3>
-                <div class="d-flex flex-column gap-2">
-                    <a href="<?php echo URLROOT; ?>/calculators/emi" class="category-link">EMI Calculator</a>
-                    <a href="<?php echo URLROOT; ?>/calculators/home_loan" class="category-link">Home Loan</a>
-                    <a href="<?php echo URLROOT; ?>/calculators/car_loan" class="category-link">Car Loan</a>
-                    <a href="<?php echo URLROOT; ?>/calculators/personal_loan" class="category-link">Personal Loan</a>
-                    <a href="<?php echo URLROOT; ?>/calculators/fd" class="category-link">FD Calculator</a>
+                <h3 class="category-title" id="financial" style="color: #000000; font-weight: 700;">Financial & Banking</h3>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                    <a href="<?php echo URLROOT; ?>/emi-calculator" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1">EMI Calculator</a>
+                    <a href="<?php echo URLROOT; ?>/home-loan" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1">Home Loan</a>
+                    <a href="<?php echo URLROOT; ?>/car-loan" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1">Car Loan</a>
+                    <a href="<?php echo URLROOT; ?>/personal-loan" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1">Personal Loan</a>
+                    <a href="<?php echo URLROOT; ?>/fd-calculator" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1">FD Calculator</a>
                 </div>
             </div>
         </div>
@@ -38,16 +38,16 @@
         <!-- Column 2: Investment & Tax -->
         <div class="col-md-6 col-xl-3">
             <div class="category-card h-100">
-                <div class="category-icon-wrapper">
+                <div class="category-icon-wrapper" style="color: #10B981;">
                     <i class="bi bi-graph-up-arrow fs-4"></i>
                 </div>
-                <h3 class="category-title">Investment & Tax</h3>
-                <div class="d-flex flex-column gap-2">
-                    <a href="<?php echo URLROOT; ?>/calculators/sip" class="category-link">SIP Calculator</a>
-                    <a href="<?php echo URLROOT; ?>/calculators/compound_interest" class="category-link">Compound Interest</a>
-                    <a href="<?php echo URLROOT; ?>/calculators/simple_interest" class="category-link">Simple Interest</a>
-                    <a href="<?php echo URLROOT; ?>/calculators/income_tax" class="category-link">Income Tax</a>
-                    <a href="<?php echo URLROOT; ?>/calculators/gst" class="category-link">GST Calculator</a>
+                <h3 class="category-title" style="color: #000000; font-weight: 700;">Investment & Tax</h3>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                    <a href="<?php echo URLROOT; ?>/sip-calculator" class="btn btn-sm btn-outline-success rounded-pill px-3 py-1">SIP Calculator</a>
+                    <a href="<?php echo URLROOT; ?>/compound-interest" class="btn btn-sm btn-outline-success rounded-pill px-3 py-1">Compound Interest</a>
+                    <a href="<?php echo URLROOT; ?>/simple-interest" class="btn btn-sm btn-outline-success rounded-pill px-3 py-1">Simple Interest</a>
+                    <a href="<?php echo URLROOT; ?>/income-tax" class="btn btn-sm btn-outline-success rounded-pill px-3 py-1">Income Tax</a>
+                    <a href="<?php echo URLROOT; ?>/gst-calculator" class="btn btn-sm btn-outline-success rounded-pill px-3 py-1">GST Calculator</a>
                 </div>
             </div>
         </div>
@@ -55,13 +55,13 @@
         <!-- Column 3: Health & Fitness -->
         <div class="col-md-6 col-xl-3">
             <div class="category-card h-100">
-                <div class="category-icon-wrapper">
+                <div class="category-icon-wrapper" style="color: #EF4444;">
                     <i class="bi bi-activity fs-4"></i>
                 </div>
-                <h3 class="category-title" id="health">Health & Fitness</h3>
-                <div class="d-flex flex-column gap-2">
-                    <a href="<?php echo URLROOT; ?>/calculators/bmi" class="category-link">BMI Calculator</a>
-                    <a href="<?php echo URLROOT; ?>/calculators/calorie" class="category-link">Calorie Calculator</a>
+                <h3 class="category-title" id="health" style="color: #000000; font-weight: 700;">Health & Fitness</h3>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                    <a href="<?php echo URLROOT; ?>/bmi-calculator" class="btn btn-sm btn-outline-danger rounded-pill px-3 py-1">BMI Calculator</a>
+                    <a href="<?php echo URLROOT; ?>/calorie-calculator" class="btn btn-sm btn-outline-danger rounded-pill px-3 py-1">Calorie Calculator</a>
                 </div>
             </div>
         </div>
@@ -69,14 +69,14 @@
         <!-- Column 4: Everyday Math & Other -->
         <div class="col-md-6 col-xl-3">
             <div class="category-card h-100">
-                <div class="category-icon-wrapper">
+                <div class="category-icon-wrapper" style="color: #F59E0B;">
                     <i class="bi bi-calculator fs-4"></i>
                 </div>
-                <h3 class="category-title" id="math">Math & Others</h3>
-                <div class="d-flex flex-column gap-2">
-                    <a href="<?php echo URLROOT; ?>/calculators/percentage" class="category-link">Percentage</a>
-                    <a href="<?php echo URLROOT; ?>/calculators/age" class="category-link">Age Calculator</a>
-                    <a href="<?php echo URLROOT; ?>/calculators/love" class="category-link">Love Calculator</a>
+                <h3 class="category-title" id="math" style="color: #000000; font-weight: 700;">Math & Others</h3>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                    <a href="<?php echo URLROOT; ?>/percentage-calculator" class="btn btn-sm btn-outline-warning rounded-pill px-3 py-1">Percentage</a>
+                    <a href="<?php echo URLROOT; ?>/age-calculator" class="btn btn-sm btn-outline-warning rounded-pill px-3 py-1">Age Calculator</a>
+                    <a href="<?php echo URLROOT; ?>/date-calculator" class="btn btn-sm btn-outline-warning rounded-pill px-3 py-1">Date Calculator</a>
                 </div>
             </div>
         </div>

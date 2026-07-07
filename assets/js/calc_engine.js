@@ -1,7 +1,7 @@
 let calcCurrent = '0';
 let calcHistory = '';
 let calcMemory = 0;
-let isScientific = true;
+let isScientific = false;
 
 function switchCalcTab(tab) {
     if (tab === 'scientific') {

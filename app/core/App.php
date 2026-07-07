@@ -7,6 +7,38 @@ class App {
     public function __construct() {
         $url = $this->getUrl();
 
+        $slugMap = [
+            'emi-calculator' => 'emi',
+            'home-loan' => 'home_loan',
+            'car-loan' => 'car_loan',
+            'personal-loan' => 'personal_loan',
+            'sip-calculator' => 'sip',
+            'compound-interest' => 'compound_interest',
+            'simple-interest' => 'simple_interest',
+            'income-tax' => 'income_tax',
+            'fd-calculator' => 'fd',
+            'gst-calculator' => 'gst',
+            'bmi-calculator' => 'bmi',
+            'calorie-calculator' => 'calorie',
+            'percentage-calculator' => 'percentage',
+            'age-calculator' => 'age',
+            'love-calculator' => 'love',
+            'date-calculator' => 'date',
+        ];
+
+        if (isset($url[0]) && isset($slugMap[$url[0]])) {
+            $this->currentController = 'Calculators';
+            $this->currentMethod = $slugMap[$url[0]];
+            unset($url[0]);
+            
+            require_once APPROOT . '/controllers/' . $this->currentController . '.php';
+            $this->currentController = new $this->currentController;
+            
+            $this->params = $url ? array_values($url) : [];
+            call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
+            return;
+        }
+
         if (isset($url[0]) && file_exists(APPROOT . '/controllers/' . ucwords($url[0]) . '.php')) {
             $this->currentController = ucwords($url[0]);
             unset($url[0]);

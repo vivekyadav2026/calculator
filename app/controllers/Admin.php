@@ -136,10 +136,38 @@ class Admin extends Controller {
 
     public function settings() {
         $this->checkLogin();
+        
         $data = [
             'title' => 'Website Settings',
-            'active_menu' => 'settings'
+            'active_menu' => 'settings',
+            'password_err' => '',
+            'password_success' => ''
         ];
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['change_password'])) {
+            $old_password = trim($_POST['old_password'] ?? '');
+            $new_password = trim($_POST['new_password'] ?? '');
+            $confirm_password = trim($_POST['confirm_password'] ?? '');
+
+            if (empty($old_password) || empty($new_password) || empty($confirm_password)) {
+                $data['password_err'] = 'Please fill all password fields.';
+            } elseif ($new_password !== $confirm_password) {
+                $data['password_err'] = 'New passwords do not match.';
+            } else {
+                $user = $this->userModel->getUserById($_SESSION['user_id']);
+                if ($user && password_verify($old_password, $user->password_hash)) {
+                    $new_hash = password_hash($new_password, PASSWORD_DEFAULT);
+                    if ($this->userModel->updatePassword($_SESSION['user_id'], $new_hash)) {
+                        $data['password_success'] = 'Password updated successfully.';
+                    } else {
+                        $data['password_err'] = 'Something went wrong. Please try again.';
+                    }
+                } else {
+                    $data['password_err'] = 'Incorrect old password.';
+                }
+            }
+        }
+
         $this->view('admin/settings', $data);
     }
 

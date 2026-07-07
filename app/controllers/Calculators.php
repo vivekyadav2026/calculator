@@ -79,4 +79,8 @@ class Calculators extends Controller {
     public function calorie() {
         $this->loadCalculatorPage('calorie', 'Calorie Calculator', 'calorie');
     }
+
+    public function date() {
+        $this->loadCalculatorPage('date-calculator', 'Date Calculator', 'date', 'Calculate the difference between two dates or add/subtract days from a date.');
+    }
 }

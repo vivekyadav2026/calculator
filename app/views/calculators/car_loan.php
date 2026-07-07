@@ -4,10 +4,17 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo URLROOT; ?>">Home</a></li>
-            <li class="breadcrumb-item"><a href="<?php echo URLROOT; ?>#calculators">Calculators</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo URLROOT; ?>/calculators">Calculators</a></li>
             <li class="breadcrumb-item active" aria-current="page">Car Loan Calculator</li>
         </ol>
     </nav>
+
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-5 fw-bold mb-2" style="color: #000000;">Car Loan EMI Calculator</h1>
+            <p class="text-muted lead" style="color: #000000 !important;">Calculate your Equated Monthly Installment (EMI) for new or used car financing.</p>
+        </div>
+    </div>
 
     <div class="row g-4 mb-4">
         <!-- Calculator Inputs -->

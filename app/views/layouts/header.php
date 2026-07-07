@@ -36,70 +36,70 @@
                     </a>
                     <div class="saas-mega-menu">
                         <div class="saas-mega-grid" style="grid-template-columns: 1fr 1fr; width: 600px;">
-                            <a href="<?php echo URLROOT; ?>/calculators/emi" class="saas-mega-item">
+                            <a href="<?php echo URLROOT; ?>/emi-calculator" class="saas-mega-item">
                                 <div class="saas-mega-icon"><i class="bi bi-bank"></i></div>
                                 <div class="saas-mega-content">
                                     <span class="saas-mega-title">EMI Calculator <span class="saas-badge-popular">Popular</span></span>
                                     <span class="saas-mega-desc">Plan your loan repayment schedule instantly.</span>
                                 </div>
                             </a>
-                            <a href="<?php echo URLROOT; ?>/calculators/home_loan" class="saas-mega-item">
+                            <a href="<?php echo URLROOT; ?>/home-loan" class="saas-mega-item">
                                 <div class="saas-mega-icon"><i class="bi bi-house-door"></i></div>
                                 <div class="saas-mega-content">
                                     <span class="saas-mega-title">Home Loan</span>
                                     <span class="saas-mega-desc">Calculate housing loan EMIs and interest.</span>
                                 </div>
                             </a>
-                            <a href="<?php echo URLROOT; ?>/calculators/car_loan" class="saas-mega-item">
+                            <a href="<?php echo URLROOT; ?>/car-loan" class="saas-mega-item">
                                 <div class="saas-mega-icon"><i class="bi bi-car-front"></i></div>
                                 <div class="saas-mega-content">
                                     <span class="saas-mega-title">Car Loan</span>
                                     <span class="saas-mega-desc">Estimate vehicle financing costs.</span>
                                 </div>
                             </a>
-                            <a href="<?php echo URLROOT; ?>/calculators/personal_loan" class="saas-mega-item">
+                            <a href="<?php echo URLROOT; ?>/personal-loan" class="saas-mega-item">
                                 <div class="saas-mega-icon"><i class="bi bi-person"></i></div>
                                 <div class="saas-mega-content">
                                     <span class="saas-mega-title">Personal Loan</span>
                                     <span class="saas-mega-desc">Check EMIs for unsecured loans.</span>
                                 </div>
                             </a>
-                            <a href="<?php echo URLROOT; ?>/calculators/sip" class="saas-mega-item">
+                            <a href="<?php echo URLROOT; ?>/sip-calculator" class="saas-mega-item">
                                 <div class="saas-mega-icon"><i class="bi bi-graph-up-arrow"></i></div>
                                 <div class="saas-mega-content">
                                     <span class="saas-mega-title">SIP Returns</span>
                                     <span class="saas-mega-desc">Project your mutual fund wealth growth.</span>
                                 </div>
                             </a>
-                            <a href="<?php echo URLROOT; ?>/calculators/income_tax" class="saas-mega-item">
+                            <a href="<?php echo URLROOT; ?>/income-tax" class="saas-mega-item">
                                 <div class="saas-mega-icon"><i class="bi bi-receipt"></i></div>
                                 <div class="saas-mega-content">
                                     <span class="saas-mega-title">Income Tax</span>
                                     <span class="saas-mega-desc">Estimate your tax liability accurately.</span>
                                 </div>
                             </a>
-                            <a href="<?php echo URLROOT; ?>/calculators/fd" class="saas-mega-item">
+                            <a href="<?php echo URLROOT; ?>/fd-calculator" class="saas-mega-item">
                                 <div class="saas-mega-icon"><i class="bi bi-safe"></i></div>
                                 <div class="saas-mega-content">
                                     <span class="saas-mega-title">Fixed Deposit</span>
                                     <span class="saas-mega-desc">Calculate maturity values for term deposits.</span>
                                 </div>
                             </a>
-                            <a href="<?php echo URLROOT; ?>/calculators/compound_interest" class="saas-mega-item">
+                            <a href="<?php echo URLROOT; ?>/compound-interest" class="saas-mega-item">
                                 <div class="saas-mega-icon"><i class="bi bi-graph-up"></i></div>
                                 <div class="saas-mega-content">
                                     <span class="saas-mega-title">Compound Interest</span>
                                     <span class="saas-mega-desc">See the power of compounding on savings.</span>
                                 </div>
                             </a>
-                            <a href="<?php echo URLROOT; ?>/calculators/simple_interest" class="saas-mega-item">
+                            <a href="<?php echo URLROOT; ?>/simple-interest" class="saas-mega-item">
                                 <div class="saas-mega-icon"><i class="bi bi-cash-stack"></i></div>
                                 <div class="saas-mega-content">
                                     <span class="saas-mega-title">Simple Interest</span>
                                     <span class="saas-mega-desc">Quickly find flat interest amounts.</span>
                                 </div>
                             </a>
-                            <a href="<?php echo URLROOT; ?>/calculators/gst" class="saas-mega-item">
+                            <a href="<?php echo URLROOT; ?>/gst-calculator" class="saas-mega-item">
                                 <div class="saas-mega-icon"><i class="bi bi-percent"></i></div>
                                 <div class="saas-mega-content">
                                     <span class="saas-mega-title">GST Calculator</span>
@@ -117,14 +117,14 @@
                     </a>
                     <div class="saas-mega-menu">
                         <div class="saas-mega-grid">
-                            <a href="<?php echo URLROOT; ?>/calculators/bmi" class="saas-mega-item">
+                            <a href="<?php echo URLROOT; ?>/bmi-calculator" class="saas-mega-item">
                                 <div class="saas-mega-icon"><i class="bi bi-person-bounding-box"></i></div>
                                 <div class="saas-mega-content">
                                     <span class="saas-mega-title">BMI Calculator</span>
                                     <span class="saas-mega-desc">Check your Body Mass Index and ideal weight.</span>
                                 </div>
                             </a>
-                            <a href="<?php echo URLROOT; ?>/calculators/calorie" class="saas-mega-item">
+                            <a href="<?php echo URLROOT; ?>/calorie-calculator" class="saas-mega-item">
                                 <div class="saas-mega-icon"><i class="bi bi-fire"></i></div>
                                 <div class="saas-mega-content">
                                     <span class="saas-mega-title">Calorie Calculator</span>
@@ -142,25 +142,25 @@
                     </a>
                     <div class="saas-mega-menu">
                         <div class="saas-mega-grid">
-                            <a href="<?php echo URLROOT; ?>/calculators/percentage" class="saas-mega-item">
+                            <a href="<?php echo URLROOT; ?>/percentage-calculator" class="saas-mega-item">
                                 <div class="saas-mega-icon"><i class="bi bi-calculator"></i></div>
                                 <div class="saas-mega-content">
                                     <span class="saas-mega-title">Percentage Calculator</span>
                                     <span class="saas-mega-desc">Calculate proportions and growth rates quickly.</span>
                                 </div>
                             </a>
-                            <a href="<?php echo URLROOT; ?>/calculators/age" class="saas-mega-item">
+                            <a href="<?php echo URLROOT; ?>/age-calculator" class="saas-mega-item">
                                 <div class="saas-mega-icon"><i class="bi bi-calendar3"></i></div>
                                 <div class="saas-mega-content">
                                     <span class="saas-mega-title">Age Calculator</span>
                                     <span class="saas-mega-desc">Find exact age in years, months, and days.</span>
                                 </div>
                             </a>
-                            <a href="<?php echo URLROOT; ?>/calculators/love" class="saas-mega-item">
-                                <div class="saas-mega-icon"><i class="bi bi-heart"></i></div>
+                            <a href="<?php echo URLROOT; ?>/date-calculator" class="saas-mega-item">
+                                <div class="saas-mega-icon"><i class="bi bi-calendar-event"></i></div>
                                 <div class="saas-mega-content">
-                                    <span class="saas-mega-title">Love Calculator <span class="saas-badge-popular" style="background:#FCE7F3; color:#BE185D;">Fun</span></span>
-                                    <span class="saas-mega-desc">Check your compatibility score instantly.</span>
+                                    <span class="saas-mega-title">Date Calculator</span>
+                                    <span class="saas-mega-desc">Calculate difference between dates or add/subtract days.</span>
                                 </div>
                             </a>
                         </div>
@@ -168,7 +168,44 @@
                 </li>
                 
                 <li class="saas-nav-item">
-                    <a href="<?php echo URLROOT; ?>" class="saas-nav-link fw-bold text-primary">
+                    <a href="<?php echo URLROOT; ?>/love-calculator" class="saas-nav-link fw-bold" style="color: #fda4af !important;">
+                        <i class="bi bi-heart-fill me-1"></i> Love Calculator
+                    </a>
+                </li>
+
+                <li class="saas-nav-item">
+                    <a href="<?php echo URLROOT; ?>/blog" class="saas-nav-link">
+                        Blog
+                    </a>
+                </li>
+
+                <li class="saas-nav-item">
+                    <a href="#" class="saas-nav-link" aria-haspopup="true" aria-expanded="false">
+                        Pages <i class="bi bi-chevron-down saas-nav-icon"></i>
+                    </a>
+                    <div class="saas-mega-menu" style="min-width: 200px;">
+                        <div class="saas-mega-grid">
+                            <a href="<?php echo URLROOT; ?>/pages/about" class="saas-mega-item">
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">About Us</span>
+                                </div>
+                            </a>
+                            <a href="<?php echo URLROOT; ?>/pages/privacy" class="saas-mega-item">
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">Privacy Policy</span>
+                                </div>
+                            </a>
+                            <a href="<?php echo URLROOT; ?>/pages/terms" class="saas-mega-item">
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">Terms of Service</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="saas-nav-item">
+                    <a href="<?php echo URLROOT; ?>/calculators" class="saas-nav-link">
                         All Calculators
                     </a>
                 </li>
@@ -200,35 +237,48 @@
     
     <div class="saas-mobile-body">
         <nav>
-            <a href="<?php echo URLROOT; ?>" class="saas-mobile-link fw-bold text-primary mb-3">
+            <a href="<?php echo URLROOT; ?>/calculators" class="saas-mobile-link fw-bold mb-3">
                 <i class="bi bi-grid-fill me-2"></i> All Calculators
             </a>
 
             <div class="saas-mobile-group">
                 <div class="saas-mobile-group-title">Financial</div>
-                <a href="<?php echo URLROOT; ?>/calculators/emi" class="saas-mobile-link"><i class="bi bi-bank"></i> EMI Calculator</a>
-                <a href="<?php echo URLROOT; ?>/calculators/home_loan" class="saas-mobile-link"><i class="bi bi-house-door"></i> Home Loan</a>
-                <a href="<?php echo URLROOT; ?>/calculators/car_loan" class="saas-mobile-link"><i class="bi bi-car-front"></i> Car Loan</a>
-                <a href="<?php echo URLROOT; ?>/calculators/personal_loan" class="saas-mobile-link"><i class="bi bi-person"></i> Personal Loan</a>
-                <a href="<?php echo URLROOT; ?>/calculators/sip" class="saas-mobile-link"><i class="bi bi-graph-up-arrow"></i> SIP Calculator</a>
-                <a href="<?php echo URLROOT; ?>/calculators/fd" class="saas-mobile-link"><i class="bi bi-safe"></i> Fixed Deposit</a>
-                <a href="<?php echo URLROOT; ?>/calculators/compound_interest" class="saas-mobile-link"><i class="bi bi-graph-up"></i> Compound Interest</a>
-                <a href="<?php echo URLROOT; ?>/calculators/simple_interest" class="saas-mobile-link"><i class="bi bi-cash-stack"></i> Simple Interest</a>
-                <a href="<?php echo URLROOT; ?>/calculators/income_tax" class="saas-mobile-link"><i class="bi bi-receipt"></i> Income Tax</a>
-                <a href="<?php echo URLROOT; ?>/calculators/gst" class="saas-mobile-link"><i class="bi bi-percent"></i> GST Calculator</a>
+                <a href="<?php echo URLROOT; ?>/emi-calculator" class="saas-mobile-link"><i class="bi bi-bank"></i> EMI Calculator</a>
+                <a href="<?php echo URLROOT; ?>/home-loan" class="saas-mobile-link"><i class="bi bi-house-door"></i> Home Loan</a>
+                <a href="<?php echo URLROOT; ?>/car-loan" class="saas-mobile-link"><i class="bi bi-car-front"></i> Car Loan</a>
+                <a href="<?php echo URLROOT; ?>/personal-loan" class="saas-mobile-link"><i class="bi bi-person"></i> Personal Loan</a>
+                <a href="<?php echo URLROOT; ?>/sip-calculator" class="saas-mobile-link"><i class="bi bi-graph-up-arrow"></i> SIP Calculator</a>
+                <a href="<?php echo URLROOT; ?>/fd-calculator" class="saas-mobile-link"><i class="bi bi-safe"></i> Fixed Deposit</a>
+                <a href="<?php echo URLROOT; ?>/compound-interest" class="saas-mobile-link"><i class="bi bi-graph-up"></i> Compound Interest</a>
+                <a href="<?php echo URLROOT; ?>/simple-interest" class="saas-mobile-link"><i class="bi bi-cash-stack"></i> Simple Interest</a>
+                <a href="<?php echo URLROOT; ?>/income-tax" class="saas-mobile-link"><i class="bi bi-receipt"></i> Income Tax</a>
+                <a href="<?php echo URLROOT; ?>/gst-calculator" class="saas-mobile-link"><i class="bi bi-percent"></i> GST Calculator</a>
             </div>
 
             <div class="saas-mobile-group" style="margin-top: 32px;">
                 <div class="saas-mobile-group-title">Health</div>
-                <a href="<?php echo URLROOT; ?>/calculators/bmi" class="saas-mobile-link"><i class="bi bi-person-bounding-box"></i> BMI Calculator</a>
-                <a href="<?php echo URLROOT; ?>/calculators/calorie" class="saas-mobile-link"><i class="bi bi-fire"></i> Calorie Calculator</a>
+                <a href="<?php echo URLROOT; ?>/bmi-calculator" class="saas-mobile-link"><i class="bi bi-person-bounding-box"></i> BMI Calculator</a>
+                <a href="<?php echo URLROOT; ?>/calorie-calculator" class="saas-mobile-link"><i class="bi bi-fire"></i> Calorie Calculator</a>
             </div>
 
             <div class="saas-mobile-group" style="margin-top: 32px;">
                 <div class="saas-mobile-group-title">Math</div>
-                <a href="<?php echo URLROOT; ?>/calculators/percentage" class="saas-mobile-link"><i class="bi bi-calculator"></i> Percentage Calculator</a>
-                <a href="<?php echo URLROOT; ?>/calculators/age" class="saas-mobile-link"><i class="bi bi-calendar3"></i> Age Calculator</a>
-                <a href="<?php echo URLROOT; ?>/calculators/love" class="saas-mobile-link"><i class="bi bi-heart"></i> Love Calculator</a>
+                <a href="<?php echo URLROOT; ?>/percentage-calculator" class="saas-mobile-link"><i class="bi bi-calculator"></i> Percentage Calculator</a>
+                <a href="<?php echo URLROOT; ?>/age-calculator" class="saas-mobile-link"><i class="bi bi-calendar3"></i> Age Calculator</a>
+                <a href="<?php echo URLROOT; ?>/date-calculator" class="saas-mobile-link"><i class="bi bi-calendar-event"></i> Date Calculator</a>
+            </div>
+
+            <div class="saas-mobile-group" style="margin-top: 32px;">
+                <div class="saas-mobile-group-title">Featured</div>
+                <a href="<?php echo URLROOT; ?>/love-calculator" class="saas-mobile-link text-danger fw-bold"><i class="bi bi-heart-fill"></i> Love Calculator</a>
+                <a href="<?php echo URLROOT; ?>/blog" class="saas-mobile-link"><i class="bi bi-file-earmark-text"></i> Blog</a>
+            </div>
+
+            <div class="saas-mobile-group" style="margin-top: 32px;">
+                <div class="saas-mobile-group-title">Pages</div>
+                <a href="<?php echo URLROOT; ?>/pages/about" class="saas-mobile-link"><i class="bi bi-info-circle"></i> About Us</a>
+                <a href="<?php echo URLROOT; ?>/pages/privacy" class="saas-mobile-link"><i class="bi bi-shield-lock"></i> Privacy Policy</a>
+                <a href="<?php echo URLROOT; ?>/pages/terms" class="saas-mobile-link"><i class="bi bi-file-earmark-ruled"></i> Terms of Service</a>
             </div>
             
             <div class="saas-mobile-group" style="margin-top: 32px;">

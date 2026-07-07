@@ -72,13 +72,16 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border-subtle);
+  background: linear-gradient(135deg, #3b0764 0%, #6b21a8 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  --text-primary: #ffffff;
+  --text-secondary: #f3e8ff;
+  --brand-primary: #e9d5ff;
 }
 
 [data-bs-theme="dark"] .saas-header {
-  background-color: rgba(17, 24, 39, 0.95);
+  background: linear-gradient(135deg, #2e0254 0%, #4c1d95 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .saas-header-container {
@@ -185,10 +188,16 @@
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
   z-index: 1050;
   pointer-events: none;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --brand-primary: #6b21a8;
 }
 
 [data-bs-theme="dark"] .saas-mega-menu {
   background: #1F2937;
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --brand-primary: #c084fc;
 }
 
 .saas-nav-item:hover .saas-mega-menu {
@@ -223,12 +232,16 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: rgba(79, 70, 229, 0.1);
+  background-color: rgba(107, 33, 168, 0.1);
   color: var(--brand-primary);
   border-radius: 8px;
   margin-right: 16px;
   flex-shrink: 0;
   font-size: 1.25rem;
+}
+
+[data-bs-theme="dark"] .saas-mega-icon {
+  background-color: rgba(192, 132, 252, 0.15);
 }
 
 .saas-mega-content {
@@ -452,10 +465,14 @@
    FOOTER
    ========================================================================== */
 .saas-footer {
-  background-color: var(--bg-subtle);
-  border-top: 1px solid var(--border-subtle);
+  background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.15) 0%, transparent 60%), #090514;
+  border-top: 1px solid transparent;
+  border-image: linear-gradient(to right, transparent, rgba(167, 139, 250, 0.25), transparent) 1;
   padding: var(--space-10) var(--space-3) var(--space-4);
-  color: var(--text-secondary);
+  color: #cbd5e1;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --border-subtle: rgba(255, 255, 255, 0.08);
 }
 
 .saas-footer-container {
@@ -475,79 +492,196 @@
   max-width: 400px;
 }
 
+.saas-footer .saas-brand {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.6rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 12px;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #ffffff 30%, #e9d5ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.saas-footer .saas-brand:hover {
+  transform: scale(1.02);
+}
+
 .saas-footer-desc {
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-top: var(--space-3);
-  margin-bottom: var(--space-3);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #cbd5e1;
 }
 
 .saas-footer-trust {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-primary);
+  gap: 12px;
+}
+
+.saas-footer-trust span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #e2e8f0;
 }
 
 .saas-trust-avatars {
   display: flex;
+  align-items: center;
 }
 
 .saas-trust-avatars img {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  border: 2px solid var(--bg-subtle);
-  margin-left: -8px;
+  border: 2px solid #090514;
+  margin-right: -8px;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
-.saas-trust-avatars img:first-child {
-  margin-left: 0;
+
+.saas-trust-avatars img:hover {
+  transform: translateY(-4px) scale(1.15);
+  z-index: 10;
+}
+
+/* Newsletter Column */
+.saas-footer-newsletter {
+  max-width: 440px;
+  justify-self: end;
+}
+
+@media (max-width: 768px) {
+  .saas-footer-newsletter {
+    justify-self: start;
+  }
 }
 
 .saas-footer-newsletter h4 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: var(--space-1);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
 }
 
 .saas-footer-newsletter p {
-  font-size: 0.875rem;
-  margin-bottom: var(--space-3);
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #cbd5e1;
 }
 
-.saas-newsletter-form {
+.saas-footer-newsletter-form {
+  margin-top: 12px;
+}
+
+.saas-input-group {
   display: flex;
-  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  padding: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.saas-input-group:focus-within {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.25), 0 4px 20px rgba(139, 92, 246, 0.1);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .saas-newsletter-input {
   flex-grow: 1;
-  padding: 10px 16px;
-  border: 1px solid var(--border-subtle);
-  border-radius: 6px;
-  background-color: white;
+  border: none !important;
+  background: transparent !important;
+  padding: 10px 18px;
+  color: #ffffff !important;
   font-size: 0.875rem;
   font-family: inherit;
+  outline: none !important;
+  width: 100%;
 }
-[data-bs-theme="dark"] .saas-newsletter-input { background: #374151; color: white;}
+
+.saas-newsletter-input::placeholder {
+  color: #94a3b8;
+}
 
 .saas-newsletter-btn {
-  background-color: var(--text-primary);
-  color: var(--bg-subtle);
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  color: #ffffff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
+  padding: 10px 22px;
+  border-radius: 25px;
   font-weight: 600;
   font-size: 0.875rem;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
 }
 
 .saas-newsletter-btn:hover {
-  opacity: 0.9;
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.4);
+  transform: translateY(-1px);
+}
+
+.saas-newsletter-btn i {
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.saas-newsletter-btn:hover i {
+  transform: translateX(3px);
+}
+
+.saas-footer-badge-container {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.saas-footer-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+  text-decoration: none !important;
+}
+
+.saas-footer-badge:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.saas-footer-badge span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Divider Class */
+.saas-footer-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.08) 15%, rgba(255, 255, 255, 0.08) 85%, transparent);
+  border: none;
+  margin: 40px 0;
 }
 
 /* Middle Section (Links Grid) */
@@ -559,26 +693,42 @@
 }
 
 .saas-footer-col h5 {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: var(--space-3);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+  position: relative;
+  display: inline-block;
+}
+
+.saas-footer-col h5::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 24px;
+  height: 2px;
+  background-color: #8b5cf6;
+  border-radius: 1px;
 }
 
 .saas-footer-col ul li {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .saas-footer-col ul li a {
-  color: var(--text-secondary);
+  color: #94a3b8;
   font-size: 0.875rem;
-  transition: color 0.2s;
+  transition: all 0.25s ease;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .saas-footer-col ul li a:hover {
-  color: var(--brand-primary);
+  color: #c084fc;
+  transform: translateX(4px);
 }
 
 /* Bottom Section */
@@ -586,40 +736,79 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-3);
-  padding-top: var(--space-4);
-  border-top: 1px solid var(--border-subtle);
-  font-size: 0.75rem;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 24px;
+  font-size: 0.8rem;
+  color: #94a3b8;
 }
 
 .saas-footer-legal-links {
   display: flex;
-  gap: var(--space-3);
+  gap: 24px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+.saas-footer-legal-links span {
+  color: #64748b;
+  font-weight: 500;
+}
+
 .saas-footer-legal-links a {
-  color: var(--text-secondary);
+  color: #94a3b8;
+  transition: color 0.2s ease;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .saas-footer-legal-links a:hover {
-  color: var(--text-primary);
+  color: #ffffff;
+}
+
+.saas-footer-credit {
+  font-weight: 500;
+  color: #64748b;
+}
+
+.saas-footer-credit span {
+  color: #ef4444;
+  display: inline-block;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.18); }
+  100% { transform: scale(1); }
 }
 
 .saas-footer-socials {
   display: flex;
-  gap: var(--space-2);
+  gap: 12px;
 }
 
 .saas-footer-socials a {
-  color: var(--text-tertiary);
-  font-size: 1.25rem;
-  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  color: #a78bfa;
+  font-size: 1.1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
 }
 
 .saas-footer-socials a:hover {
-  color: var(--text-primary);
+  background: rgba(139, 92, 246, 0.15);
+  border-color: #a78bfa;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
 }
 
 /* ==========================================================================
@@ -656,4 +845,107 @@
   .saas-footer-links {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+/* ==========================================================================
+   SITE FAQ SECTION ACCORDION (Modern styling with Dark Mode support)
+   ========================================================================== */
+.site-faq-section {
+  font-family: var(--font-family-sans);
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+[data-bs-theme="dark"] .site-faq-section {
+  background-color: #0d121f;
+  border-top-color: #1e293b;
+  border-bottom-color: #1e293b;
+}
+
+.site-faq-section .accordion-item {
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+  margin-bottom: 12px;
+  background: #ffffff !important;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  transition: all 0.25s ease;
+}
+
+[data-bs-theme="dark"] .site-faq-section .accordion-item {
+  border-color: #1e293b !important;
+  background: #151c2c !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.site-faq-section .accordion-item:hover {
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+[data-bs-theme="dark"] .site-faq-section .accordion-item:hover {
+  border-color: #334155 !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.site-faq-section .accordion-button {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 1.1rem 1.25rem !important;
+  box-shadow: none !important;
+  border: none;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+[data-bs-theme="dark"] .site-faq-section .accordion-button {
+  background-color: #151c2c !important;
+  color: #f1f5f9 !important;
+}
+
+.site-faq-section .accordion-button:not(.collapsed) {
+  color: #6b21a8 !important;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+[data-bs-theme="dark"] .site-faq-section .accordion-button:not(.collapsed) {
+  color: #c084fc !important;
+  border-bottom-color: #1e293b;
+}
+
+.site-faq-section .accordion-body {
+  color: #475569 !important;
+  line-height: 1.6;
+  padding: 1.25rem !important;
+  font-size: 0.95rem;
+  background: #fafafa;
+}
+
+[data-bs-theme="dark"] .site-faq-section .accordion-body {
+  color: #94a3b8 !important;
+  background: #0f1626 !important;
+}
+
+.site-faq-title {
+  font-size: 2rem;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  transition: color 0.3s;
+}
+
+[data-bs-theme="dark"] .site-faq-title {
+  color: #f8fafc;
+}
+
+.site-faq-desc {
+  font-size: 1rem;
+  color: #64748b;
+  transition: color 0.3s;
+}
+
+[data-bs-theme="dark"] .site-faq-desc {
+  color: #94a3b8;
 }

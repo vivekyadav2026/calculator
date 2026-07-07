@@ -4,10 +4,17 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo URLROOT; ?>">Home</a></li>
-            <li class="breadcrumb-item"><a href="<?php echo URLROOT; ?>#calculators">Calculators</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo URLROOT; ?>/calculators">Calculators</a></li>
             <li class="breadcrumb-item active" aria-current="page">Age Calculator</li>
         </ol>
     </nav>
+
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-5 fw-bold mb-2" style="color: #000000;">Age Calculator</h1>
+            <p class="text-muted lead" style="color: #000000 !important;">Find your exact age in years, months, and days, or calculate the time difference between dates.</p>
+        </div>
+    </div>
 
     <div class="row g-4 mb-4">
         <!-- Calculator Inputs -->

@@ -10,8 +10,8 @@
     --border-color: #E5E7EB;
     --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     --hover-bg: #F3F4F6;
-    --text-main: #111827;
-    --text-muted: #6B7280;
+    --text-main: #000000;
+    --text-muted: #4B5563;
 }
 
 [data-bs-theme="dark"] {
@@ -157,17 +157,45 @@ body {
 
 /* Category Grid */
 .category-card {
-    background: var(--bg-hero);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 2rem 1.5rem 1.5rem;
     height: 100%;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.category-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+.col-md-6:nth-child(1) .category-card::before { background: #4f46e5; }
+.col-md-6:nth-child(2) .category-card::before { background: #10b981; }
+.col-md-6:nth-child(3) .category-card::before { background: #ef4444; }
+.col-md-6:nth-child(4) .category-card::before { background: #f59e0b; }
+
 .category-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--card-shadow);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: #cbd5e1;
+}
+
+[data-bs-theme="dark"] .category-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+[data-bs-theme="dark"] .category-card:hover {
+    border-color: #475569;
 }
 
 .category-icon-wrapper {
@@ -178,44 +206,70 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 1.25rem;
-    background: var(--hover-bg);
-    color: var(--text-main);
+    transition: transform 0.3s ease;
+}
+
+.col-md-6:nth-child(1) .category-icon-wrapper { background: rgba(79, 70, 229, 0.08); }
+.col-md-6:nth-child(2) .category-icon-wrapper { background: rgba(16, 185, 129, 0.08); }
+.col-md-6:nth-child(3) .category-icon-wrapper { background: rgba(239, 68, 68, 0.08); }
+.col-md-6:nth-child(4) .category-icon-wrapper { background: rgba(245, 158, 11, 0.08); }
+
+.category-card:hover .category-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .category-title {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: var(--text-main);
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
 }
 
 .category-link {
-    display: flex;
+    display: flex !important;
     align-items: center;
-    padding: 0.5rem 0;
-    color: var(--text-muted);
+    justify-content: space-between;
+    padding: 0.65rem 0.9rem !important;
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 10px;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    color: #000000 !important;
     text-decoration: none;
-    transition: all 0.2s ease;
-    font-size: 0.95rem;
-    font-weight: 500;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 0.5rem;
 }
 
-.category-link::before {
-    content: "→";
-    margin-right: 0.5rem;
-    opacity: 0;
-    transform: translateX(-5px);
-    transition: all 0.2s ease;
-    color: var(--primary);
+.category-link::after {
+    font-family: "bootstrap-icons" !important;
+    content: "\F138";
+    font-size: 0.75rem;
+    opacity: 0.4;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .category-link:hover {
-    color: var(--primary);
+    background: #ffffff;
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transform: translateX(4px);
 }
 
-.category-link:hover::before {
+.category-link:hover::after {
+    transform: translateX(3px);
     opacity: 1;
-    transform: translateX(0);
+}
+
+[data-bs-theme="dark"] .category-link {
+    background: #0f172a;
+    border-color: #1e293b;
+    color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .category-link:hover {
+    background: #1e293b;
+    border-color: #475569;
 }
 
 /* Calculator Pages */
