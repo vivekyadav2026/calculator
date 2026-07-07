@@ -78,58 +78,24 @@
 <!-- Footer Section -->
 <footer class="saas-footer">
     <div class="saas-footer-container">
-        
-        <!-- Top Section (Brand, Trust, Features) -->
-        <div class="saas-footer-top">
+        <div class="saas-footer-grid">
+            <!-- Col 1: Brand & Actions -->
             <div class="saas-footer-brand-col">
                 <a class="saas-brand" href="<?php echo URLROOT; ?>">
                     CalculatorTube
                 </a>
                 <p class="saas-footer-desc">
-                    Comprehensive, beautifully designed financial and health calculators built for speed and precision. No tracking. No registration required.
+                    Leading provider of free, beautifully designed financial and health calculators built for speed and precision. No tracking. No registration required.
                 </p>
-                <div class="saas-footer-trust">
-                    <div class="saas-trust-avatars">
-                        <img src="https://i.pravatar.cc/100?img=1" alt="User">
-                        <img src="https://i.pravatar.cc/100?img=2" alt="User">
-                        <img src="https://i.pravatar.cc/100?img=3" alt="User">
-                        <img src="https://i.pravatar.cc/100?img=4" alt="User">
-                    </div>
-                    <span>Trusted by 50,000+ users</span>
-                </div>
+                <a class="saas-footer-about-link" href="<?php echo URLROOT; ?>/pages/about">Learn more About Us</a>
+                <!-- <div class="saas-footer-actions">
+                    <a href="<?php echo URLROOT; ?>/admin/login" class="saas-footer-btn-outline">Login</a>
+                    <span class="saas-footer-actions-or">or</span>
+                    <a href="<?php echo URLROOT; ?>/admin/login" class="saas-footer-btn-outline">Create an Account</a>
+                </div> -->
             </div>
-            
-            <div class="saas-footer-newsletter">
-                <h4>Lightning Fast. Always Free.</h4>
-                <p>We believe in providing professional-grade calculation tools without the clutter. Subscribe to our minimal product updates newsletter.</p>
-                
-                <form class="saas-footer-newsletter-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
-                    <div class="saas-input-group">
-                        <input type="email" placeholder="Enter your email" required class="saas-newsletter-input">
-                        <button type="submit" class="saas-newsletter-btn">
-                            <span>Subscribe</span>
-                            <i class="bi bi-arrow-right"></i>
-                        </button>
-                    </div>
-                </form>
 
-                <div class="saas-footer-badge-container">
-                    <div class="saas-footer-badge">
-                        <i class="bi bi-lightning-charge-fill" style="color: #F59E0B; font-size: 0.9rem;"></i>
-                        <span>Instant Results</span>
-                    </div>
-                    <div class="saas-footer-badge">
-                        <i class="bi bi-shield-check" style="color: #10B981; font-size: 0.9rem;"></i>
-                        <span>Privacy First</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="saas-footer-divider"></div>
-
-        <!-- Middle Section (Links Grid) -->
-        <div class="saas-footer-links">
+            <!-- Col 2: Financial -->
             <div class="saas-footer-col">
                 <h5>Financial</h5>
                 <ul>
@@ -140,7 +106,8 @@
                     <li><a href="<?php echo URLROOT; ?>/income-tax">Income Tax</a></li>
                 </ul>
             </div>
-            
+
+            <!-- Col 3: Investment & Tax -->
             <div class="saas-footer-col">
                 <h5>Investment & Tax</h5>
                 <ul>
@@ -151,6 +118,7 @@
                 </ul>
             </div>
 
+            <!-- Col 4: Health, Math & Company (Stacked) -->
             <div class="saas-footer-col">
                 <h5>Health & Math</h5>
                 <ul>
@@ -161,10 +129,8 @@
                     <li><a href="<?php echo URLROOT; ?>/date-calculator">Date Calculator</a></li>
                     <li><a href="<?php echo URLROOT; ?>/love-calculator">Love Calculator</a></li>
                 </ul>
-            </div>
 
-            <div class="saas-footer-col">
-                <h5>Company</h5>
+                <h5 class="sub-header">Company</h5>
                 <ul>
                     <li><a href="<?php echo URLROOT; ?>/pages/about">About Us</a></li>
                     <li><a href="<?php echo URLROOT; ?>/pages/privacy">Privacy Policy</a></li>
@@ -173,26 +139,22 @@
                 </ul>
             </div>
         </div>
+    </div>
 
-        <div class="saas-footer-divider"></div>
-
-        <!-- Bottom Section -->
-        <div class="saas-footer-bottom">
-            <div class="saas-footer-legal-links">
-                <span>&copy; <?php echo date('Y'); ?> CalculatorTube.</span>
+    <!-- Bottom Strip -->
+    <div class="saas-footer-bottom-bar">
+        <div class="saas-footer-bottom-container">
+            <div>
+                Copyright &copy; <?php echo date('Y'); ?> CalculatorTube.com. All rights reserved
+            </div>
+            <div>
                 <a href="<?php echo URLROOT; ?>/pages/privacy">Privacy</a>
+                <span class="divider-pipe">|</span>
                 <a href="<?php echo URLROOT; ?>/pages/terms">Terms</a>
+                <span class="divider-pipe">|</span>
                 <a href="#">Cookies</a>
+                <span class="divider-pipe">|</span>
                 <a href="#">Sitemap</a>
-            </div>
-            <div class="saas-footer-credit">
-                Version 3.0 &nbsp;&middot;&nbsp; Built with <span>❤️</span>
-            </div>
-            <div class="saas-footer-socials">
-                <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-                <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
             </div>
         </div>
     </div>
