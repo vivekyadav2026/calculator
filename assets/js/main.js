@@ -126,16 +126,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Live Search
-    const searchInput = document.getElementById('calc-search');
-    const searchResults = document.getElementById('search-results');
-    const brandEl = document.querySelector('.navbar-brand');
+    // Live Search (supports multiple search inputs)
+    const searchInputs = document.querySelectorAll('.saas-search-input, #calc-search');
+    const brandEl = document.querySelector('.saas-brand, .navbar-brand');
     const baseUrl = brandEl ? brandEl.getAttribute('href') : '/';
 
-    if (searchInput && searchResults) {
-        searchInput.addEventListener('input', (e) => {
+    searchInputs.forEach(input => {
+        let resultsContainer = input.nextElementSibling;
+        
+        // Handle legacy index.php search where results container might have ID search-results
+        if (!resultsContainer || !resultsContainer.classList.contains('saas-search-results')) {
+            resultsContainer = document.getElementById('search-results');
+            if (!resultsContainer) return;
+        }
+
+        input.addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase();
-            searchResults.innerHTML = '';
+            resultsContainer.innerHTML = '';
             
             if (query.length > 0) {
                 const matches = calculatorsList.filter(c => c.name.toLowerCase().includes(query));
@@ -144,26 +151,32 @@ document.addEventListener('DOMContentLoaded', () => {
                         const a = document.createElement('a');
                         const base = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
                         a.href = base + m.url;
-                        a.className = 'd-block p-3 text-decoration-none search-item';
-                        a.innerHTML = `<i class="bi bi-calculator me-2 text-primary"></i> <span class="fw-medium">${m.name}</span>`;
-                        searchResults.appendChild(a);
+                        a.className = 'd-block p-3 text-decoration-none text-dark border-bottom';
+                        a.innerHTML = `<i class="bi bi-calculator me-2" style="color: #4F46E5;"></i> <span style="font-weight: 500;">${m.name}</span>`;
+                        resultsContainer.appendChild(a);
                     });
-                    searchResults.classList.remove('d-none');
+                    resultsContainer.classList.remove('d-none');
                 } else {
-                    searchResults.innerHTML = '<div class="p-3 text-muted search-item">No calculators found</div>';
-                    searchResults.classList.remove('d-none');
+                    resultsContainer.innerHTML = '<div class="p-3" style="color: #6B7280; font-size: 0.875rem;">No calculators found</div>';
+                    resultsContainer.classList.remove('d-none');
                 }
             } else {
-                searchResults.classList.add('d-none');
+                resultsContainer.classList.add('d-none');
             }
         });
 
+        // Hide on outside click
         document.addEventListener('click', (e) => {
-            if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
-                searchResults.classList.add('d-none');
+            if (!input.contains(e.target) && !resultsContainer.contains(e.target)) {
+                resultsContainer.classList.add('d-none');
             }
         });
-    }
+        
+        // Show again when clicking input if there's text
+        input.addEventListener('focus', () => {
+            if (input.value.length > 0) resultsContainer.classList.remove('d-none');
+        });
+    });
 
     // Setup input slider interactions dynamically
     const sliders = document.querySelectorAll('.form-range');
@@ -187,4 +200,21 @@ document.addEventListener('DOMContentLoaded', () => {
         slider.addEventListener('input', updateSliderVal);
         updateSliderVal();
     });
+
+    // Custom Mobile Slide Panel Logic
+    const mobileMenuTrigger = document.getElementById('mobile-menu-trigger');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuTrigger && mobileMenuClose && mobileMenu) {
+        mobileMenuTrigger.addEventListener('click', () => {
+            mobileMenu.classList.add('is-open');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('is-open');
+            document.body.style.overflow = '';
+        });
+    }
 });

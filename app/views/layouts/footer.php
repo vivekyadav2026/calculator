@@ -1,69 +1,111 @@
-<footer class="bg-white border-top py-5 mt-auto">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-5 pe-lg-5">
-                <a class="d-flex align-items-center gap-2 text-decoration-none mb-3" href="<?php echo URLROOT; ?>">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="24" height="24" rx="6" fill="#4F46E5"/>
-                        <path d="M7 16H17M7 12H17M7 8H11" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                    <span class="fw-bold fs-5 text-dark" style="letter-spacing: -0.5px;">CalculatorTube</span>
+<footer class="saas-footer">
+    <div class="saas-footer-container">
+        
+        <!-- Top Section (Brand, Trust, Newsletter) -->
+        <div class="saas-footer-top">
+            <div class="saas-footer-brand-col">
+                <a class="saas-brand" href="<?php echo URLROOT; ?>">
+                    CalculatorTube
                 </a>
-                <p class="text-muted small" style="line-height: 1.6;">
-                    CalculatorTube's sole focus is to provide fast, comprehensive, convenient, and beautifully designed free online calculators. We want to be your go-to platform to "do the math" quickly in finance, health, and everyday life.
+                <p class="saas-footer-desc">
+                    Comprehensive, beautifully designed financial and health calculators built for speed and precision. No tracking. No registration required.
                 </p>
-                <p class="text-muted small" style="line-height: 1.6;">
-                    We have coded and developed each calculator individually and put them through strict testing. Our tools are completely free to use with no registration required.
-                </p>
+                <div class="saas-footer-trust">
+                    <div class="saas-trust-avatars">
+                        <img src="https://i.pravatar.cc/100?img=1" alt="User">
+                        <img src="https://i.pravatar.cc/100?img=2" alt="User">
+                        <img src="https://i.pravatar.cc/100?img=3" alt="User">
+                        <img src="https://i.pravatar.cc/100?img=4" alt="User">
+                    </div>
+                    <span>Trusted by 50,000+ users</span>
+                </div>
             </div>
             
-            <div class="col-lg-2 col-6">
-                <h6 class="text-dark fw-bold mb-4 fs-6">Financial</h6>
-                <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
-                    <li><a href="<?php echo URLROOT; ?>/calculators/emi" class="text-muted text-decoration-none small hover-text-main">EMI Calculator</a></li>
-                    <li><a href="<?php echo URLROOT; ?>/calculators/sip" class="text-muted text-decoration-none small hover-text-main">SIP Calculator</a></li>
-                    <li><a href="<?php echo URLROOT; ?>/calculators/home_loan" class="text-muted text-decoration-none small hover-text-main">Home Loan</a></li>
-                    <li><a href="<?php echo URLROOT; ?>/calculators/income_tax" class="text-muted text-decoration-none small hover-text-main">Income Tax</a></li>
+            <div class="saas-footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Subscribe to our newsletter for the latest calculator releases and financial guides. No spam, ever.</p>
+                <form class="saas-newsletter-form">
+                    <input type="email" class="saas-newsletter-input" placeholder="you@company.com" required>
+                    <button type="submit" class="saas-newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Middle Section (Links Grid) -->
+        <div class="saas-footer-links">
+            <div class="saas-footer-col">
+                <h5>Financial</h5>
+                <ul>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/emi">EMI Calculator</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/sip">SIP Calculator</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/home_loan">Home Loan</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/personal_loan">Personal Loan</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/income_tax">Income Tax</a></li>
                 </ul>
             </div>
             
-            <div class="col-lg-2 col-6">
-                <h6 class="text-dark fw-bold mb-4 fs-6">Health & Math</h6>
-                <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
-                    <li><a href="<?php echo URLROOT; ?>/calculators/bmi" class="text-muted text-decoration-none small hover-text-main">BMI Calculator</a></li>
-                    <li><a href="<?php echo URLROOT; ?>/calculators/calorie" class="text-muted text-decoration-none small hover-text-main">Calories</a></li>
-                    <li><a href="<?php echo URLROOT; ?>/calculators/percentage" class="text-muted text-decoration-none small hover-text-main">Percentage</a></li>
-                    <li><a href="<?php echo URLROOT; ?>/calculators/age" class="text-muted text-decoration-none small hover-text-main">Age</a></li>
+            <div class="saas-footer-col">
+                <h5>Health</h5>
+                <ul>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/bmi">BMI Calculator</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/calorie">Calorie Calculator</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/macro">Macro Calculator</a></li>
                 </ul>
             </div>
-            
-            <div class="col-lg-3 col-12">
-                <h6 class="text-dark fw-bold mb-4 fs-6">Legal</h6>
-                <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
-                    <li><a href="#" class="text-muted text-decoration-none small hover-text-main">About Us</a></li>
-                    <li><a href="#" class="text-muted text-decoration-none small hover-text-main">Terms of Use</a></li>
-                    <li><a href="#" class="text-muted text-decoration-none small hover-text-main">Privacy Policy</a></li>
-                    <li><a href="#" class="text-muted text-decoration-none small hover-text-main">Sitemap</a></li>
+
+            <div class="saas-footer-col">
+                <h5>Math</h5>
+                <ul>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/percentage">Percentage</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/age">Age Calculator</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/scientific">Scientific</a></li>
+                </ul>
+            </div>
+
+            <div class="saas-footer-col">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="<?php echo URLROOT; ?>/pages/about">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="saas-footer-col">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="#">API Documentation</a></li>
+                    <li><a href="#">Widget Embed</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">System Status</a></li>
                 </ul>
             </div>
         </div>
-        
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-5 pt-4 border-top">
-            <p class="text-muted small mb-3 mb-md-0">&copy; <?php echo date('Y'); ?> CalculatorTube. All rights reserved.</p>
-            <div class="d-flex gap-4">
-                <a href="#" class="text-muted text-decoration-none hover-text-main"><i class="bi bi-twitter-x"></i></a>
-                <a href="#" class="text-muted text-decoration-none hover-text-main"><i class="bi bi-github"></i></a>
-                <a href="#" class="text-muted text-decoration-none hover-text-main"><i class="bi bi-linkedin"></i></a>
+
+        <!-- Bottom Section -->
+        <div class="saas-footer-bottom">
+            <div class="saas-footer-legal-links">
+                <span>&copy; <?php echo date('Y'); ?> CalculatorTube.</span>
+                <a href="<?php echo URLROOT; ?>/pages/privacy">Privacy</a>
+                <a href="<?php echo URLROOT; ?>/pages/terms">Terms</a>
+                <a href="#">Cookies</a>
+                <a href="#">Sitemap</a>
+            </div>
+            <div style="font-weight: 500;">
+                Version 3.0 &nbsp;&middot;&nbsp; Built with ❤️
+            </div>
+            <div class="saas-footer-socials">
+                <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
             </div>
         </div>
     </div>
 </footer>
-<style>
-.hover-text-main { transition: color 0.2s ease; }
-.hover-text-main:hover { color: var(--text-main) !important; }
-</style>
 
-<!-- Bootstrap JS Bundle -->
+<!-- Bootstrap JS Bundle (Kept for inner calculators that still rely on it for things like tabs, but not used by header/footer navigation) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- html2pdf for exports -->
@@ -73,7 +115,6 @@
 <script src="<?php echo URLROOT; ?>/assets/js/calc_engine.js?v=3.0"></script>
 <script src="<?php echo URLROOT; ?>/assets/js/main.js?v=3.0"></script>
 <script src="<?php echo URLROOT; ?>/assets/js/calculators.js?v=3.0"></script>
-
 
 </body>
 </html>

@@ -6,7 +6,7 @@
     <title><?php echo isset($data['seo']->meta_title) ? $data['seo']->meta_title : (isset($data['title']) ? $data['title'] . ' - ' . SITENAME : SITENAME); ?></title>
     <meta name="description" content="<?php echo isset($data['seo']->meta_description) ? $data['seo']->meta_description : (isset($data['description']) ? $data['description'] : ''); ?>">
     
-    <!-- Bootstrap 5 CSS -->
+    <!-- Bootstrap 5 CSS (kept for calculator core structure until fully removed, but NOT used in header/footer) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -15,80 +15,233 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/assets/css/style.css?v=3.0">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/assets/css/saas-layout.css?v=1.0">
 </head>
 <body>
 
-<header class="modern-header border-bottom bg-white shadow-sm sticky-top">
-    <nav class="navbar navbar-expand-lg py-3">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="<?php echo URLROOT; ?>">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="24" height="24" rx="6" fill="#4F46E5"/>
-                    <path d="M7 16H17M7 12H17M7 8H11" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span class="fw-bold fs-5 text-dark" style="letter-spacing: -0.5px;">CalculatorTube</span>
-            </a>
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarMain">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center gap-2 gap-lg-3">
-                    
-                    <!-- Financial Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Financial
-                        </a>
-                        <ul class="dropdown-menu border-0 shadow-sm rounded-3 mt-2">
-                            <li><h6 class="dropdown-header fw-bold text-dark">Banking</h6></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo URLROOT; ?>/calculators/emi">EMI Calculator</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo URLROOT; ?>/calculators/home_loan">Home Loan</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo URLROOT; ?>/calculators/car_loan">Car Loan</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo URLROOT; ?>/calculators/personal_loan">Personal Loan</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo URLROOT; ?>/calculators/fd">FD Calculator</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><h6 class="dropdown-header fw-bold text-dark">Investment & Tax</h6></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo URLROOT; ?>/calculators/sip">SIP Calculator</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo URLROOT; ?>/calculators/compound_interest">Compound Interest</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo URLROOT; ?>/calculators/simple_interest">Simple Interest</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo URLROOT; ?>/calculators/income_tax">Income Tax</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo URLROOT; ?>/calculators/gst">GST Calculator</a></li>
-                        </ul>
-                    </li>
+<header class="saas-header">
+    <div class="saas-header-container">
+        <!-- Brand Logo -->
+        <a class="saas-brand" href="<?php echo URLROOT; ?>">
+            CalculatorTube
+        </a>
 
-                    <!-- Health Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Health
-                        </a>
-                        <ul class="dropdown-menu border-0 shadow-sm rounded-3 mt-2">
-                            <li><a class="dropdown-item py-2" href="<?php echo URLROOT; ?>/calculators/bmi">BMI Calculator</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo URLROOT; ?>/calculators/calorie">Calorie Calculator</a></li>
-                        </ul>
-                    </li>
+        <!-- Desktop Navigation -->
+        <nav class="saas-desktop-nav" aria-label="Main Navigation">
+            <ul class="saas-nav-list">
+                <!-- Financial Mega Menu -->
+                <li class="saas-nav-item">
+                    <a href="#" class="saas-nav-link" aria-haspopup="true" aria-expanded="false">
+                        Financial <i class="bi bi-chevron-down saas-nav-icon"></i>
+                    </a>
+                    <div class="saas-mega-menu">
+                        <div class="saas-mega-grid" style="grid-template-columns: 1fr 1fr; width: 600px;">
+                            <a href="<?php echo URLROOT; ?>/calculators/emi" class="saas-mega-item">
+                                <div class="saas-mega-icon"><i class="bi bi-bank"></i></div>
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">EMI Calculator <span class="saas-badge-popular">Popular</span></span>
+                                    <span class="saas-mega-desc">Plan your loan repayment schedule instantly.</span>
+                                </div>
+                            </a>
+                            <a href="<?php echo URLROOT; ?>/calculators/home_loan" class="saas-mega-item">
+                                <div class="saas-mega-icon"><i class="bi bi-house-door"></i></div>
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">Home Loan</span>
+                                    <span class="saas-mega-desc">Calculate housing loan EMIs and interest.</span>
+                                </div>
+                            </a>
+                            <a href="<?php echo URLROOT; ?>/calculators/car_loan" class="saas-mega-item">
+                                <div class="saas-mega-icon"><i class="bi bi-car-front"></i></div>
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">Car Loan</span>
+                                    <span class="saas-mega-desc">Estimate vehicle financing costs.</span>
+                                </div>
+                            </a>
+                            <a href="<?php echo URLROOT; ?>/calculators/personal_loan" class="saas-mega-item">
+                                <div class="saas-mega-icon"><i class="bi bi-person"></i></div>
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">Personal Loan</span>
+                                    <span class="saas-mega-desc">Check EMIs for unsecured loans.</span>
+                                </div>
+                            </a>
+                            <a href="<?php echo URLROOT; ?>/calculators/sip" class="saas-mega-item">
+                                <div class="saas-mega-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">SIP Returns</span>
+                                    <span class="saas-mega-desc">Project your mutual fund wealth growth.</span>
+                                </div>
+                            </a>
+                            <a href="<?php echo URLROOT; ?>/calculators/income_tax" class="saas-mega-item">
+                                <div class="saas-mega-icon"><i class="bi bi-receipt"></i></div>
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">Income Tax</span>
+                                    <span class="saas-mega-desc">Estimate your tax liability accurately.</span>
+                                </div>
+                            </a>
+                            <a href="<?php echo URLROOT; ?>/calculators/fd" class="saas-mega-item">
+                                <div class="saas-mega-icon"><i class="bi bi-safe"></i></div>
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">Fixed Deposit</span>
+                                    <span class="saas-mega-desc">Calculate maturity values for term deposits.</span>
+                                </div>
+                            </a>
+                            <a href="<?php echo URLROOT; ?>/calculators/compound_interest" class="saas-mega-item">
+                                <div class="saas-mega-icon"><i class="bi bi-graph-up"></i></div>
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">Compound Interest</span>
+                                    <span class="saas-mega-desc">See the power of compounding on savings.</span>
+                                </div>
+                            </a>
+                            <a href="<?php echo URLROOT; ?>/calculators/simple_interest" class="saas-mega-item">
+                                <div class="saas-mega-icon"><i class="bi bi-cash-stack"></i></div>
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">Simple Interest</span>
+                                    <span class="saas-mega-desc">Quickly find flat interest amounts.</span>
+                                </div>
+                            </a>
+                            <a href="<?php echo URLROOT; ?>/calculators/gst" class="saas-mega-item">
+                                <div class="saas-mega-icon"><i class="bi bi-percent"></i></div>
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">GST Calculator</span>
+                                    <span class="saas-mega-desc">Add or remove GST from product prices.</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
 
-                    <!-- Math Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Math
-                        </a>
-                        <ul class="dropdown-menu border-0 shadow-sm rounded-3 mt-2">
-                            <li><a class="dropdown-item py-2" href="<?php echo URLROOT; ?>/calculators/percentage">Percentage Calculator</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo URLROOT; ?>/calculators/age">Age Calculator</a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center justify-content-between" href="<?php echo URLROOT; ?>/calculators/love">Love Calculator <span class="badge bg-danger rounded-pill ms-2" style="font-size:0.65rem;">Fun</span></a></li>
-                        </ul>
-                    </li>
+                <!-- Health Mega Menu -->
+                <li class="saas-nav-item">
+                    <a href="#" class="saas-nav-link" aria-haspopup="true" aria-expanded="false">
+                        Health <i class="bi bi-chevron-down saas-nav-icon"></i>
+                    </a>
+                    <div class="saas-mega-menu">
+                        <div class="saas-mega-grid">
+                            <a href="<?php echo URLROOT; ?>/calculators/bmi" class="saas-mega-item">
+                                <div class="saas-mega-icon"><i class="bi bi-person-bounding-box"></i></div>
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">BMI Calculator</span>
+                                    <span class="saas-mega-desc">Check your Body Mass Index and ideal weight.</span>
+                                </div>
+                            </a>
+                            <a href="<?php echo URLROOT; ?>/calculators/calorie" class="saas-mega-item">
+                                <div class="saas-mega-icon"><i class="bi bi-fire"></i></div>
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">Calorie Calculator</span>
+                                    <span class="saas-mega-desc">Estimate daily caloric needs for your goals.</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
 
-                    <li class="nav-item ms-lg-2">
-                        <button class="btn btn-link nav-link p-0" id="theme-toggle" aria-label="Toggle dark mode">
-                            <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
-                        </button>
-                    </li>
-                    <li class="nav-item ms-lg-2 mt-3 mt-lg-0">
-                        <a class="btn btn-dark px-4 py-2 fw-medium rounded-3 shadow-sm" style="font-size: 0.9rem;" href="#">Sign In</a>
-                    </li>
-                </ul>
+                <!-- Math Mega Menu -->
+                <li class="saas-nav-item">
+                    <a href="#" class="saas-nav-link" aria-haspopup="true" aria-expanded="false">
+                        Math <i class="bi bi-chevron-down saas-nav-icon"></i>
+                    </a>
+                    <div class="saas-mega-menu">
+                        <div class="saas-mega-grid">
+                            <a href="<?php echo URLROOT; ?>/calculators/percentage" class="saas-mega-item">
+                                <div class="saas-mega-icon"><i class="bi bi-calculator"></i></div>
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">Percentage Calculator</span>
+                                    <span class="saas-mega-desc">Calculate proportions and growth rates quickly.</span>
+                                </div>
+                            </a>
+                            <a href="<?php echo URLROOT; ?>/calculators/age" class="saas-mega-item">
+                                <div class="saas-mega-icon"><i class="bi bi-calendar3"></i></div>
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">Age Calculator</span>
+                                    <span class="saas-mega-desc">Find exact age in years, months, and days.</span>
+                                </div>
+                            </a>
+                            <a href="<?php echo URLROOT; ?>/calculators/love" class="saas-mega-item">
+                                <div class="saas-mega-icon"><i class="bi bi-heart"></i></div>
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">Love Calculator <span class="saas-badge-popular" style="background:#FCE7F3; color:#BE185D;">Fun</span></span>
+                                    <span class="saas-mega-desc">Check your compatibility score instantly.</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Actions -->
+        <div class="saas-header-actions">
+            <div class="saas-desktop-search position-relative d-none d-lg-block">
+                <input type="text" class="saas-search-input form-control bg-light border-0" placeholder="Search..." style="border-radius:20px; padding: 6px 16px; width: 220px; font-size:0.875rem;">
+                <div class="saas-search-results position-absolute bg-white shadow-lg rounded w-100 mt-2 d-none" style="z-index: 1050; max-height:300px; overflow-y:auto; border:1px solid var(--border-subtle);"></div>
             </div>
+            
+            <button class="saas-btn-icon" id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+            </button>
+            <button class="saas-mobile-toggle" id="mobile-menu-trigger" aria-label="Open menu">
+                <i class="bi bi-list"></i>
+            </button>
         </div>
-    </nav>
+    </div>
 </header>
+
+<!-- Mobile Slide Panel -->
+<div class="saas-mobile-menu" id="mobile-menu">
+    <div class="saas-mobile-header">
+        <a class="saas-brand" href="<?php echo URLROOT; ?>">
+            CalculatorTube
+        </a>
+        <button class="saas-mobile-close" id="mobile-menu-close" aria-label="Close menu">
+            <i class="bi bi-x-lg"></i>
+        </button>
+    </div>
+    
+    <div class="saas-mobile-body">
+        <div class="saas-mobile-search position-relative">
+            <i class="bi bi-search" style="position: absolute; left: 12px; top: 14px; color: var(--text-tertiary);"></i>
+            <input type="text" class="saas-search-input form-control bg-light border-0" placeholder="Search calculators..." style="padding: 10px 16px 10px 40px; border-radius: 8px;">
+            <div class="saas-search-results position-absolute bg-white shadow-lg rounded w-100 mt-1 d-none" style="z-index: 1050; max-height: 250px; overflow-y:auto; border:1px solid var(--border-subtle);"></div>
+        </div>
+
+        <nav>
+            <div class="saas-mobile-group">
+                <div class="saas-mobile-group-title">Financial</div>
+                <a href="<?php echo URLROOT; ?>/calculators/emi" class="saas-mobile-link"><i class="bi bi-bank"></i> EMI Calculator</a>
+                <a href="<?php echo URLROOT; ?>/calculators/home_loan" class="saas-mobile-link"><i class="bi bi-house-door"></i> Home Loan</a>
+                <a href="<?php echo URLROOT; ?>/calculators/car_loan" class="saas-mobile-link"><i class="bi bi-car-front"></i> Car Loan</a>
+                <a href="<?php echo URLROOT; ?>/calculators/personal_loan" class="saas-mobile-link"><i class="bi bi-person"></i> Personal Loan</a>
+                <a href="<?php echo URLROOT; ?>/calculators/sip" class="saas-mobile-link"><i class="bi bi-graph-up-arrow"></i> SIP Calculator</a>
+                <a href="<?php echo URLROOT; ?>/calculators/fd" class="saas-mobile-link"><i class="bi bi-safe"></i> Fixed Deposit</a>
+                <a href="<?php echo URLROOT; ?>/calculators/compound_interest" class="saas-mobile-link"><i class="bi bi-graph-up"></i> Compound Interest</a>
+                <a href="<?php echo URLROOT; ?>/calculators/simple_interest" class="saas-mobile-link"><i class="bi bi-cash-stack"></i> Simple Interest</a>
+                <a href="<?php echo URLROOT; ?>/calculators/income_tax" class="saas-mobile-link"><i class="bi bi-receipt"></i> Income Tax</a>
+                <a href="<?php echo URLROOT; ?>/calculators/gst" class="saas-mobile-link"><i class="bi bi-percent"></i> GST Calculator</a>
+            </div>
+
+            <div class="saas-mobile-group" style="margin-top: 32px;">
+                <div class="saas-mobile-group-title">Health</div>
+                <a href="<?php echo URLROOT; ?>/calculators/bmi" class="saas-mobile-link"><i class="bi bi-person-bounding-box"></i> BMI Calculator</a>
+                <a href="<?php echo URLROOT; ?>/calculators/calorie" class="saas-mobile-link"><i class="bi bi-fire"></i> Calorie Calculator</a>
+            </div>
+
+            <div class="saas-mobile-group" style="margin-top: 32px;">
+                <div class="saas-mobile-group-title">Math</div>
+                <a href="<?php echo URLROOT; ?>/calculators/percentage" class="saas-mobile-link"><i class="bi bi-calculator"></i> Percentage Calculator</a>
+                <a href="<?php echo URLROOT; ?>/calculators/age" class="saas-mobile-link"><i class="bi bi-calendar3"></i> Age Calculator</a>
+                <a href="<?php echo URLROOT; ?>/calculators/love" class="saas-mobile-link"><i class="bi bi-heart"></i> Love Calculator</a>
+            </div>
+            
+            <div class="saas-mobile-group" style="margin-top: 32px;">
+                <div class="saas-mobile-group-title">Preferences</div>
+                <button class="saas-mobile-link" style="width: 100%; border:none; background:none; cursor:pointer;" id="theme-toggle-mobile">
+                    <i class="bi bi-moon-stars-fill" id="theme-icon-mobile"></i> Toggle Dark Mode
+                </button>
+            </div>
+        </nav>
+        
+        <div style="margin-top: auto; display: flex; gap: 16px;">
+            <button class="saas-btn-primary" style="display: block; flex: 1;">Get Started</button>
+        </div>
+    </div>
+</div>

@@ -15,4 +15,19 @@ class Pages extends Controller {
         ];
         $this->view('pages/index', $data);
     }
+
+    public function about() {
+        $data = ['title' => 'About Us'];
+        $this->view('pages/about', $data);
+    }
+
+    public function terms() {
+        $data = ['title' => 'Terms of Use'];
+        $this->view('pages/terms', $data);
+    }
+
+    public function privacy() {
+        $data = ['title' => 'Privacy Policy'];
+        $this->view('pages/privacy', $data);
+    }
 }
