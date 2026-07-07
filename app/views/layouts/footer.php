@@ -74,28 +74,6 @@
 <script src="<?php echo URLROOT; ?>/assets/js/main.js?v=3.0"></script>
 <script src="<?php echo URLROOT; ?>/assets/js/calculators.js?v=3.0"></script>
 
-<script>
-    // Simple Dark Mode Toggle Logic
-    document.addEventListener('DOMContentLoaded', () => {
-        const toggle = document.getElementById('theme-toggle');
-        if(toggle) {
-            const icon = document.getElementById('theme-icon');
-            const html = document.documentElement;
-            
-            toggle.addEventListener('click', () => {
-                const isDark = html.getAttribute('data-bs-theme') === 'dark';
-                if(isDark) {
-                    html.setAttribute('data-bs-theme', 'light');
-                    icon.classList.remove('bi-sun-fill');
-                    icon.classList.add('bi-moon-stars-fill');
-                } else {
-                    html.setAttribute('data-bs-theme', 'dark');
-                    icon.classList.remove('bi-moon-stars-fill');
-                    icon.classList.add('bi-sun-fill');
-                }
-            });
-        }
-    });
-</script>
+
 </body>
 </html>

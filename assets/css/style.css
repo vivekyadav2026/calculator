@@ -241,6 +241,11 @@ body {
     color: var(--bs-gray-700);
 }
 
+.form-label.d-flex {
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
 [data-bs-theme="dark"] .form-label {
     color: var(--bs-gray-300);
 }
@@ -291,6 +296,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 }
@@ -299,6 +306,7 @@ body {
     font-size: 16px;
     font-weight: 500;
     margin: 0;
+    word-break: break-word;
 }
 
 .literal-calc-controls {

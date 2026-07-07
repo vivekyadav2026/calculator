@@ -187,7 +187,7 @@
 
                         <!-- Interactive SVG Gauge Chart -->
                         <div class="d-flex justify-content-center mb-4">
-                            <svg width="320" height="180" viewBox="0 0 240 130">
+                            <svg style="width: 100%; max-width: 320px; height: auto;" viewBox="0 0 240 130">
                                 <!-- Colors arcs for BMI Zones -->
                                 <!-- Underweight (15 to 18.5) -->
                                 <path d="M 20 120 A 100 100 0 0 1 29.5 77.4" fill="none" stroke="#f59e0b" stroke-width="20" />
