@@ -179,7 +179,7 @@
                     </a>
                 </li>
 
-                <li class="saas-nav-item">
+                <!-- <li class="saas-nav-item">
                     <a href="#" class="saas-nav-link" aria-haspopup="true" aria-expanded="false">
                         Pages <i class="bi bi-chevron-down saas-nav-icon"></i>
                     </a>
@@ -208,7 +208,7 @@
                     <a href="<?php echo URLROOT; ?>/calculators" class="saas-nav-link">
                         All Calculators
                     </a>
-                </li>
+                </li> -->
             </ul>
         </nav>
 
@@ -235,7 +235,7 @@
         </button>
     </div>
     
-    <div class="saas-mobile-body">
+    <!-- <div class="saas-mobile-body">
         <nav>
             <a href="<?php echo URLROOT; ?>/calculators" class="saas-mobile-link fw-bold mb-3">
                 <i class="bi bi-grid-fill me-2"></i> All Calculators
@@ -292,5 +292,5 @@
         <div style="margin-top: auto; display: flex; gap: 16px;">
             <button class="saas-btn-primary" style="display: block; flex: 1;">Get Started</button>
         </div>
-    </div>
+    </div> -->
 </div>

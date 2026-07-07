@@ -72,15 +72,15 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: linear-gradient(135deg, #3b0764 0%, #6b21a8 100%);
+  background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   --text-primary: #ffffff;
-  --text-secondary: #f3e8ff;
-  --brand-primary: #e9d5ff;
+  --text-secondary: #d1fae5;
+  --brand-primary: #a7f3d0;
 }
 
 [data-bs-theme="dark"] .saas-header {
-  background: linear-gradient(135deg, #2e0254 0%, #4c1d95 100%);
+  background: linear-gradient(135deg, #022c22 0%, #011f18 100%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -190,14 +190,14 @@
   pointer-events: none;
   --text-primary: #111827;
   --text-secondary: #4b5563;
-  --brand-primary: #6b21a8;
+  --brand-primary: #059669;
 }
 
 [data-bs-theme="dark"] .saas-mega-menu {
   background: #1F2937;
   --text-primary: #f9fafb;
   --text-secondary: #9ca3af;
-  --brand-primary: #c084fc;
+  --brand-primary: #34d399;
 }
 
 .saas-nav-item:hover .saas-mega-menu {
@@ -232,7 +232,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: rgba(107, 33, 168, 0.1);
+  background-color: rgba(16, 185, 129, 0.1);
   color: var(--brand-primary);
   border-radius: 8px;
   margin-right: 16px;
@@ -241,7 +241,7 @@
 }
 
 [data-bs-theme="dark"] .saas-mega-icon {
-  background-color: rgba(192, 132, 252, 0.15);
+  background-color: rgba(52, 211, 153, 0.15);
 }
 
 .saas-mega-content {
@@ -465,9 +465,9 @@
    FOOTER
    ========================================================================== */
 .saas-footer {
-  background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.15) 0%, transparent 60%), #090514;
+  background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.15) 0%, transparent 60%), #0b0f19;
   border-top: 1px solid transparent;
-  border-image: linear-gradient(to right, transparent, rgba(167, 139, 250, 0.25), transparent) 1;
+  border-image: linear-gradient(to right, transparent, rgba(52, 211, 153, 0.25), transparent) 1;
   padding: var(--space-10) var(--space-3) var(--space-4);
   color: #cbd5e1;
   --text-primary: #ffffff;
@@ -500,7 +500,7 @@
   display: inline-block;
   margin-bottom: 12px;
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, #ffffff 30%, #e9d5ff 100%);
+  background: linear-gradient(135deg, #ffffff 30%, #a7f3d0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: transform 0.3s ease;
@@ -539,7 +539,7 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  border: 2px solid #090514;
+  border: 2px solid #0b0f19;
   margin-right: -8px;
   transition: transform 0.2s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -593,8 +593,8 @@
 }
 
 .saas-input-group:focus-within {
-  border-color: #8b5cf6;
-  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.25), 0 4px 20px rgba(139, 92, 246, 0.1);
+  border-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25), 0 4px 20px rgba(16, 185, 129, 0.1);
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -615,7 +615,7 @@
 }
 
 .saas-newsletter-btn {
-  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
   color: #ffffff;
   border: none;
   padding: 10px 22px;
@@ -627,12 +627,12 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
 }
 
 .saas-newsletter-btn:hover {
-  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.4);
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  box-shadow: 0 4px 16px rgba(5, 150, 105, 0.4);
   transform: translateY(-1px);
 }
 
@@ -710,7 +710,7 @@
   bottom: -6px;
   width: 24px;
   height: 2px;
-  background-color: #8b5cf6;
+  background-color: #10b981;
   border-radius: 1px;
 }
 
@@ -727,7 +727,7 @@
 }
 
 .saas-footer-col ul li a:hover {
-  color: #c084fc;
+  color: #34d399;
   transform: translateX(4px);
 }
 
@@ -797,18 +797,18 @@
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 50%;
-  color: #a78bfa;
+  color: #34d399;
   font-size: 1.1rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
 }
 
 .saas-footer-socials a:hover {
-  background: rgba(139, 92, 246, 0.15);
-  border-color: #a78bfa;
+  background: rgba(16, 185, 129, 0.15);
+  border-color: #34d399;
   color: #ffffff;
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
 }
 
 /* ==========================================================================
@@ -907,12 +907,12 @@
 }
 
 .site-faq-section .accordion-button:not(.collapsed) {
-  color: #6b21a8 !important;
+  color: #059669 !important;
   border-bottom: 1px solid #f1f5f9;
 }
 
 [data-bs-theme="dark"] .site-faq-section .accordion-button:not(.collapsed) {
-  color: #c084fc !important;
+  color: #34d399 !important;
   border-bottom-color: #1e293b;
 }
 
