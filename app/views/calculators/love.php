@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/layouts/header.php'; ?>
+﻿<?php require APPROOT . '/views/layouts/header.php'; ?>
 
 <div class="container py-5">
     <nav aria-label="breadcrumb">
@@ -27,7 +27,7 @@
 
                     <form id="love-calculator-form">
                         <div class="mb-3">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Your Name</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Your Name</label>
                             <div class="input-group input-group-sm">
                                 <span class="input-group-text bg-light border-secondary-subtle"><i class="bi bi-person-fill text-muted"></i></span>
                                 <input type="text" class="form-control border-secondary-subtle fw-medium" id="love-name1-custom" placeholder="Your Name" value="Jack" required>
@@ -37,7 +37,7 @@
                         <div class="text-danger my-2 text-center"><i class="bi bi-heartbreak-fill fs-5"></i></div>
 
                         <div class="mb-3">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Partner's Name</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Partner's Name</label>
                             <div class="input-group input-group-sm">
                                 <span class="input-group-text bg-light border-secondary-subtle"><i class="bi bi-people-fill text-muted"></i></span>
                                 <input type="text" class="form-control border-secondary-subtle fw-medium" id="love-name2-custom" placeholder="Partner's Name" value="Rose" required>
@@ -69,11 +69,11 @@
                         <div class="p-3 rounded border mb-3 position-relative overflow-hidden" style="background-color: #ffe5e5; border-color: #dc3545 !important;">
                             <span class="text-danger d-block small mb-1 fw-bold text-uppercase" style="font-size: 0.75rem;">COMPATIBILITY SCORE</span>
                             <h2 class="fw-bold text-danger mb-1" id="res-love-score">0%</h2>
-                            <p class="fw-bold text-dark mb-0" style="font-size: 0.85rem;" id="res-love-msg">Enter names to begin</p>
+                            <p class="fw-bold  mb-0" style="font-size: 0.85rem;" id="res-love-msg">Enter names to begin</p>
                         </div>
 
                         <!-- Mini Stats Grid -->
-                        <h6 class="fw-bold text-start mb-2 text-dark" style="font-size: 0.8rem;">Relationship Dimensions</h6>
+                        <h6 class="fw-bold text-start mb-2 " style="font-size: 0.8rem;">Relationship Dimensions</h6>
                         <div class="row g-2 text-start small text-muted">
                             <div class="col-6">
                                 <div class="p-2 border rounded bg-light d-flex justify-content-between align-items-center">

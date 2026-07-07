@@ -1,7 +1,7 @@
-<?php require APPROOT . '/views/admin/layouts/header.php'; ?>
+﻿<?php require APPROOT . '/views/admin/layouts/header.php'; ?>
 
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h3 class="fw-bold mb-0 text-dark">Website Settings</h3>
+    <h3 class="fw-bold mb-0 ">Website Settings</h3>
 </div>
 
 <div class="row">
@@ -13,15 +13,15 @@
             <div class="card-body p-4">
                 <form>
                     <div class="mb-4">
-                        <label class="form-label fw-medium text-dark mb-1" style="font-size: 0.875rem;">Site Title</label>
+                        <label class="form-label fw-medium  mb-1" style="font-size: 0.875rem;">Site Title</label>
                         <input type="text" class="form-control" value="CalculatorTube" required>
                     </div>
                     <div class="mb-4">
-                        <label class="form-label fw-medium text-dark mb-1" style="font-size: 0.875rem;">System Email</label>
+                        <label class="form-label fw-medium  mb-1" style="font-size: 0.875rem;">System Email</label>
                         <input type="email" class="form-control" value="admin@calculatortube.com" required>
                     </div>
                     <div class="mb-4">
-                        <label class="form-label fw-medium text-dark mb-1" style="font-size: 0.875rem;">Default Theme</label>
+                        <label class="form-label fw-medium  mb-1" style="font-size: 0.875rem;">Default Theme</label>
                         <select class="form-select">
                             <option value="light" selected>Light Mode</option>
                             <option value="dark">Dark Mode</option>
@@ -52,15 +52,15 @@
                 <form action="<?php echo URLROOT; ?>/admin/settings" method="POST">
                     <input type="hidden" name="change_password" value="1">
                     <div class="mb-3">
-                        <label class="form-label fw-medium text-dark mb-1" style="font-size: 0.875rem;">Old Password</label>
+                        <label class="form-label fw-medium  mb-1" style="font-size: 0.875rem;">Old Password</label>
                         <input type="password" name="old_password" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label fw-medium text-dark mb-1" style="font-size: 0.875rem;">New Password</label>
+                        <label class="form-label fw-medium  mb-1" style="font-size: 0.875rem;">New Password</label>
                         <input type="password" name="new_password" class="form-control" required>
                     </div>
                     <div class="mb-4">
-                        <label class="form-label fw-medium text-dark mb-1" style="font-size: 0.875rem;">Confirm New Password</label>
+                        <label class="form-label fw-medium  mb-1" style="font-size: 0.875rem;">Confirm New Password</label>
                         <input type="password" name="confirm_password" class="form-control" required>
                     </div>
                     <div class="mt-4 pt-3 border-top" style="border-color: #E5E7EB;">

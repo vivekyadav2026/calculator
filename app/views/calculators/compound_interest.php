@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/layouts/header.php'; ?>
+﻿<?php require APPROOT . '/views/layouts/header.php'; ?>
 
 <div class="container py-5">
     <nav aria-label="breadcrumb">
@@ -24,7 +24,7 @@
                     <form id="ci-calculator-form">
                         <!-- Principal Amount -->
                         <div class="mb-3">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Principal Amount (P)</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Principal Amount (P)</label>
                             <div class="input-group input-group-sm mt-1">
                                 <span class="input-group-text bg-light border-secondary-subtle">₹</span>
                                 <input type="number" class="form-control border-secondary-subtle fw-medium" id="ci-p-custom" value="10000" min="0" required>
@@ -33,7 +33,7 @@
 
                         <!-- Rate of Interest -->
                         <div class="mb-3">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Rate of Interest (R) % p.a.</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Rate of Interest (R) % p.a.</label>
                             <div class="input-group input-group-sm mt-1">
                                 <input type="number" class="form-control border-secondary-subtle fw-medium" id="ci-r-custom" value="8" step="0.1" min="0" required>
                                 <span class="input-group-text bg-light border-secondary-subtle">%</span>
@@ -42,7 +42,7 @@
 
                         <!-- Time Period -->
                         <div class="mb-3">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Time Period (t) in Years</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Time Period (t) in Years</label>
                             <div class="input-group input-group-sm mt-1">
                                 <input type="number" class="form-control border-secondary-subtle fw-medium" id="ci-t-custom" value="5" step="1" min="1" required>
                                 <span class="input-group-text bg-light border-secondary-subtle">Years</span>
@@ -51,7 +51,7 @@
 
                         <!-- Compounding Frequency -->
                         <div class="mb-3">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Compounding Frequency (n)</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Compounding Frequency (n)</label>
                             <select class="form-select form-select-sm bg-light border-secondary-subtle" id="ci-n-custom">
                                 <option value="1">Annually</option>
                                 <option value="2">Semi-Annually</option>
@@ -79,19 +79,19 @@
                     
                     <div class="row g-2 mb-3">
                         <div class="col-md-4">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Principal Amount</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Principal Amount</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main text-dark fs-5 text-end" id="res-ci-principal">₹0</div>
+                                <div class="literal-display-main  fs-5 text-end" id="res-ci-principal">₹0</div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Interest Earned</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Interest Earned</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
                                 <div class="literal-display-main text-success fs-5 text-end" id="res-ci-interest">₹0</div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Total Value</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Total Value</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0; background-color: #f8f9ff;">
                                 <div class="literal-display-main text-primary fs-5 text-end" id="res-ci-total">₹0</div>
                             </div>
@@ -102,14 +102,14 @@
                     <div class="row g-2 mt-2">
                         <!-- Bar Chart -->
                         <div class="col-md-7 p-2 border-secondary-subtle" style="border: 1px solid #ccc; background: #fdfdfd; border-right: none;">
-                            <h6 class="fw-bold text-center mb-1 text-dark" style="font-size: 0.8rem;">Growth Projections</h6>
+                            <h6 class="fw-bold text-center mb-1 " style="font-size: 0.8rem;">Growth Projections</h6>
                             <div style="height: 150px; position: relative;">
                                 <canvas id="ciBarChart"></canvas>
                             </div>
                         </div>
                         <!-- Pie Chart -->
                         <div class="col-md-5 p-2 border-secondary-subtle" style="border: 1px solid #ccc; background: #fdfdfd;">
-                            <h6 class="fw-bold text-center mb-1 text-dark" style="font-size: 0.8rem;">Portfolio Split</h6>
+                            <h6 class="fw-bold text-center mb-1 " style="font-size: 0.8rem;">Portfolio Split</h6>
                             <div style="height: 150px; position: relative;" class="d-flex justify-content-center">
                                 <canvas id="ciPieChartCustom"></canvas>
                             </div>

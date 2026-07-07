@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/layouts/header.php'; ?>
+﻿<?php require APPROOT . '/views/layouts/header.php'; ?>
 
 <div class="container py-5">
     <nav aria-label="breadcrumb">
@@ -24,7 +24,7 @@
                     <form id="fd-calculator-form">
                         <!-- Deposit Amount -->
                         <div class="mb-3">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Deposit Amount</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Deposit Amount</label>
                             <div class="input-group input-group-sm mt-1">
                                 <span class="input-group-text bg-light border-secondary-subtle">₹</span>
                                 <input type="number" class="form-control border-secondary-subtle fw-medium" id="fd-p-custom" value="100000" min="0" required>
@@ -33,7 +33,7 @@
 
                         <!-- Interest Rate -->
                         <div class="mb-3">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Rate of Interest (%)</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Rate of Interest (%)</label>
                             <div class="input-group input-group-sm mt-1">
                                 <input type="number" class="form-control border-secondary-subtle fw-medium" id="fd-r-custom" value="7" step="0.1" min="0" required>
                                 <span class="input-group-text bg-light border-secondary-subtle">%</span>
@@ -42,7 +42,7 @@
 
                         <!-- Time Period -->
                         <div class="mb-3">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Time Period</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Time Period</label>
                             <div class="input-group input-group-sm mt-1">
                                 <input type="number" class="form-control border-secondary-subtle fw-medium" id="fd-t-custom" value="5" step="1" min="1" required>
                                 <select class="form-select bg-light border-secondary-subtle" id="fd-t-type-custom" style="max-width: 120px;">
@@ -71,19 +71,19 @@
                     
                     <div class="row g-2 mb-3">
                         <div class="col-md-4">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Invested Amount</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Invested Amount</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main text-dark fs-5 text-end" id="res-fd-principal">₹0</div>
+                                <div class="literal-display-main  fs-5 text-end" id="res-fd-principal">₹0</div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Interest Earned</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Interest Earned</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
                                 <div class="literal-display-main text-success fs-5 text-end" id="res-fd-interest">₹0</div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Maturity Value</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Maturity Value</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0; background-color: #f8f9ff;">
                                 <div class="literal-display-main text-warning fs-5 text-end" id="res-fd-total">₹0</div>
                             </div>
@@ -94,14 +94,14 @@
                     <div class="row g-2 mt-2">
                         <!-- Bar Chart -->
                         <div class="col-md-7 p-2 border-secondary-subtle" style="border: 1px solid #ccc; background: #fdfdfd; border-right: none;">
-                            <h6 class="fw-bold text-center mb-1 text-dark" style="font-size: 0.8rem;">Maturity Projection</h6>
+                            <h6 class="fw-bold text-center mb-1 " style="font-size: 0.8rem;">Maturity Projection</h6>
                             <div style="height: 150px; position: relative;">
                                 <canvas id="fdBarChart"></canvas>
                             </div>
                         </div>
                         <!-- Pie Chart -->
                         <div class="col-md-5 p-2 border-secondary-subtle" style="border: 1px solid #ccc; background: #fdfdfd;">
-                            <h6 class="fw-bold text-center mb-1 text-dark" style="font-size: 0.8rem;">Investment Split</h6>
+                            <h6 class="fw-bold text-center mb-1 " style="font-size: 0.8rem;">Investment Split</h6>
                             <div style="height: 150px; position: relative;" class="d-flex justify-content-center">
                                 <canvas id="fdPieChartCustom"></canvas>
                             </div>

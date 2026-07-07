@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/layouts/header.php'; ?>
+﻿<?php require APPROOT . '/views/layouts/header.php'; ?>
 
 <div class="container py-5">
     <nav aria-label="breadcrumb">
@@ -20,12 +20,12 @@
                         <span class="literal-calc-icon">×</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style=" border-radius: 0 0 4px 4px;">
                     <form id="india-tax-form">
                         <!-- Age Category & Financial Year -->
                         <div class="row g-2 mb-3">
                             <div class="col-md-6">
-                                <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Age Category</label>
+                                <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Age Category</label>
                                 <select class="form-select form-select-sm border-secondary-subtle fw-medium" id="tax-age-category">
                                     <option value="individual" selected>Individual (&lt; 60 Years)</option>
                                     <option value="senior">Senior Citizen (60–80 Years)</option>
@@ -33,7 +33,7 @@
                                 </select>
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Financial Year</label>
+                                <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Financial Year</label>
                                 <select class="form-select form-select-sm border-secondary-subtle fw-medium" id="tax-year">
                                     <option value="2023" selected>FY 2023-24 (AY 2024-25)</option>
                                 </select>
@@ -44,41 +44,41 @@
                         <div class="mb-3">
                             <div class="d-flex align-items-center gap-2 mb-2">
                                 <i class="bi bi-cash-stack text-success fs-6"></i>
-                                <span class="fw-bold text-dark" style="font-size: 0.9rem;">Income Details</span>
+                                <span class="fw-bold " style="font-size: 0.9rem;">Income Details</span>
                             </div>
                             <div class="row g-2">
                                 <div class="col-md-6">
                                     <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Gross Salary / Wages</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <span class="input-group-text bg-body-tertiary border-secondary-subtle">₹</span>
                                         <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-salary" value="1200000" min="0">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Income from House Property</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <span class="input-group-text bg-body-tertiary border-secondary-subtle">₹</span>
                                         <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-house-rent" value="0" min="0">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Interest Income (FD/Savings)</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <span class="input-group-text bg-body-tertiary border-secondary-subtle">₹</span>
                                         <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-interest" value="15000" min="0">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Capital Gains</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <span class="input-group-text bg-body-tertiary border-secondary-subtle">₹</span>
                                         <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-capgains" value="0" min="0">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Other Income (Business, Freelance)</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <span class="input-group-text bg-body-tertiary border-secondary-subtle">₹</span>
                                         <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-other" value="0" min="0">
                                     </div>
                                 </div>
@@ -89,49 +89,49 @@
                         <div class="mb-3">
                             <div class="d-flex align-items-center gap-2 mb-2">
                                 <i class="bi bi-shield-check text-primary fs-6"></i>
-                                <span class="fw-bold text-dark" style="font-size: 0.9rem;">Deductions (Old Regime)</span>
+                                <span class="fw-bold " style="font-size: 0.9rem;">Deductions (Old Regime)</span>
                             </div>
                             
                             <div class="row g-2">
                                 <div class="col-md-6">
                                     <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Section 80C Investments</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <span class="input-group-text bg-body-tertiary border-secondary-subtle">₹</span>
                                         <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-80c" value="150000" placeholder="Max ₹1,50,000" min="0" max="150000">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Section 80D (Health)</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <span class="input-group-text bg-body-tertiary border-secondary-subtle">₹</span>
                                         <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-80d" value="25000" placeholder="e.g. ₹25,000" min="0">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">HRA Exemption Claimed</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <span class="input-group-text bg-body-tertiary border-secondary-subtle">₹</span>
                                         <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-hra" value="120000" placeholder="Rent Exemption" min="0">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Home Loan Interest (24b)</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <span class="input-group-text bg-body-tertiary border-secondary-subtle">₹</span>
                                         <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-interest-24b" value="0" placeholder="Max ₹2,00,000" min="0">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Education Loan (80E)</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <span class="input-group-text bg-body-tertiary border-secondary-subtle">₹</span>
                                         <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-80e" value="0" min="0">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Other Deductions (80G, NPS)</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <span class="input-group-text bg-body-tertiary border-secondary-subtle">₹</span>
                                         <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-other-deductions" value="0" min="0">
                                     </div>
                                 </div>
@@ -157,7 +157,7 @@
                         <span class="literal-calc-icon">×</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style=" border-radius: 0 0 4px 4px;">
                     
                     <div>
                         <!-- Side by Side Regimes -->
@@ -183,38 +183,38 @@
                             </div>
                             <div>
                                 <span class="fw-bold text-success-emphasis d-block" id="tax-rec-title" style="font-size: 0.85rem;">Regime Recommendation</span>
-                                <span class="text-muted" style="font-size: 0.75rem;" id="tax-rec-desc">Calculating...</span>
+                                <span class="text-secondary" style="font-size: 0.75rem;" id="tax-rec-desc">Calculating...</span>
                             </div>
                         </div>
 
                         <!-- Key Figures Table -->
                         <div class="list-group list-group-flush mb-3 bg-white border rounded shadow-sm p-2" style="font-size: 0.85rem;">
                             <div class="list-group-item d-flex justify-content-between align-items-center py-1 border-0">
-                                <span class="text-dark fw-bold">Total Gross Income</span>
+                                <span class=" fw-bold">Total Gross Income</span>
                                 <span class="fw-semibold text-primary" id="res-gross-income">₹0</span>
                             </div>
                             <div class="list-group-item d-flex justify-content-between align-items-center py-1 border-bottom border-light">
-                                <span class="text-muted">Standard Deduction</span>
+                                <span class="text-secondary">Standard Deduction</span>
                                 <span class="fw-semibold text-danger">₹50,000</span>
                             </div>
                             <div class="list-group-item d-flex justify-content-between align-items-center py-1 border-bottom border-light">
-                                <span class="text-muted">Old Deductions Claimed</span>
+                                <span class="text-secondary">Old Deductions Claimed</span>
                                 <span class="fw-semibold text-danger" id="res-old-deductions">₹0</span>
                             </div>
                             <div class="list-group-item d-flex justify-content-between align-items-center py-1 border-bottom border-light">
-                                <span class="text-dark fw-bold">Taxable Income (New)</span>
+                                <span class=" fw-bold">Taxable Income (New)</span>
                                 <span class="fw-bold text-info" id="res-taxable-new">₹0</span>
                             </div>
                             <div class="list-group-item d-flex justify-content-between align-items-center py-1 border-0">
-                                <span class="text-dark fw-bold">Taxable Income (Old)</span>
+                                <span class=" fw-bold">Taxable Income (Old)</span>
                                 <span class="fw-bold text-warning-emphasis" id="res-taxable-old">₹0</span>
                             </div>
                         </div>
                     </div>        
                         <!-- Bracket Breakdown Table for New Regime -->
-                        <h6 class="fw-bold mb-2 text-dark">New Regime – Slab Calculations</h6>
+                        <h6 class="fw-bold mb-2 ">New Regime – Slab Calculations</h6>
                         <div class="table-responsive rounded border bg-white shadow-sm">
-                            <table class="table table-hover align-middle mb-0 small text-muted">
+                            <table class="table table-hover align-middle mb-0 small text-secondary">
                                 <thead class="table-light text-body border-bottom">
                                     <tr>
                                         <th>Tax Slab</th>
@@ -225,7 +225,7 @@
                                 <tbody id="tax-slab-breakdown-body">
                                     <!-- Dynamic Rows -->
                                 </tbody>
-                                <tfoot class="bg-light fw-bold text-dark border-top">
+                                <tfoot class="bg-body-tertiary fw-bold  border-top">
                                     <tr>
                                         <td colspan="2">Sub-total Tax (New Regime)</td>
                                         <td class="text-end" id="tax-subtotal-new">₹0</td>
@@ -253,14 +253,14 @@
             <div class="card shadow-none border rounded-4">
                 <div class="card-body p-4 p-md-5">
                     <h2 class="fw-bold h3 mb-4 text-body border-bottom pb-2">What is Income Tax?</h2>
-                    <p class="text-muted">Income tax is a direct tax levied by the government on the income earned by individuals, Hindu Undivided Families (HUFs), companies, firms, and other entities within a financial year. In India, income tax is administered by the Central Board of Direct Taxes (CBDT) under the authority of the Income Tax Act, 1961. It is one of the largest sources of revenue for the Indian government, alongside Goods and Services Tax (GST). The tax collected is used to fund public infrastructure, national defense, social welfare schemes, healthcare, and education.</p>
-                    <p class="text-muted">Income for the purposes of taxation is classified under five distinct heads under the Income Tax Act: (1) Salary Income — remuneration received from an employer, including allowances, perquisites, and benefits; (2) Income from House Property — rent received from owned properties, reduced by the municipal taxes paid and a standard deduction of 30%; (3) Profits and Gains from Business or Profession — net profits earned from any trade, commerce, or professional service; (4) Capital Gains — profits realized from the transfer or sale of capital assets like stocks, mutual funds, real estate, or gold; and (5) Income from Other Sources — interest income, dividend income, lottery winnings, and other residual income that doesn't fall under any previous category.</p>
+                    <p class="text-secondary">Income tax is a direct tax levied by the government on the income earned by individuals, Hindu Undivided Families (HUFs), companies, firms, and other entities within a financial year. In India, income tax is administered by the Central Board of Direct Taxes (CBDT) under the authority of the Income Tax Act, 1961. It is one of the largest sources of revenue for the Indian government, alongside Goods and Services Tax (GST). The tax collected is used to fund public infrastructure, national defense, social welfare schemes, healthcare, and education.</p>
+                    <p class="text-secondary">Income for the purposes of taxation is classified under five distinct heads under the Income Tax Act: (1) Salary Income — remuneration received from an employer, including allowances, perquisites, and benefits; (2) Income from House Property — rent received from owned properties, reduced by the municipal taxes paid and a standard deduction of 30%; (3) Profits and Gains from Business or Profession — net profits earned from any trade, commerce, or professional service; (4) Capital Gains — profits realized from the transfer or sale of capital assets like stocks, mutual funds, real estate, or gold; and (5) Income from Other Sources — interest income, dividend income, lottery winnings, and other residual income that doesn't fall under any previous category.</p>
 
                     <h2 class="fw-bold h3 mt-5 mb-4 text-body border-bottom pb-2">New Tax Regime vs. Old Tax Regime</h2>
-                    <p class="text-muted">Since Budget 2020, the Indian government introduced a new optional tax regime offering lower slab rates but eliminating most deductions and exemptions. From FY 2023-24 (Assessment Year 2024-25), as announced in Budget 2023, the New Tax Regime has been made the <strong>default regime</strong>. Taxpayers must now explicitly opt out and file a declaration to choose the Old Regime. The following detailed comparison clarifies the key differences:</p>
+                    <p class="text-secondary">Since Budget 2020, the Indian government introduced a new optional tax regime offering lower slab rates but eliminating most deductions and exemptions. From FY 2023-24 (Assessment Year 2024-25), as announced in Budget 2023, the New Tax Regime has been made the <strong>default regime</strong>. Taxpayers must now explicitly opt out and file a declaration to choose the Old Regime. The following detailed comparison clarifies the key differences:</p>
 
                     <div class="table-responsive mb-4">
-                        <table class="table table-bordered text-muted">
+                        <table class="table table-bordered text-secondary">
                             <thead class="table-light text-body">
                                 <tr>
                                     <th>Feature</th>
@@ -310,7 +310,7 @@
 
                     <h2 class="fw-bold h3 mt-5 mb-4 text-body border-bottom pb-2">New Tax Regime – Slab Rates (FY 2023-24)</h2>
                     <div class="table-responsive mb-4">
-                        <table class="table table-bordered text-muted">
+                        <table class="table table-bordered text-secondary">
                             <thead class="table-light text-body">
                                 <tr>
                                     <th>Annual Income Slab</th>

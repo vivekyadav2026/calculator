@@ -181,13 +181,13 @@
                 <div class="category-icon-wrapper" style="color: #4F46E5;">
                     <i class="bi bi-bank fs-4"></i>
                 </div>
-                <h3 class="category-title" id="financial" style="color: #000000;">Financial & Banking</h3>
+                <h3 class="category-title" id="financial">Financial & Banking</h3>
                 <div class="d-flex flex-column gap-2">
-                    <a href="<?php echo URLROOT; ?>/emi-calculator" class="category-link" style="color: #000000;">EMI Calculator</a>
-                    <a href="<?php echo URLROOT; ?>/home-loan" class="category-link" style="color: #000000;">Home Loan</a>
-                    <a href="<?php echo URLROOT; ?>/car-loan" class="category-link" style="color: #000000;">Car Loan</a>
-                    <a href="<?php echo URLROOT; ?>/personal-loan" class="category-link" style="color: #000000;">Personal Loan</a>
-                    <a href="<?php echo URLROOT; ?>/fd-calculator" class="category-link" style="color: #000000;">FD Calculator</a>
+                    <a href="<?php echo URLROOT; ?>/emi-calculator" class="category-link">EMI Calculator</a>
+                    <a href="<?php echo URLROOT; ?>/home-loan-calculator" class="category-link">Home Loan</a>
+                    <a href="<?php echo URLROOT; ?>/car-loan-calculator" class="category-link">Car Loan</a>
+                    <a href="<?php echo URLROOT; ?>/personal-loan-calculator" class="category-link">Personal Loan</a>
+                    <a href="<?php echo URLROOT; ?>/fd-calculator" class="category-link">FD Calculator</a>
                 </div>
             </div>
         </div>
@@ -198,13 +198,13 @@
                 <div class="category-icon-wrapper" style="color: #10B981;">
                     <i class="bi bi-graph-up-arrow fs-4"></i>
                 </div>
-                <h3 class="category-title" style="color: #000000;">Investment & Tax</h3>
+                <h3 class="category-title">Investment & Tax</h3>
                 <div class="d-flex flex-column gap-2">
-                    <a href="<?php echo URLROOT; ?>/sip-calculator" class="category-link" style="color: #000000;">SIP Calculator</a>
-                    <a href="<?php echo URLROOT; ?>/compound-interest" class="category-link" style="color: #000000;">Compound Interest</a>
-                    <a href="<?php echo URLROOT; ?>/simple-interest" class="category-link" style="color: #000000;">Simple Interest</a>
-                    <a href="<?php echo URLROOT; ?>/income-tax" class="category-link" style="color: #000000;">Income Tax</a>
-                    <a href="<?php echo URLROOT; ?>/gst-calculator" class="category-link" style="color: #000000;">GST Calculator</a>
+                    <a href="<?php echo URLROOT; ?>/sip-calculator" class="category-link">SIP Calculator</a>
+                    <a href="<?php echo URLROOT; ?>/compound-interest-calculator" class="category-link">Compound Interest</a>
+                    <a href="<?php echo URLROOT; ?>/simple-interest-calculator" class="category-link">Simple Interest</a>
+                    <a href="<?php echo URLROOT; ?>/income-tax-calculator" class="category-link">Income Tax</a>
+                    <a href="<?php echo URLROOT; ?>/gst-calculator" class="category-link">GST Calculator</a>
                 </div>
             </div>
         </div>
@@ -215,10 +215,10 @@
                 <div class="category-icon-wrapper" style="color: #EF4444;">
                     <i class="bi bi-activity fs-4"></i>
                 </div>
-                <h3 class="category-title" id="health" style="color: #000000;">Health & Fitness</h3>
+                <h3 class="category-title" id="health">Health & Fitness</h3>
                 <div class="d-flex flex-column gap-2">
-                    <a href="<?php echo URLROOT; ?>/bmi-calculator" class="category-link" style="color: #000000;">BMI Calculator</a>
-                    <a href="<?php echo URLROOT; ?>/calorie-calculator" class="category-link" style="color: #000000;">Calorie Calculator</a>
+                    <a href="<?php echo URLROOT; ?>/bmi-calculator" class="category-link">BMI Calculator</a>
+                    <a href="<?php echo URLROOT; ?>/calorie-calculator" class="category-link">Calorie Calculator</a>
                 </div>
             </div>
         </div>
@@ -229,11 +229,11 @@
                 <div class="category-icon-wrapper" style="color: #F59E0B;">
                     <i class="bi bi-calculator fs-4"></i>
                 </div>
-                <h3 class="category-title" id="math" style="color: #000000;">Math & Others</h3>
+                <h3 class="category-title" id="math">Math & Others</h3>
                 <div class="d-flex flex-column gap-2">
-                    <a href="<?php echo URLROOT; ?>/percentage-calculator" class="category-link" style="color: #000000;">Percentage</a>
-                    <a href="<?php echo URLROOT; ?>/age-calculator" class="category-link" style="color: #000000;">Age Calculator</a>
-                    <a href="<?php echo URLROOT; ?>/date-calculator" class="category-link" style="color: #000000;">Date Calculator</a>
+                    <a href="<?php echo URLROOT; ?>/percentage-calculator" class="category-link">Percentage</a>
+                    <a href="<?php echo URLROOT; ?>/age-calculator" class="category-link">Age Calculator</a>
+                    <a href="<?php echo URLROOT; ?>/date-calculator" class="category-link">Date Calculator</a>
                 </div>
             </div>
         </div>
@@ -242,40 +242,40 @@
 
     <!-- View All Button -->
     <div class="text-center mt-5 pt-3">
-        <a href="<?php echo URLROOT; ?>/calculators" class="btn btn-outline-secondary px-5 py-2 fw-medium rounded-pill" style="border-color: var(--border-color); color: #000000;">View All Calculators <i class="bi bi-arrow-right ms-2"></i></a>
+        <a href="<?php echo URLROOT; ?>/calculators" class="btn btn-outline-secondary px-5 py-2 fw-medium rounded-pill" style="border-color: var(--border-color); ">View All Calculators <i class="bi bi-arrow-right ms-2"></i></a>
     </div>
 </section>
 
 <!-- SEO & Information Content Section -->
-<section class="bg-light py-5 border-top border-bottom" style="border-color: #E5E7EB;">
+<section class="bg-body-tertiary py-5 border-top border-bottom border-secondary-subtle">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10">
-                <h2 class="fw-bold text-center mb-5 text-dark" style="font-size: 2rem; color: #000000 !important;">Your Go-To Hub for Financial, Health, and Math Calculations</h2>
+                <h2 class="fw-bold text-center mb-5" style="font-size: 2rem;">Your Go-To Hub for Financial, Health, and Math Calculations</h2>
                 
                 <div class="row g-4">
                     <div class="col-md-6">
                         <div class="p-3">
-                            <h4 class="fw-bold mb-3 text-dark" style="color: #000000 !important;"><i class="bi bi-patch-check-fill text-primary me-2"></i> Easy Financial Decisions</h4>
-                            <p class="text-muted" style="line-height: 1.7; font-size: 0.95rem; color: #000000 !important;">Planning a loan or starting a mutual fund investment? Use our EMI Calculator, SIP Calculator, and Loan comparison tools to estimate monthly payments, interest breakups, and wealth projections instantly. Secure your financial future with precise calculations.</p>
+                            <h4 class="fw-bold mb-3"><i class="bi bi-patch-check-fill text-primary me-2"></i> Easy Financial Decisions</h4>
+                            <p class="text-secondary" style="line-height: 1.7; font-size: 0.95rem;">Planning a loan or starting a mutual fund investment? Use our EMI Calculator, SIP Calculator, and Loan comparison tools to estimate monthly payments, interest breakups, and wealth projections instantly. Secure your financial future with precise calculations.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="p-3">
-                            <h4 class="fw-bold mb-3 text-dark" style="color: #000000 !important;"><i class="bi bi-heart-pulse-fill text-danger me-2"></i> Track Health & Fitness</h4>
-                            <p class="text-muted" style="line-height: 1.7; font-size: 0.95rem; color: #000000 !important;">Stay on top of your health goals. Our BMI Calculator and Calorie Calculator help you monitor body mass index, ideal weights, and daily caloric needs based on activity levels. Manage your lifestyle with science-backed numbers.</p>
+                            <h4 class="fw-bold mb-3"><i class="bi bi-heart-pulse-fill text-danger me-2"></i> Track Health & Fitness</h4>
+                            <p class="text-secondary" style="line-height: 1.7; font-size: 0.95rem;">Stay on top of your health goals. Our BMI Calculator and Calorie Calculator help you monitor body mass index, ideal weights, and daily caloric needs based on activity levels. Manage your lifestyle with science-backed numbers.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="p-3">
-                            <h4 class="fw-bold mb-3 text-dark" style="color: #000000 !important;"><i class="bi bi-percent text-success me-2"></i> Quick Math & Date Operations</h4>
-                            <p class="text-muted" style="line-height: 1.7; font-size: 0.95rem; color: #000000 !important;">Simplify daily percentage growth, age calculations, or find the exact days between dates using our Date Calculator. Perfect for office work, school projects, or tracking important deadlines.</p>
+                            <h4 class="fw-bold mb-3"><i class="bi bi-percent text-success me-2"></i> Quick Math & Date Operations</h4>
+                            <p class="text-secondary" style="line-height: 1.7; font-size: 0.95rem;">Simplify daily percentage growth, age calculations, or find the exact days between dates using our Date Calculator. Perfect for office work, school projects, or tracking important deadlines.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="p-3">
-                            <h4 class="fw-bold mb-3 text-dark" style="color: #000000 !important;"><i class="bi bi-shield-lock-fill text-warning me-2"></i> Privacy First & No Sign-ups</h4>
-                            <p class="text-muted" style="line-height: 1.7; font-size: 0.95rem; color: #000000 !important;">We value your data. Unlike other online tools, all of our calculations run completely locally inside your web browser. There are no registration popups, no tracking cookies, and your inputs are never sent to external servers.</p>
+                            <h4 class="fw-bold mb-3"><i class="bi bi-shield-lock-fill text-warning me-2"></i> Privacy First & No Sign-ups</h4>
+                            <p class="text-secondary" style="line-height: 1.7; font-size: 0.95rem;">We value your data. Unlike other online tools, all of our calculations run completely locally inside your web browser. There are no registration popups, no tracking cookies, and your inputs are never sent to external servers.</p>
                         </div>
                     </div>
                 </div>

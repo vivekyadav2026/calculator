@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
@@ -74,9 +74,9 @@
                     <div class="card-body p-4 p-md-5">
                         <div class="text-center mb-4 pb-2">
                             <div class="mb-3 d-inline-flex align-items-center justify-content-center bg-light rounded-circle" style="width: 56px; height: 56px; border: 1px solid #E5E7EB;">
-                                <i class="bi bi-shield-lock-fill text-dark fs-3"></i>
+                                <i class="bi bi-shield-lock-fill  fs-3"></i>
                             </div>
-                            <h4 class="fw-bold text-dark">Welcome back</h4>
+                            <h4 class="fw-bold ">Welcome back</h4>
                             <p class="small text-light-muted">Sign in to manage your calculator site</p>
                         </div>
                         <form action="<?php echo URLROOT; ?>/admin/login" method="POST">

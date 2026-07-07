@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/layouts/header.php'; ?>
+﻿<?php require APPROOT . '/views/layouts/header.php'; ?>
 
 <div class="container py-5">
     <nav aria-label="breadcrumb">
@@ -11,8 +11,8 @@
 
     <div class="row mb-4">
         <div class="col-12">
-            <h1 class="display-5 fw-bold mb-2" style="color: #000000;">Home Loan EMI Calculator</h1>
-            <p class="text-muted lead" style="color: #000000 !important;">Calculate housing loan EMIs, total interest payable, and view yearly amortization schedule.</p>
+            <h1 class="display-5 fw-bold mb-2">Home Loan EMI Calculator</h1>
+            
         </div>
     </div>
 
@@ -31,7 +31,7 @@
                     <form id="home-loan-calculator-form">
                         <!-- Loan Amount -->
                         <div class="mb-3">
-                            <label class="form-label d-flex justify-content-between text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">
+                            <label class="form-label d-flex justify-content-between  mb-1" style="font-size: 0.9rem; font-weight: 600;">
                                 <span>Home Loan Amount</span>
                                 <span class="text-primary" id="hl-amount-val">₹3,500,000</span>
                             </label>
@@ -44,7 +44,7 @@
 
                         <!-- Interest Rate -->
                         <div class="mb-3">
-                            <label class="form-label d-flex justify-content-between text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">
+                            <label class="form-label d-flex justify-content-between  mb-1" style="font-size: 0.9rem; font-weight: 600;">
                                 <span>Interest Rate (p.a.)</span>
                                 <span class="text-success" id="hl-rate-val">8.5%</span>
                             </label>
@@ -57,7 +57,7 @@
 
                         <!-- Tenure -->
                         <div class="mb-3">
-                            <label class="form-label d-flex justify-content-between text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">
+                            <label class="form-label d-flex justify-content-between  mb-1" style="font-size: 0.9rem; font-weight: 600;">
                                 <span>Loan Tenure</span>
                                 <span class="text-warning" id="hl-tenure-val">20 Years</span>
                             </label>
@@ -89,25 +89,25 @@
                     
                     <div class="row g-2 mb-3">
                         <div class="col-md-6">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Monthly Home EMI</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Monthly Home EMI</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
                                 <div class="literal-display-main text-primary fs-5 text-end" id="res-hl-monthly">₹0</div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Total Principal</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Total Principal</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main text-dark fs-5 text-end" id="res-hl-principal">₹0</div>
+                                <div class="literal-display-main  fs-5 text-end" id="res-hl-principal">₹0</div>
                             </div>
                         </div>
                         <div class="col-md-6 mt-2">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Total Interest</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Total Interest</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
                                 <div class="literal-display-main text-danger fs-5 text-end" id="res-hl-interest">₹0</div>
                             </div>
                         </div>
                         <div class="col-md-6 mt-2">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Amount Payable</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Amount Payable</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0; background-color: #f8f9ff;">
                                 <div class="literal-display-main text-success fs-5 text-end" id="res-hl-total">₹0</div>
                             </div>
@@ -118,14 +118,14 @@
                     <div class="row g-2 mt-2">
                         <!-- Bar Chart -->
                         <div class="col-md-7 p-2 border-secondary-subtle" style="border: 1px solid #ccc; background: #fdfdfd; border-right: none;">
-                            <h6 class="fw-bold text-center mb-1 text-dark" style="font-size: 0.8rem;">Amortization Growth</h6>
+                            <h6 class="fw-bold text-center mb-1 " style="font-size: 0.8rem;">Amortization Growth</h6>
                             <div style="height: 150px; position: relative;">
                                 <canvas id="hlBarChartCustom"></canvas>
                             </div>
                         </div>
                         <!-- Pie Chart -->
                         <div class="col-md-5 p-2 border-secondary-subtle" style="border: 1px solid #ccc; background: #fdfdfd;">
-                            <h6 class="fw-bold text-center mb-1 text-dark" style="font-size: 0.8rem;">Payment Breakup</h6>
+                            <h6 class="fw-bold text-center mb-1 " style="font-size: 0.8rem;">Payment Breakup</h6>
                             <div style="height: 150px; position: relative;" class="d-flex justify-content-center">
                                 <canvas id="hlPieChartCustom"></canvas>
                             </div>

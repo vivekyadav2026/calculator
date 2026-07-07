@@ -9,13 +9,13 @@ class App {
 
         $slugMap = [
             'emi-calculator' => 'emi',
-            'home-loan' => 'home_loan',
-            'car-loan' => 'car_loan',
-            'personal-loan' => 'personal_loan',
+            'home-loan-calculator' => 'home_loan',
+            'car-loan-calculator' => 'car_loan',
+            'personal-loan-calculator' => 'personal_loan',
             'sip-calculator' => 'sip',
-            'compound-interest' => 'compound_interest',
-            'simple-interest' => 'simple_interest',
-            'income-tax' => 'income_tax',
+            'compound-interest-calculator' => 'compound_interest',
+            'simple-interest-calculator' => 'simple_interest',
+            'income-tax-calculator' => 'income_tax',
             'fd-calculator' => 'fd',
             'gst-calculator' => 'gst',
             'bmi-calculator' => 'bmi',
@@ -25,6 +25,13 @@ class App {
             'love-calculator' => 'love',
             'date-calculator' => 'date',
         ];
+
+        if (isset($url[0]) && $url[0] === 'sitemap.xml') {
+            require_once APPROOT . '/controllers/Sitemap.php';
+            $sitemap = new Sitemap();
+            $sitemap->index($slugMap);
+            return;
+        }
 
         if (isset($url[0]) && isset($slugMap[$url[0]])) {
             $this->currentController = 'Calculators';

@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/layouts/header.php'; ?>
+﻿<?php require APPROOT . '/views/layouts/header.php'; ?>
 
 <main class="container py-5 my-3">
     <!-- Breadcrumb -->
@@ -13,8 +13,8 @@
     <!-- Page Heading -->
     <div class="row mb-4">
         <div class="col-12">
-            <h1 class="display-5 fw-bold mb-2" style="color: #000000;">Date Calculator</h1>
-            <p class="text-muted lead" style="color: #000000 !important;">Calculate the exact duration between two dates or add/subtract values to/from a starting date.</p>
+            <h1 class="display-5 fw-bold mb-2">Date Calculator</h1>
+            
         </div>
     </div>
 
@@ -35,16 +35,16 @@
                 <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     <form id="date-diff-form">
                         <div class="mb-3">
-                            <label for="start-date" class="form-label text-dark mb-1 fw-bold">Start Date</label>
+                            <label for="start-date" class="form-label  mb-1 fw-bold">Start Date</label>
                             <input type="date" class="form-control border-secondary-subtle" id="start-date" value="<?php echo date('Y-m-d'); ?>" required>
                         </div>
                         <div class="mb-3">
-                            <label for="end-date" class="form-label text-dark mb-1 fw-bold">End Date</label>
+                            <label for="end-date" class="form-label  mb-1 fw-bold">End Date</label>
                             <input type="date" class="form-control border-secondary-subtle" id="end-date" value="<?php echo date('Y-m-d', strtotime('+7 days')); ?>" required>
                         </div>
                         <div class="form-check mb-3">
                             <input class="form-check-input" type="checkbox" id="include-end-date" value="1">
-                            <label class="form-check-label text-dark fw-medium" for="include-end-date">
+                            <label class="form-check-label  fw-medium" for="include-end-date">
                                 Include end date in calculation (adds 1 day)
                             </label>
                         </div>
@@ -61,37 +61,37 @@
                 <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     <form id="date-addsub-form">
                         <div class="mb-3">
-                            <label for="start-date-as" class="form-label text-dark mb-1 fw-bold">Start Date</label>
+                            <label for="start-date-as" class="form-label  mb-1 fw-bold">Start Date</label>
                             <input type="date" class="form-control border-secondary-subtle" id="start-date-as" value="<?php echo date('Y-m-d'); ?>" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label text-dark mb-1 fw-bold">Operation</label>
+                            <label class="form-label  mb-1 fw-bold">Operation</label>
                             <div class="d-flex gap-3 mt-1">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="date_op" id="op-add" value="add" checked>
-                                    <label class="form-check-label text-dark fw-medium" for="op-add">Add</label>
+                                    <label class="form-check-label  fw-medium" for="op-add">Add</label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="date_op" id="op-sub" value="sub">
-                                    <label class="form-check-label text-dark fw-medium" for="op-sub">Subtract</label>
+                                    <label class="form-check-label  fw-medium" for="op-sub">Subtract</label>
                                 </div>
                             </div>
                         </div>
                         <div class="row g-2 mb-3">
                             <div class="col-6">
-                                <label for="as-years" class="form-label text-dark mb-1 fw-bold">Years</label>
+                                <label for="as-years" class="form-label  mb-1 fw-bold">Years</label>
                                 <input type="number" class="form-control border-secondary-subtle" id="as-years" min="0" value="0">
                             </div>
                             <div class="col-6">
-                                <label for="as-months" class="form-label text-dark mb-1 fw-bold">Months</label>
+                                <label for="as-months" class="form-label  mb-1 fw-bold">Months</label>
                                 <input type="number" class="form-control border-secondary-subtle" id="as-months" min="0" value="0">
                             </div>
                             <div class="col-6 mt-2">
-                                <label for="as-weeks" class="form-label text-dark mb-1 fw-bold">Weeks</label>
+                                <label for="as-weeks" class="form-label  mb-1 fw-bold">Weeks</label>
                                 <input type="number" class="form-control border-secondary-subtle" id="as-weeks" min="0" value="0">
                             </div>
                             <div class="col-6 mt-2">
-                                <label for="as-days" class="form-label text-dark mb-1 fw-bold">Days</label>
+                                <label for="as-days" class="form-label  mb-1 fw-bold">Days</label>
                                 <input type="number" class="form-control border-secondary-subtle" id="as-days" min="0" value="0">
                             </div>
                         </div>
@@ -110,24 +110,24 @@
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     <div class="mb-3">
-                        <label class="form-label text-dark mb-1 fw-bold">Date Range Duration</label>
+                        <label class="form-label  mb-1 fw-bold">Date Range Duration</label>
                         <div class="literal-calc-displays" style="height: auto; padding: 12px; margin-bottom: 0;">
-                            <div class="literal-display-main text-dark fs-5 text-start fw-bold" id="res-diff-main" style="font-family: inherit; text-align: left !important;">0 Days</div>
+                            <div class="literal-display-main  fs-5 text-start fw-bold" id="res-diff-main" style="font-family: inherit; text-align: left !important;">0 Days</div>
                         </div>
                     </div>
                     
                     <div class="mb-3">
-                        <label class="form-label text-dark mb-1 fw-bold">Alternative Breakdown</label>
+                        <label class="form-label  mb-1 fw-bold">Alternative Breakdown</label>
                         <ul class="list-group border border-secondary-subtle">
-                            <li class="list-group-item d-flex justify-content-between text-dark" style="background-color: #f8fafc;">
+                            <li class="list-group-item d-flex justify-content-between " style="background-color: #f8fafc;">
                                 <span>Total Days</span>
                                 <strong id="res-diff-total-days">0 days</strong>
                             </li>
-                            <li class="list-group-item d-flex justify-content-between text-dark" style="background-color: #f8fafc;">
+                            <li class="list-group-item d-flex justify-content-between " style="background-color: #f8fafc;">
                                 <span>Total Weeks & Days</span>
                                 <strong id="res-diff-weeks-days">0 weeks, 0 days</strong>
                             </li>
-                            <li class="list-group-item d-flex justify-content-between text-dark" style="background-color: #f8fafc;">
+                            <li class="list-group-item d-flex justify-content-between " style="background-color: #f8fafc;">
                                 <span>Total Months & Days</span>
                                 <strong id="res-diff-months-days">0 months, 0 days</strong>
                             </li>
@@ -143,20 +143,20 @@
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     <div class="mb-3">
-                        <label class="form-label text-dark mb-1 fw-bold">Resulting Date</label>
+                        <label class="form-label  mb-1 fw-bold">Resulting Date</label>
                         <div class="literal-calc-displays" style="height: auto; padding: 12px; margin-bottom: 0;">
-                            <div class="literal-display-main text-dark fs-5 text-start fw-bold" id="res-addsub-main" style="font-family: inherit; text-align: left !important;">-</div>
+                            <div class="literal-display-main  fs-5 text-start fw-bold" id="res-addsub-main" style="font-family: inherit; text-align: left !important;">-</div>
                         </div>
                     </div>
                     
                     <div class="mb-3">
-                        <label class="form-label text-dark mb-1 fw-bold">Details</label>
+                        <label class="form-label  mb-1 fw-bold">Details</label>
                         <ul class="list-group border border-secondary-subtle">
-                            <li class="list-group-item d-flex justify-content-between text-dark" style="background-color: #f8fafc;">
+                            <li class="list-group-item d-flex justify-content-between " style="background-color: #f8fafc;">
                                 <span>Day of Week</span>
                                 <strong id="res-addsub-dayofweek">-</strong>
                             </li>
-                            <li class="list-group-item d-flex justify-content-between text-dark" style="background-color: #f8fafc;">
+                            <li class="list-group-item d-flex justify-content-between " style="background-color: #f8fafc;">
                                 <span>Days Remaining in Year</span>
                                 <strong id="res-addsub-remaining-days">-</strong>
                             </li>
@@ -172,12 +172,12 @@
         <div class="col-12">
             <div class="card shadow-none border rounded-4">
                 <div class="card-body p-4 p-md-5">
-                    <h2 class="fw-bold h3 mb-4 text-dark border-bottom pb-2" style="color: #000000 !important;">Understanding Time Durations & Calendar Calculations</h2>
-                    <p class="text-muted" style="color: #000000 !important; line-height: 1.7;">Working with dates is a crucial task in project planning, financial calculations, age tracking, and scheduling events. Unlike normal base-10 numerical calculations, date math has unique complexities due to varying month lengths (28, 29, 30, or 31 days) and leap years occurring every 4 years.</p>
-                    <p class="text-muted" style="color: #000000 !important; line-height: 1.7;">Our Date Calculator makes these computations effortless. The **Difference Between Dates** calculator computes the exact duration between a starting and ending date. You can choose whether to count only the gap days or to include the end date itself (useful for calculating working days in employment or project tasks). The output is dynamically converted into years/months/days, weeks, and total days so you get the complete analytical view.</p>
+                    <h2 class="fw-bold h3 mb-4  border-bottom pb-2">Understanding Time Durations & Calendar Calculations</h2>
+                    <p class="text-muted" style=" line-height: 1.7;">Working with dates is a crucial task in project planning, financial calculations, age tracking, and scheduling events. Unlike normal base-10 numerical calculations, date math has unique complexities due to varying month lengths (28, 29, 30, or 31 days) and leap years occurring every 4 years.</p>
+                    <p class="text-muted" style=" line-height: 1.7;">Our Date Calculator makes these computations effortless. The **Difference Between Dates** calculator computes the exact duration between a starting and ending date. You can choose whether to count only the gap days or to include the end date itself (useful for calculating working days in employment or project tasks). The output is dynamically converted into years/months/days, weeks, and total days so you get the complete analytical view.</p>
                     
-                    <h3 class="fw-bold h4 mt-4 mb-3 text-dark" style="color: #000000 !important;">Add or Subtract Days from Date</h3>
-                    <p class="text-muted" style="color: #000000 !important; line-height: 1.7;">Need to know the exact deadline 45 days from today? Or what the date was 3 months ago? The **Add / Subtract Days** tool allows you to add or subtract years, months, weeks, and days relative to any date. The engine correctly carries over changes across months and years while adjusting for leap years dynamically, returning the target date along with the corresponding day of the week.</p>
+                    <h3 class="fw-bold h4 mt-4 mb-3 ">Add or Subtract Days from Date</h3>
+                    <p class="text-muted" style=" line-height: 1.7;">Need to know the exact deadline 45 days from today? Or what the date was 3 months ago? The **Add / Subtract Days** tool allows you to add or subtract years, months, weeks, and days relative to any date. The engine correctly carries over changes across months and years while adjusting for leap years dynamically, returning the target date along with the corresponding day of the week.</p>
                 </div>
             </div>
         </div>

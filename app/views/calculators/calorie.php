@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/layouts/header.php'; ?>
+﻿<?php require APPROOT . '/views/layouts/header.php'; ?>
 
 <div class="container py-5">
     <nav aria-label="breadcrumb">
@@ -25,12 +25,12 @@
                         <div class="row g-2">
                             <!-- Age -->
                             <div class="col-md-6">
-                                <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Age (years)</label>
+                                <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Age (years)</label>
                                 <input type="number" class="form-control form-control-sm border-secondary-subtle fw-medium" id="cal-age-custom" value="25" min="1" max="120" required>
                             </div>
                             <!-- Gender -->
                             <div class="col-md-6">
-                                <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Gender</label>
+                                <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Gender</label>
                                 <select class="form-select form-select-sm border-secondary-subtle fw-medium" id="cal-gender-custom">
                                     <option value="male" selected>Male</option>
                                     <option value="female">Female</option>
@@ -38,17 +38,17 @@
                             </div>
                             <!-- Height -->
                             <div class="col-md-6">
-                                <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Height (cm)</label>
+                                <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Height (cm)</label>
                                 <input type="number" class="form-control form-control-sm border-secondary-subtle fw-medium" id="cal-height-custom" value="175" min="50" max="250" required>
                             </div>
                             <!-- Weight -->
                             <div class="col-md-6">
-                                <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Weight (kg)</label>
+                                <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Weight (kg)</label>
                                 <input type="number" class="form-control form-control-sm border-secondary-subtle fw-medium" id="cal-weight-custom" value="70" min="10" max="300" required>
                             </div>
                             <!-- Activity Level -->
                             <div class="col-12">
-                                <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Activity Level</label>
+                                <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Activity Level</label>
                                 <select class="form-select form-select-sm border-secondary-subtle fw-medium" id="cal-activity-custom">
                                     <option value="1.2" selected>Sedentary: little or no exercise</option>
                                     <option value="1.375">Light: exercise 1-3 times/week</option>
@@ -77,25 +77,25 @@
                     
                     <div class="row g-2 mb-3">
                         <div class="col-md-6">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Weight Maintenance</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Weight Maintenance</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
                                 <div class="literal-display-main text-success fs-5 text-end" id="res-cal-maintain">0 kcal</div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Weight Loss (0.5 kg/wk)</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Weight Loss (0.5 kg/wk)</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
                                 <div class="literal-display-main text-warning-emphasis fs-5 text-end" id="res-cal-loss">0 kcal</div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Extreme Loss (1 kg/wk)</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Extreme Loss (1 kg/wk)</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
                                 <div class="literal-display-main text-danger fs-5 text-end" id="res-cal-extreme">0 kcal</div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Weight Gain (0.5 kg/wk)</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Weight Gain (0.5 kg/wk)</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
                                 <div class="literal-display-main text-primary fs-5 text-end" id="res-cal-gain">0 kcal</div>
                             </div>
@@ -105,19 +105,19 @@
                     <!-- Visual Representation: Macro Split Chart -->
                     <div class="row g-2 mt-2">
                         <div class="col-md-6 p-2 border-secondary-subtle" style="border: 1px solid #ccc; background: #fdfdfd; border-right: none;">
-                            <h6 class="fw-bold mb-2 text-dark" style="font-size: 0.8rem;">Macro Split (Maintenance)</h6>
+                            <h6 class="fw-bold mb-2 " style="font-size: 0.8rem;">Macro Split (Maintenance)</h6>
                             <div class="list-group list-group-flush border rounded" style="font-size: 0.8rem;">
                                 <div class="list-group-item d-flex justify-content-between border-0 border-bottom border-light py-1">
                                     <span class="text-muted">Carbs (40%)</span>
-                                    <span class="fw-semibold text-dark" id="res-macro-carbs">0g</span>
+                                    <span class="fw-semibold " id="res-macro-carbs">0g</span>
                                 </div>
                                 <div class="list-group-item d-flex justify-content-between border-0 border-bottom border-light py-1">
                                     <span class="text-muted">Proteins (30%)</span>
-                                    <span class="fw-semibold text-dark" id="res-macro-protein">0g</span>
+                                    <span class="fw-semibold " id="res-macro-protein">0g</span>
                                 </div>
                                 <div class="list-group-item d-flex justify-content-between border-0 py-1">
                                     <span class="text-muted">Fats (30%)</span>
-                                    <span class="fw-semibold text-dark" id="res-macro-fats">0g</span>
+                                    <span class="fw-semibold " id="res-macro-fats">0g</span>
                                 </div>
                             </div>
                         </div>

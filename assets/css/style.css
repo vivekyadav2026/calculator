@@ -516,3 +516,29 @@ body {
     border-bottom: 2px solid var(--primary);
     color: var(--primary);
 }
+
+/* Mobile responsive overrides for calculator pages */
+@media (max-width: 768px) {
+    /* Reduce top padding of main container on mobile */
+    .container.py-5, main.container.py-5 {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+    
+    /* Reduce bottom margin of title block */
+    .container .row.mb-4, main.container .row.mb-4 {
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Reduce size of H1 title */
+    .container h1.display-5, main.container h1.display-5 {
+        font-size: 1.75rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    /* Reduce size of description */
+    .container p.lead, main.container p.lead {
+        font-size: 0.95rem !important;
+        margin-bottom: 0 !important;
+    }
+}

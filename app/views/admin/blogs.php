@@ -1,7 +1,7 @@
-<?php require APPROOT . '/views/admin/layouts/header.php'; ?>
+﻿<?php require APPROOT . '/views/admin/layouts/header.php'; ?>
 
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h3 class="fw-bold mb-0 text-dark">Manage Blogs</h3>
+    <h3 class="fw-bold mb-0 ">Manage Blogs</h3>
     <button class="btn btn-primary btn-sm"><i class="bi bi-plus-lg me-1"></i> Add Post</button>
 </div>
 
@@ -20,7 +20,7 @@
                     <?php if(!empty($data['posts'])): ?>
                         <?php foreach($data['posts'] as $post): ?>
                         <tr>
-                            <td class="ps-4 fw-medium text-dark"><?php echo $post->title; ?></td>
+                            <td class="ps-4 fw-medium "><?php echo $post->title; ?></td>
                             <td class="text-muted" style="font-size: 0.875rem;"><?php echo date('M d, Y', strtotime($post->created_at)); ?></td>
                             <td class="pe-4 text-end">
                                 <button class="btn btn-sm btn-outline-primary me-1 px-2"><i class="bi bi-pencil"></i></button>

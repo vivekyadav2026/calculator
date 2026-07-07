@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/layouts/header.php'; ?>
+﻿<?php require APPROOT . '/views/layouts/header.php'; ?>
 
 <div class="container py-5">
     <nav aria-label="breadcrumb">
@@ -11,8 +11,8 @@
 
     <div class="row mb-4">
         <div class="col-12">
-            <h1 class="display-5 fw-bold mb-2" style="color: #000000;">Age Calculator</h1>
-            <p class="text-muted lead" style="color: #000000 !important;">Find your exact age in years, months, and days, or calculate the time difference between dates.</p>
+            <h1 class="display-5 fw-bold mb-2">Age Calculator</h1>
+            
         </div>
     </div>
 
@@ -27,17 +27,17 @@
                         <span class="literal-calc-icon">×</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style=" border-radius: 0 0 4px 4px;">
                     <form id="age-calculator-form">
                         <!-- Date of Birth -->
                         <div class="mb-3">
-                            <label for="dob-custom" class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Date of Birth</label>
+                            <label for="dob-custom" class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Date of Birth</label>
                             <input type="date" class="form-control form-control-sm border-secondary-subtle fw-medium" id="dob-custom" value="1995-10-15" required max="<?php echo date('Y-m-d'); ?>">
                         </div>
 
                         <!-- Target Date -->
                         <div class="mb-3">
-                            <label for="target-date-custom" class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Calculate Age at Date</label>
+                            <label for="target-date-custom" class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Calculate Age at Date</label>
                             <input type="date" class="form-control form-control-sm border-secondary-subtle fw-medium" id="target-date-custom" value="<?php echo date('Y-m-d'); ?>" required>
                         </div>
                     </form>
@@ -55,7 +55,7 @@
                         <span class="literal-calc-icon">×</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style=" border-radius: 0 0 4px 4px;">
                     
                     <!-- Main Age display -->
                     <div class="row g-2 mb-3">
@@ -64,7 +64,7 @@
                                 <div class="text-center">
                                     <span class="fw-bold d-block small mb-1 text-uppercase" style="color: #005A9E;">CHRONOLOGICAL AGE</span>
                                     <h3 class="fw-bold mb-1" id="res-age-string" style="color: #005A9E;">0 Years, 0 Months, 0 Days</h3>
-                                    <span class="text-muted extra-small" id="res-dob-day">Born on a Sunday</span>
+                                    <span class="text-secondary extra-small" id="res-dob-day">Born on a Sunday</span>
                                 </div>
                             </div>
                         </div>
@@ -73,16 +73,16 @@
                     <!-- Side-by-Side Birthday Info -->
                     <div class="row g-2 mb-3">
                         <div class="col-md-6">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Next Birthday In</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Next Birthday In</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
                                 <div class="d-flex justify-content-between align-items-center w-100">
                                     <span class="fw-semibold text-success fs-6" id="res-next-birthday">0 Months, 0 Days</span>
-                                    <span class="text-muted extra-small" id="res-next-birthday-day">Weekday</span>
+                                    <span class="text-secondary extra-small" id="res-next-birthday-day">Weekday</span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Half Birthday</label>
+                            <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Half Birthday</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
                                 <div class="d-flex justify-content-between align-items-center w-100">
                                     <span class="fw-semibold text-info fs-6" id="res-half-birthday">M 00, YYYY</span>
@@ -92,36 +92,36 @@
                     </div>
 
                     <!-- Breakdown Grid -->
-                    <h6 class="fw-bold mb-2 text-dark" style="font-size: 0.8rem;">Detailed Time Breakdowns</h6>
-                        <div class="row g-2 text-center text-muted small">
+                    <h6 class="fw-bold mb-2 " style="font-size: 0.8rem;">Detailed Time Breakdowns</h6>
+                        <div class="row g-2 text-center text-secondary small">
                             <div class="col-6 col-md-4">
-                                <div class="p-2 border rounded bg-light">
-                                    <span class="d-block text-dark fw-bold fs-5" id="grid-months">0</span> Months
+                                <div class="p-2 border rounded bg-body-tertiary">
+                                    <span class="d-block  fw-bold fs-5" id="grid-months">0</span> Months
                                 </div>
                             </div>
                             <div class="col-6 col-md-4">
-                                <div class="p-2 border rounded bg-light">
-                                    <span class="d-block text-dark fw-bold fs-5" id="grid-weeks">0</span> Weeks
+                                <div class="p-2 border rounded bg-body-tertiary">
+                                    <span class="d-block  fw-bold fs-5" id="grid-weeks">0</span> Weeks
                                 </div>
                             </div>
                             <div class="col-6 col-md-4">
-                                <div class="p-2 border rounded bg-light">
-                                    <span class="d-block text-dark fw-bold fs-5" id="grid-days">0</span> Days
+                                <div class="p-2 border rounded bg-body-tertiary">
+                                    <span class="d-block  fw-bold fs-5" id="grid-days">0</span> Days
                                 </div>
                             </div>
                             <div class="col-6 col-md-4">
-                                <div class="p-2 border rounded bg-light">
-                                    <span class="d-block text-dark fw-bold fs-5" id="grid-hours">0</span> Hours
+                                <div class="p-2 border rounded bg-body-tertiary">
+                                    <span class="d-block  fw-bold fs-5" id="grid-hours">0</span> Hours
                                 </div>
                             </div>
                             <div class="col-6 col-md-4">
-                                <div class="p-2 border rounded bg-light">
-                                    <span class="d-block text-dark fw-bold fs-5" id="grid-minutes">0</span> Minutes
+                                <div class="p-2 border rounded bg-body-tertiary">
+                                    <span class="d-block  fw-bold fs-5" id="grid-minutes">0</span> Minutes
                                 </div>
                             </div>
                             <div class="col-6 col-md-4">
-                                <div class="p-2 border rounded bg-light">
-                                    <span class="d-block text-dark fw-bold fs-5" id="grid-seconds">0</span> Seconds
+                                <div class="p-2 border rounded bg-body-tertiary">
+                                    <span class="d-block  fw-bold fs-5" id="grid-seconds">0</span> Seconds
                                 </div>
                             </div>
                         </div>
@@ -137,10 +137,10 @@
             <div class="card shadow-none border rounded-4">
                 <div class="card-body p-4 p-md-5">
                     <h2 class="fw-bold h3 mb-4 text-body border-bottom pb-2">What is Age and How is it Calculated?</h2>
-                    <p class="text-muted">Age is a measure of elapsed time from the moment of birth or initiation to a specific target date. In most of the modern world, age is calculated under the international standard age system, where a person’s age increments on their birthday. However, calculating the exact difference between two calendar dates involves complex logic due to the irregularities of the Gregorian calendar system.</p>
+                    <p class="text-secondary">Age is a measure of elapsed time from the moment of birth or initiation to a specific target date. In most of the modern world, age is calculated under the international standard age system, where a person’s age increments on their birthday. However, calculating the exact difference between two calendar dates involves complex logic due to the irregularities of the Gregorian calendar system.</p>
                     
                     <h2 class="fw-bold h3 mt-5 mb-4 text-body border-bottom pb-2">Step-by-Step Date Subtraction Example</h2>
-                    <div class="p-3 bg-light rounded-3 mb-3">
+                    <div class="p-3 bg-body-tertiary rounded-3 mb-3">
                         <pre class="mb-0"><code class="text-primary fw-bold">Target Date:  2026 Year, 07 Month, 06 Day
 Birth Date:   1995 Year, 10 Month, 15 Day
 

@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/layouts/header.php'; ?>
+﻿<?php require APPROOT . '/views/layouts/header.php'; ?>
 
 <div class="container py-5">
     <nav aria-label="breadcrumb">
@@ -11,8 +11,8 @@
 
     <div class="row mb-4">
         <div class="col-12">
-            <h1 class="display-5 fw-bold mb-2" style="color: #000000;">BMI Calculator</h1>
-            <p class="text-muted lead" style="color: #000000 !important;">Calculate your Body Mass Index (BMI) and evaluate your health status based on height and weight.</p>
+            <h1 class="display-5 fw-bold mb-2">BMI Calculator</h1>
+            
         </div>
     </div>
 
@@ -37,28 +37,28 @@
                 
                 <!-- Converter Tabs -->
                 <ul class="nav nav-tabs mb-3 border-bottom-0" id="converterTabs" role="tablist">
-                    <li class="nav-item"><button class="nav-link active py-2 text-dark border-0 fw-bold rounded-top bg-white" id="conv-length-tab" data-bs-toggle="tab" data-bs-target="#conv-length" type="button" role="tab" style="margin-right: 4px;">Length</button></li>
-                    <li class="nav-item"><button class="nav-link py-2 text-dark border-0 fw-bold rounded-top bg-light" id="conv-weight-tab" data-bs-toggle="tab" data-bs-target="#conv-weight" type="button" role="tab" style="margin-right: 4px;">Weight</button></li>
-                    <li class="nav-item"><button class="nav-link py-2 text-dark border-0 fw-bold rounded-top bg-light" id="conv-temp-tab" data-bs-toggle="tab" data-bs-target="#conv-temp" type="button" role="tab" style="margin-right: 4px;">Temperature</button></li>
-                    <li class="nav-item"><button class="nav-link py-2 text-dark border-0 fw-bold rounded-top bg-light" id="conv-area-tab" data-bs-toggle="tab" data-bs-target="#conv-area" type="button" role="tab" style="margin-right: 4px;">Area</button></li>
-                    <li class="nav-item"><button class="nav-link py-2 text-dark border-0 fw-bold rounded-top bg-light" id="conv-volume-tab" data-bs-toggle="tab" data-bs-target="#conv-volume" type="button" role="tab">Volume</button></li>
+                    <li class="nav-item"><button class="nav-link active py-2  border-0 fw-bold rounded-top bg-white" id="conv-length-tab" data-bs-toggle="tab" data-bs-target="#conv-length" type="button" role="tab" style="margin-right: 4px;">Length</button></li>
+                    <li class="nav-item"><button class="nav-link py-2  border-0 fw-bold rounded-top bg-light" id="conv-weight-tab" data-bs-toggle="tab" data-bs-target="#conv-weight" type="button" role="tab" style="margin-right: 4px;">Weight</button></li>
+                    <li class="nav-item"><button class="nav-link py-2  border-0 fw-bold rounded-top bg-light" id="conv-temp-tab" data-bs-toggle="tab" data-bs-target="#conv-temp" type="button" role="tab" style="margin-right: 4px;">Temperature</button></li>
+                    <li class="nav-item"><button class="nav-link py-2  border-0 fw-bold rounded-top bg-light" id="conv-area-tab" data-bs-toggle="tab" data-bs-target="#conv-area" type="button" role="tab" style="margin-right: 4px;">Area</button></li>
+                    <li class="nav-item"><button class="nav-link py-2  border-0 fw-bold rounded-top bg-light" id="conv-volume-tab" data-bs-toggle="tab" data-bs-target="#conv-volume" type="button" role="tab">Volume</button></li>
                 </ul>
 
                 <div class="row g-3 align-items-end bg-white p-3 border rounded shadow-sm">
                     <div class="col-md-3">
-                        <label class="form-label fw-bold small text-dark">From Value</label>
+                        <label class="form-label fw-bold small ">From Value</label>
                         <input type="number" class="form-control" id="conv-from-val" value="180">
                     </div>
                     <div class="col-md-3">
-                        <label class="form-label fw-bold small text-dark">From Unit</label>
+                        <label class="form-label fw-bold small ">From Unit</label>
                         <select class="form-select" id="conv-from-unit"></select>
                     </div>
                     <div class="col-md-3">
-                        <label class="form-label fw-bold small text-dark">To Unit</label>
+                        <label class="form-label fw-bold small ">To Unit</label>
                         <select class="form-select" id="conv-to-unit"></select>
                     </div>
                     <div class="col-md-3">
-                        <label class="form-label fw-bold small text-dark">To Converted Value</label>
+                        <label class="form-label fw-bold small ">To Converted Value</label>
                         <div class="input-group">
                             <input type="text" class="form-control bg-light" id="conv-to-val" readonly>
                             <button class="btn text-white fw-bold" style="background-color: #005A9E;" id="btn-apply-conv" type="button" title="Apply to BMI Calculator">Apply</button>
@@ -84,9 +84,9 @@
                 <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     <!-- Tabs: US Units / Metric Units / Other Units -->
                     <ul class="nav nav-pills mb-3 nav-justified bg-white p-1 rounded shadow-sm border" id="bmiSystemTab" role="tablist">
-                        <li class="nav-item"><button class="nav-link active small py-2 fw-bold text-dark" id="tab-us" data-bs-toggle="pill" data-bs-target="#pane-us" type="button" role="tab">US Units</button></li>
-                        <li class="nav-item"><button class="nav-link small py-2 fw-bold text-dark" id="tab-metric" data-bs-toggle="pill" data-bs-target="#pane-metric" type="button" role="tab">Metric Units</button></li>
-                        <li class="nav-item"><button class="nav-link small py-2 fw-bold text-dark" id="tab-other" data-bs-toggle="pill" data-bs-target="#pane-other" type="button" role="tab">Other Units</button></li>
+                        <li class="nav-item"><button class="nav-link active small py-2 fw-bold " id="tab-us" data-bs-toggle="pill" data-bs-target="#pane-us" type="button" role="tab">US Units</button></li>
+                        <li class="nav-item"><button class="nav-link small py-2 fw-bold " id="tab-metric" data-bs-toggle="pill" data-bs-target="#pane-metric" type="button" role="tab">Metric Units</button></li>
+                        <li class="nav-item"><button class="nav-link small py-2 fw-bold " id="tab-other" data-bs-toggle="pill" data-bs-target="#pane-other" type="button" role="tab">Other Units</button></li>
                     </ul>
 
                     <form id="bmi-calc-form">
@@ -94,7 +94,7 @@
                             <!-- US Units Pane -->
                             <div class="tab-pane fade show active" id="pane-us" role="tabpanel">
                                 <div class="row g-2 mb-2">
-                                    <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Height</label>
+                                    <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Height</label>
                                     <div class="col-6">
                                         <div class="input-group input-group-sm">
                                             <input type="number" class="form-control border-secondary-subtle fw-medium" id="bmi-us-ft" value="5" min="1">
@@ -109,7 +109,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-2">
-                                    <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Weight</label>
+                                    <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Weight</label>
                                     <div class="input-group input-group-sm">
                                         <input type="number" class="form-control border-secondary-subtle fw-medium" id="bmi-us-lbs" value="160" min="1">
                                         <span class="input-group-text bg-light border-secondary-subtle">lbs</span>
@@ -120,14 +120,14 @@
                             <!-- Metric Units Pane -->
                             <div class="tab-pane fade" id="pane-metric" role="tabpanel">
                                 <div class="mb-2">
-                                    <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Height</label>
+                                    <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Height</label>
                                     <div class="input-group input-group-sm">
                                         <input type="number" class="form-control border-secondary-subtle fw-medium" id="bmi-metric-cm" value="180" min="50">
                                         <span class="input-group-text bg-light border-secondary-subtle">cm</span>
                                     </div>
                                 </div>
                                 <div class="mb-2">
-                                    <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Weight</label>
+                                    <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Weight</label>
                                     <div class="input-group input-group-sm">
                                         <input type="number" class="form-control border-secondary-subtle fw-medium" id="bmi-metric-kg" value="65" min="1">
                                         <span class="input-group-text bg-light border-secondary-subtle">kg</span>
@@ -138,14 +138,14 @@
                             <!-- Other Units Pane -->
                             <div class="tab-pane fade" id="pane-other" role="tabpanel">
                                 <div class="mb-2">
-                                    <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Height</label>
+                                    <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Height</label>
                                     <div class="input-group input-group-sm">
                                         <input type="number" class="form-control border-secondary-subtle fw-medium" id="bmi-other-m" value="1.8" step="0.01" min="0.5">
                                         <span class="input-group-text bg-light border-secondary-subtle">m</span>
                                     </div>
                                 </div>
                                 <div class="mb-2">
-                                    <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Weight</label>
+                                    <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Weight</label>
                                     <div class="input-group input-group-sm">
                                         <input type="number" class="form-control border-secondary-subtle fw-medium" id="bmi-other-g" value="65000" min="1000">
                                         <span class="input-group-text bg-light border-secondary-subtle">g</span>
@@ -157,19 +157,19 @@
                         <!-- Shared Context Fields -->
                         <div class="row g-2 mb-0">
                             <div class="col-6">
-                                <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Age</label>
+                                <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Age</label>
                                 <input type="number" class="form-control form-control-sm border-secondary-subtle fw-medium" id="bmi-shared-age" value="25" min="2" max="120">
                             </div>
                             <div class="col-6">
-                                <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Gender</label>
+                                <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Gender</label>
                                 <div class="d-flex gap-2 align-items-center mt-1">
                                     <div class="form-check form-check-inline mb-0">
                                         <input class="form-check-input" type="radio" name="bmi-gender" id="gender-male" value="male" checked>
-                                        <label class="form-check-label text-dark" style="font-size: 0.85rem;" for="gender-male">Male</label>
+                                        <label class="form-check-label " style="font-size: 0.85rem;" for="gender-male">Male</label>
                                     </div>
                                     <div class="form-check form-check-inline mb-0">
                                         <input class="form-check-input" type="radio" name="bmi-gender" id="gender-female" value="female">
-                                        <label class="form-check-label text-dark" style="font-size: 0.85rem;" for="gender-female">Female</label>
+                                        <label class="form-check-label " style="font-size: 0.85rem;" for="gender-female">Female</label>
                                     </div>
                                 </div>
                             </div>
@@ -228,12 +228,12 @@
 
                         <!-- Bullet Point Details -->
                         <div class="text-start bg-light p-4 rounded border">
-                            <h5 class="fw-bold mb-3 text-dark" id="res-header-msg">BMI = 20.1 kg/m² (<span class="text-success">Normal</span>)</h5>
+                            <h5 class="fw-bold mb-3 " id="res-header-msg">BMI = 20.1 kg/m² (<span class="text-success">Normal</span>)</h5>
                             <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small text-muted">
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="text-dark">Healthy BMI range:</strong> 18.5 kg/m² - 25 kg/m²</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="text-dark">Healthy weight for the height:</strong> <span id="bullet-healthy-weight">59.9 kg - 81 kg</span></li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="text-dark">BMI Prime:</strong> <span id="bullet-bmi-prime">0.8</span></li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="text-dark">Ponderal Index:</strong> <span id="bullet-ponderal-index">11.1 kg/m³</span></li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="">Healthy BMI range:</strong> 18.5 kg/m² - 25 kg/m²</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="">Healthy weight for the height:</strong> <span id="bullet-healthy-weight">59.9 kg - 81 kg</span></li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="">BMI Prime:</strong> <span id="bullet-bmi-prime">0.8</span></li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="">Ponderal Index:</strong> <span id="bullet-ponderal-index">11.1 kg/m³</span></li>
                             </ul>
                         </div>
                     </div>

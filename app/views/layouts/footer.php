@@ -1,4 +1,4 @@
-<!-- FAQ Section (Clean light background above footer) -->
+﻿<!-- FAQ Section (Clean light background above footer) -->
 <section class="site-faq-section py-5">
     <div class="container" style="max-width: 850px;">
         <h2 class="fw-bold mb-2 text-center site-faq-title">Frequently Asked Questions</h2>
@@ -95,30 +95,23 @@
                 </div> -->
             </div>
 
-            <!-- Col 2: Financial -->
+            <!-- Col 2: Financial & Investment -->
             <div class="saas-footer-col">
-                <h5>Financial</h5>
+                <h5>Finance & Investment</h5>
                 <ul>
                     <li><a href="<?php echo URLROOT; ?>/emi-calculator">EMI Calculator</a></li>
                     <li><a href="<?php echo URLROOT; ?>/sip-calculator">SIP Calculator</a></li>
-                    <li><a href="<?php echo URLROOT; ?>/home-loan">Home Loan</a></li>
-                    <li><a href="<?php echo URLROOT; ?>/personal-loan">Personal Loan</a></li>
-                    <li><a href="<?php echo URLROOT; ?>/income-tax">Income Tax</a></li>
-                </ul>
-            </div>
-
-            <!-- Col 3: Investment & Tax -->
-            <div class="saas-footer-col">
-                <h5>Investment & Tax</h5>
-                <ul>
+                    <li><a href="<?php echo URLROOT; ?>/home-loan-calculator">Home Loan</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/personal-loan-calculator">Personal Loan</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/income-tax-calculator">Income Tax</a></li>
                     <li><a href="<?php echo URLROOT; ?>/fd-calculator">FD Calculator</a></li>
                     <li><a href="<?php echo URLROOT; ?>/gst-calculator">GST Calculator</a></li>
-                    <li><a href="<?php echo URLROOT; ?>/compound-interest">Compound Interest</a></li>
-                    <li><a href="<?php echo URLROOT; ?>/simple-interest">Simple Interest</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/compound-interest-calculator">Compound Interest</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/simple-interest-calculator">Simple Interest</a></li>
                 </ul>
             </div>
 
-            <!-- Col 4: Health, Math & Company (Stacked) -->
+            <!-- Col 3: Health & Math -->
             <div class="saas-footer-col">
                 <h5>Health & Math</h5>
                 <ul>
@@ -129,8 +122,11 @@
                     <li><a href="<?php echo URLROOT; ?>/date-calculator">Date Calculator</a></li>
                     <li><a href="<?php echo URLROOT; ?>/love-calculator">Love Calculator</a></li>
                 </ul>
+            </div>
 
-                <h5 class="sub-header">Company</h5>
+            <!-- Col 4: Company -->
+            <div class="saas-footer-col">
+                <h5>Company</h5>
                 <ul>
                     <li><a href="<?php echo URLROOT; ?>/pages/about">About Us</a></li>
                     <li><a href="<?php echo URLROOT; ?>/pages/privacy">Privacy Policy</a></li>

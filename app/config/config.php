@@ -12,7 +12,7 @@ define('SITENAME', 'CalculatorTube');
 // define('DB_USER', 'root');
 // define('DB_PASS', '');
 // define('DB_NAME', 'calculator_db');
-
+    
 define('DB_HOST', 'localhost');
 define('DB_USER', 'u798623491_calculator');
 define('DB_PASS', 'Calculator2026@#$');
