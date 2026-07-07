@@ -7,7 +7,12 @@ define('URLROOT', 'http://localhost/calculator');
 define('SITENAME', 'CalculatorTube');
 
 // Database Parameters
+// define('DB_HOST', 'localhost');
+// define('DB_USER', 'root');
+// define('DB_PASS', '');
+// define('DB_NAME', 'calculator_db');
+
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'calculator_db');
+define('DB_USER', 'u798623491_calculator');
+define('DB_PASS', 'Calculator2026@#$');
+define('DB_NAME', 'u798623491_calculatordb');
