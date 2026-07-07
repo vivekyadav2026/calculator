@@ -2,7 +2,8 @@
 // App Root
 define('APPROOT', dirname(dirname(__FILE__)));
 // URL Root (Adjust based on your local setup, e.g., http://localhost/calculator)
-define('URLROOT', 'http://localhost/calculator');
+define('URLROOT', 'https://evfixer.in');
+// define('URLROOT', 'http://localhost/calculator');
 // Site Name
 define('SITENAME', 'CalculatorTube');
 
