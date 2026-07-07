@@ -20,133 +20,127 @@
                         <span class="literal-calc-icon">×</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     <form id="india-tax-form">
                         <!-- Age Category & Financial Year -->
-                        <div class="row g-3 mb-4">
+                        <div class="row g-2 mb-3">
                             <div class="col-md-6">
-                                <label class="form-label fw-bold text-dark">Age Category</label>
-                                <select class="form-select bg-white" id="tax-age-category">
+                                <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Age Category</label>
+                                <select class="form-select form-select-sm border-secondary-subtle fw-medium" id="tax-age-category">
                                     <option value="individual" selected>Individual (&lt; 60 Years)</option>
                                     <option value="senior">Senior Citizen (60–80 Years)</option>
                                     <option value="super-senior">Super Senior Citizen (&gt; 80 Years)</option>
                                 </select>
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label fw-bold text-dark">Financial Year</label>
-                                <select class="form-select bg-white" id="tax-year">
+                                <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Financial Year</label>
+                                <select class="form-select form-select-sm border-secondary-subtle fw-medium" id="tax-year">
                                     <option value="2023" selected>FY 2023-24 (AY 2024-25)</option>
                                 </select>
                             </div>
                         </div>
 
                         <!-- Income Details Section -->
-                        <div class="p-3 bg-white rounded shadow-sm border mb-4">
-                            <div class="d-flex align-items-center gap-2 mb-3">
-                                <i class="bi bi-cash-stack text-success fs-5"></i>
-                                <span class="fw-bold text-dark">Income Details</span>
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-cash-stack text-success fs-6"></i>
+                                <span class="fw-bold text-dark" style="font-size: 0.9rem;">Income Details</span>
                             </div>
-                            <div class="row g-3">
+                            <div class="row g-2">
                                 <div class="col-md-6">
-                                    <label class="form-label small fw-semibold text-dark">Gross Salary / Wages</label>
+                                    <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Gross Salary / Wages</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light">₹</span>
-                                        <input type="number" class="form-control" id="tax-salary" value="1200000" min="0">
+                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-salary" value="1200000" min="0">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label small fw-semibold text-dark">Income from House Property (Rent)</label>
+                                    <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Income from House Property</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light">₹</span>
-                                        <input type="number" class="form-control" id="tax-house-rent" value="0" min="0">
+                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-house-rent" value="0" min="0">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label small fw-semibold text-dark">Interest Income (FD/Savings)</label>
+                                    <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Interest Income (FD/Savings)</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light">₹</span>
-                                        <input type="number" class="form-control" id="tax-interest" value="15000" min="0">
+                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-interest" value="15000" min="0">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label small fw-semibold text-dark">Capital Gains</label>
+                                    <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Capital Gains</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light">₹</span>
-                                        <input type="number" class="form-control" id="tax-capgains" value="0" min="0">
+                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-capgains" value="0" min="0">
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <label class="form-label small fw-semibold text-dark">Other Income (Business, Freelance, etc.)</label>
+                                    <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Other Income (Business, Freelance)</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light">₹</span>
-                                        <input type="number" class="form-control" id="tax-other" value="0" min="0">
+                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-other" value="0" min="0">
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Deductions & Exemptions (Mainly Old Regime) -->
-                        <div class="p-3 bg-white rounded shadow-sm border mb-4">
-                            <div class="d-flex align-items-center gap-2 mb-3">
-                                <i class="bi bi-shield-check text-primary fs-5"></i>
-                                <span class="fw-bold text-dark">Deductions (Old Regime)</span>
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-shield-check text-primary fs-6"></i>
+                                <span class="fw-bold text-dark" style="font-size: 0.9rem;">Deductions (Old Regime)</span>
                             </div>
                             
-                            <div class="row g-3">
+                            <div class="row g-2">
                                 <div class="col-md-6">
-                                    <label class="form-label small fw-semibold text-dark">Section 80C Investments</label>
+                                    <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Section 80C Investments</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light">₹</span>
-                                        <input type="number" class="form-control" id="tax-80c" value="150000" placeholder="Max ₹1,50,000" min="0" max="150000">
+                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-80c" value="150000" placeholder="Max ₹1,50,000" min="0" max="150000">
                                     </div>
-                                    <div class="form-text extra-small text-muted">PPF, EPF, LIC, ELSS, Home Principal</div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label small fw-semibold text-dark">Section 80D (Health Insurance)</label>
+                                    <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Section 80D (Health)</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light">₹</span>
-                                        <input type="number" class="form-control" id="tax-80d" value="25000" placeholder="e.g. ₹25,000" min="0">
+                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-80d" value="25000" placeholder="e.g. ₹25,000" min="0">
                                     </div>
-                                    <div class="form-text extra-small text-muted">Mediclaim premiums</div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label small fw-semibold text-dark">HRA Exemption Claimed</label>
+                                    <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">HRA Exemption Claimed</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light">₹</span>
-                                        <input type="number" class="form-control" id="tax-hra" value="120000" placeholder="Rent Exemption" min="0">
+                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-hra" value="120000" placeholder="Rent Exemption" min="0">
                                     </div>
-                                    <div class="form-text extra-small text-muted">House Rent Allowance exemption</div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label small fw-semibold text-dark">Home Loan Interest (Sec 24b)</label>
+                                    <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Home Loan Interest (24b)</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light">₹</span>
-                                        <input type="number" class="form-control" id="tax-interest-24b" value="0" placeholder="Max ₹2,00,000" min="0">
+                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-interest-24b" value="0" placeholder="Max ₹2,00,000" min="0">
                                     </div>
-                                    <div class="form-text extra-small text-muted">Interest on self-occupied house</div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label small fw-semibold text-dark">Education Loan (Sec 80E)</label>
+                                    <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Education Loan (80E)</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light">₹</span>
-                                        <input type="number" class="form-control" id="tax-80e" value="0" min="0">
+                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-80e" value="0" min="0">
                                     </div>
-                                    <div class="form-text extra-small text-muted">Interest paid on study loan</div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label small fw-semibold text-dark">Other Deductions (Sec 80G, NPS, etc.)</label>
+                                    <label class="form-label mb-1" style="font-size: 0.8rem; font-weight: 600;">Other Deductions (80G, NPS)</label>
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text bg-light">₹</span>
-                                        <input type="number" class="form-control" id="tax-other-deductions" value="0" min="0">
+                                        <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                        <input type="number" class="form-control border-secondary-subtle fw-medium" id="tax-other-deductions" value="0" min="0">
                                     </div>
-                                    <div class="form-text extra-small text-muted">Donations, NPS, savings interest</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="d-flex gap-3">
-                            <button type="submit" class="btn btn-primary text-white fw-bold px-4 shadow-sm" style="background-color: #005A9E; border-color: #005A9E;">Calculate</button>
-                            <button type="reset" class="btn btn-outline-secondary px-4" id="btn-reset-tax">Clear</button>
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-sm btn-primary text-white fw-bold px-3 shadow-sm" style="background-color: #005A9E; border-color: #005A9E;">Calculate</button>
+                            <button type="reset" class="btn btn-sm btn-outline-secondary px-3" id="btn-reset-tax">Clear</button>
                         </div>
                     </form>
                 </div>
@@ -163,63 +157,60 @@
                         <span class="literal-calc-icon">×</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     
                     <div>
                         <!-- Side by Side Regimes -->
-                        <div class="row g-3 mb-4">
+                        <div class="row g-2 mb-3">
                             <div class="col-md-6">
-                                <div class="p-4 rounded border shadow-sm bg-white text-center position-relative overflow-hidden" style="border-top: 4px solid #0dcaf0 !important;">
-                                    <div class="position-absolute top-0 end-0 bg-info text-white px-2 py-1 small fw-bold" style="border-bottom-left-radius: 4px;">Default</div>
-                                    <span class="text-info-emphasis fw-bold d-block small mb-2 text-uppercase">NEW REGIME TAX</span>
-                                    <h3 class="fw-bold text-info mb-1" id="res-tax-new">₹0</h3>
-                                    <span class="text-muted extra-small">with standard deduction</span>
+                                <label class="form-label text-info-emphasis mb-1" style="font-size: 0.8rem; font-weight: 700;">NEW REGIME TAX (Default)</label>
+                                <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
+                                    <div class="literal-display-main text-info fs-5 text-end" id="res-tax-new">₹0</div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="p-4 rounded border shadow-sm bg-white text-center" style="border-top: 4px solid #ffc107 !important;">
-                                    <span class="text-warning-emphasis fw-bold d-block small mb-2 text-uppercase">OLD REGIME TAX</span>
-                                    <h3 class="fw-bold text-warning-emphasis mb-1" id="res-tax-old">₹0</h3>
-                                    <span class="text-muted extra-small">after entered deductions</span>
+                                <label class="form-label text-warning-emphasis mb-1" style="font-size: 0.8rem; font-weight: 700;">OLD REGIME TAX</label>
+                                <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
+                                    <div class="literal-display-main text-warning-emphasis fs-5 text-end" id="res-tax-old">₹0</div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Savings Recommendation Box -->
-                        <div class="alert alert-success border-0 rounded shadow-sm p-3 d-none align-items-center gap-3 mb-4 bg-white" id="tax-recommendation-box" style="border-left: 4px solid #198754 !important;">
-                            <div class="icon-circle bg-success text-white small shadow-sm" style="width: 32px; height: 32px; flex-shrink: 0;">
-                                <i class="bi bi-patch-check-fill fs-5"></i>
+                        <div class="alert alert-success border-0 rounded shadow-sm p-2 d-none align-items-center gap-2 mb-3 bg-white" id="tax-recommendation-box" style="border-left: 3px solid #198754 !important;">
+                            <div class="icon-circle bg-success text-white small shadow-sm d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; flex-shrink: 0; border-radius: 50%;">
+                                <i class="bi bi-patch-check-fill" style="font-size: 0.8rem;"></i>
                             </div>
                             <div>
-                                <span class="fw-bold text-success-emphasis d-block" id="tax-rec-title">Regime Recommendation</span>
-                                <span class="text-muted small" id="tax-rec-desc">Calculating...</span>
+                                <span class="fw-bold text-success-emphasis d-block" id="tax-rec-title" style="font-size: 0.85rem;">Regime Recommendation</span>
+                                <span class="text-muted" style="font-size: 0.75rem;" id="tax-rec-desc">Calculating...</span>
                             </div>
                         </div>
 
                         <!-- Key Figures Table -->
-                        <div class="list-group list-group-flush mb-4 bg-white border rounded shadow-sm p-2">
-                            <div class="list-group-item d-flex justify-content-between align-items-center py-2 border-0">
+                        <div class="list-group list-group-flush mb-3 bg-white border rounded shadow-sm p-2" style="font-size: 0.85rem;">
+                            <div class="list-group-item d-flex justify-content-between align-items-center py-1 border-0">
                                 <span class="text-dark fw-bold">Total Gross Income</span>
                                 <span class="fw-semibold text-primary" id="res-gross-income">₹0</span>
                             </div>
-                            <div class="list-group-item d-flex justify-content-between align-items-center py-2 border-bottom border-light">
+                            <div class="list-group-item d-flex justify-content-between align-items-center py-1 border-bottom border-light">
                                 <span class="text-muted">Standard Deduction</span>
                                 <span class="fw-semibold text-danger">₹50,000</span>
                             </div>
-                            <div class="list-group-item d-flex justify-content-between align-items-center py-2 border-bottom border-light">
-                                <span class="text-muted">Old Regime Deductions Claimed</span>
+                            <div class="list-group-item d-flex justify-content-between align-items-center py-1 border-bottom border-light">
+                                <span class="text-muted">Old Deductions Claimed</span>
                                 <span class="fw-semibold text-danger" id="res-old-deductions">₹0</span>
                             </div>
-                            <div class="list-group-item d-flex justify-content-between align-items-center py-2 border-bottom border-light">
-                                <span class="text-dark fw-bold">Net Taxable Income (New Regime)</span>
+                            <div class="list-group-item d-flex justify-content-between align-items-center py-1 border-bottom border-light">
+                                <span class="text-dark fw-bold">Taxable Income (New)</span>
                                 <span class="fw-bold text-info" id="res-taxable-new">₹0</span>
                             </div>
-                            <div class="list-group-item d-flex justify-content-between align-items-center py-2 border-0">
-                                <span class="text-dark fw-bold">Net Taxable Income (Old Regime)</span>
+                            <div class="list-group-item d-flex justify-content-between align-items-center py-1 border-0">
+                                <span class="text-dark fw-bold">Taxable Income (Old)</span>
                                 <span class="fw-bold text-warning-emphasis" id="res-taxable-old">₹0</span>
                             </div>
                         </div>
-
+                    </div>        
                         <!-- Bracket Breakdown Table for New Regime -->
                         <h6 class="fw-bold mb-2 text-dark">New Regime – Slab Calculations</h6>
                         <div class="table-responsive rounded border bg-white shadow-sm">

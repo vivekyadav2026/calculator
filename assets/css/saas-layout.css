@@ -634,7 +634,7 @@
   }
   
   .saas-footer-links {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   
   .saas-footer-bottom {
@@ -653,6 +653,6 @@
   .saas-btn-text, .saas-btn-primary { display: inline-block; }
   
   .saas-footer-links {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }

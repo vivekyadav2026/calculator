@@ -21,9 +21,19 @@ class Admin extends Controller {
 
     public function index() {
         $this->checkLogin();
+        
+        $calculators = $this->calculatorModel->getCalculators();
+        $total_calculators = count($calculators);
+        
+        $posts = $this->blogModel->getPosts();
+        $total_posts = count($posts);
+
         $data = [
             'title' => 'Admin Dashboard',
-            'active_menu' => 'dashboard'
+            'active_menu' => 'dashboard',
+            'total_calculators' => $total_calculators,
+            'total_posts' => $total_posts,
+            'page_views' => 1204 // Placeholder until analytics is added
         ];
         $this->view('admin/dashboard', $data);
     }

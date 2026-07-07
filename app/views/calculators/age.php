@@ -20,18 +20,18 @@
                         <span class="literal-calc-icon">×</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     <form id="age-calculator-form">
                         <!-- Date of Birth -->
-                        <div class="mb-4 bg-white p-3 border rounded shadow-sm">
-                            <label for="dob-custom" class="form-label fw-bold text-dark">Date of Birth</label>
-                            <input type="date" class="form-control form-control-lg bg-light border-0" id="dob-custom" value="1995-10-15" required max="<?php echo date('Y-m-d'); ?>">
+                        <div class="mb-3">
+                            <label for="dob-custom" class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Date of Birth</label>
+                            <input type="date" class="form-control form-control-sm border-secondary-subtle fw-medium" id="dob-custom" value="1995-10-15" required max="<?php echo date('Y-m-d'); ?>">
                         </div>
 
                         <!-- Target Date -->
-                        <div class="mb-0 bg-white p-3 border rounded shadow-sm">
-                            <label for="target-date-custom" class="form-label fw-bold text-dark">Calculate Age at Date</label>
-                            <input type="date" class="form-control form-control-lg bg-light border-0" id="target-date-custom" value="<?php echo date('Y-m-d'); ?>" required>
+                        <div class="mb-3">
+                            <label for="target-date-custom" class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Calculate Age at Date</label>
+                            <input type="date" class="form-control form-control-sm border-secondary-subtle fw-medium" id="target-date-custom" value="<?php echo date('Y-m-d'); ?>" required>
                         </div>
                     </form>
                 </div>
@@ -48,36 +48,44 @@
                         <span class="literal-calc-icon">×</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
-                    <div class="w-100 bg-white p-4 border rounded shadow-sm h-100 d-flex flex-column justify-content-center">
-
-                        <!-- Main Age display -->
-                        <div class="p-4 rounded border text-center mb-4" style="background-color: #f0f4f8; border-color: #005A9E !important;">
-                            <span class="fw-bold d-block small mb-2 text-uppercase" style="color: #005A9E;">CHRONOLOGICAL AGE</span>
-                            <h2 class="fw-bold mb-1" id="res-age-string" style="color: #005A9E;">0 Years, 0 Months, 0 Days</h2>
-                            <span class="text-muted extra-small" id="res-dob-day">Born on a Sunday</span>
+                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                    
+                    <!-- Main Age display -->
+                    <div class="row g-2 mb-3">
+                        <div class="col-12">
+                            <div class="literal-calc-displays" style="height: auto; padding: 12px; margin-bottom: 0; background-color: #f0f4f8;">
+                                <div class="text-center">
+                                    <span class="fw-bold d-block small mb-1 text-uppercase" style="color: #005A9E;">CHRONOLOGICAL AGE</span>
+                                    <h3 class="fw-bold mb-1" id="res-age-string" style="color: #005A9E;">0 Years, 0 Months, 0 Days</h3>
+                                    <span class="text-muted extra-small" id="res-dob-day">Born on a Sunday</span>
+                                </div>
+                            </div>
                         </div>
+                    </div>
 
-                        <!-- Side-by-Side Birthday Info -->
-                        <div class="row g-3 mb-4">
-                            <div class="col-md-6">
-                                <div class="p-3 bg-light rounded border text-center h-100">
-                                    <span class="text-muted d-block small mb-1 fw-bold text-uppercase">Next Birthday In</span>
-                                    <h4 class="fw-bold text-success mb-1" id="res-next-birthday">0 Months, 0 Days</h4>
+                    <!-- Side-by-Side Birthday Info -->
+                    <div class="row g-2 mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Next Birthday In</label>
+                            <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
+                                <div class="d-flex justify-content-between align-items-center w-100">
+                                    <span class="fw-semibold text-success fs-6" id="res-next-birthday">0 Months, 0 Days</span>
                                     <span class="text-muted extra-small" id="res-next-birthday-day">Weekday</span>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="p-3 bg-light rounded border text-center h-100">
-                                    <span class="text-muted d-block small mb-1 fw-bold text-uppercase">Half Birthday</span>
-                                    <h4 class="fw-bold text-info mb-1" id="res-half-birthday">M 00, YYYY</h4>
-                                    <span class="text-muted extra-small">6 months after birthday</span>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Half Birthday</label>
+                            <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
+                                <div class="d-flex justify-content-between align-items-center w-100">
+                                    <span class="fw-semibold text-info fs-6" id="res-half-birthday">M 00, YYYY</span>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Breakdown Grid -->
-                        <h6 class="fw-bold mb-3 text-dark">Detailed Time Breakdowns</h6>
+                    <!-- Breakdown Grid -->
+                    <h6 class="fw-bold mb-2 text-dark" style="font-size: 0.8rem;">Detailed Time Breakdowns</h6>
                         <div class="row g-2 text-center text-muted small">
                             <div class="col-6 col-md-4">
                                 <div class="p-2 border rounded bg-light">

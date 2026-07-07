@@ -74,95 +74,95 @@
                         <span class="literal-calc-icon">×</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     <!-- Tabs: US Units / Metric Units / Other Units -->
-                    <ul class="nav nav-pills mb-4 nav-justified bg-white p-1 rounded shadow-sm border" id="bmiSystemTab" role="tablist">
+                    <ul class="nav nav-pills mb-3 nav-justified bg-white p-1 rounded shadow-sm border" id="bmiSystemTab" role="tablist">
                         <li class="nav-item"><button class="nav-link active small py-2 fw-bold text-dark" id="tab-us" data-bs-toggle="pill" data-bs-target="#pane-us" type="button" role="tab">US Units</button></li>
                         <li class="nav-item"><button class="nav-link small py-2 fw-bold text-dark" id="tab-metric" data-bs-toggle="pill" data-bs-target="#pane-metric" type="button" role="tab">Metric Units</button></li>
                         <li class="nav-item"><button class="nav-link small py-2 fw-bold text-dark" id="tab-other" data-bs-toggle="pill" data-bs-target="#pane-other" type="button" role="tab">Other Units</button></li>
                     </ul>
 
                     <form id="bmi-calc-form">
-                        <div class="tab-content mb-4 bg-white p-3 border rounded shadow-sm" id="bmiTabContent">
+                        <div class="tab-content mb-3" id="bmiTabContent">
                             <!-- US Units Pane -->
                             <div class="tab-pane fade show active" id="pane-us" role="tabpanel">
-                                <div class="row g-2 mb-3">
-                                    <label class="form-label fw-bold mb-1 text-dark">Height</label>
+                                <div class="row g-2 mb-2">
+                                    <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Height</label>
                                     <div class="col-6">
-                                        <div class="input-group">
-                                            <input type="number" class="form-control" id="bmi-us-ft" value="5" min="1">
-                                            <span class="input-group-text bg-light">ft</span>
+                                        <div class="input-group input-group-sm">
+                                            <input type="number" class="form-control border-secondary-subtle fw-medium" id="bmi-us-ft" value="5" min="1">
+                                            <span class="input-group-text bg-light border-secondary-subtle">ft</span>
                                         </div>
                                     </div>
                                     <div class="col-6">
-                                        <div class="input-group">
-                                            <input type="number" class="form-control" id="bmi-us-in" value="10" min="0" max="11">
-                                            <span class="input-group-text bg-light">in</span>
+                                        <div class="input-group input-group-sm">
+                                            <input type="number" class="form-control border-secondary-subtle fw-medium" id="bmi-us-in" value="10" min="0" max="11">
+                                            <span class="input-group-text bg-light border-secondary-subtle">in</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mb-0">
-                                    <label class="form-label fw-bold text-dark">Weight</label>
-                                    <div class="input-group">
-                                        <input type="number" class="form-control" id="bmi-us-lbs" value="160" min="1">
-                                        <span class="input-group-text bg-light">lbs</span>
+                                <div class="mb-2">
+                                    <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Weight</label>
+                                    <div class="input-group input-group-sm">
+                                        <input type="number" class="form-control border-secondary-subtle fw-medium" id="bmi-us-lbs" value="160" min="1">
+                                        <span class="input-group-text bg-light border-secondary-subtle">lbs</span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Metric Units Pane -->
                             <div class="tab-pane fade" id="pane-metric" role="tabpanel">
-                                <div class="mb-3">
-                                    <label class="form-label fw-bold text-dark">Height</label>
-                                    <div class="input-group">
-                                        <input type="number" class="form-control" id="bmi-metric-cm" value="180" min="50">
-                                        <span class="input-group-text bg-light">cm</span>
+                                <div class="mb-2">
+                                    <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Height</label>
+                                    <div class="input-group input-group-sm">
+                                        <input type="number" class="form-control border-secondary-subtle fw-medium" id="bmi-metric-cm" value="180" min="50">
+                                        <span class="input-group-text bg-light border-secondary-subtle">cm</span>
                                     </div>
                                 </div>
-                                <div class="mb-0">
-                                    <label class="form-label fw-bold text-dark">Weight</label>
-                                    <div class="input-group">
-                                        <input type="number" class="form-control" id="bmi-metric-kg" value="65" min="1">
-                                        <span class="input-group-text bg-light">kg</span>
+                                <div class="mb-2">
+                                    <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Weight</label>
+                                    <div class="input-group input-group-sm">
+                                        <input type="number" class="form-control border-secondary-subtle fw-medium" id="bmi-metric-kg" value="65" min="1">
+                                        <span class="input-group-text bg-light border-secondary-subtle">kg</span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Other Units Pane -->
                             <div class="tab-pane fade" id="pane-other" role="tabpanel">
-                                <div class="mb-3">
-                                    <label class="form-label fw-bold text-dark">Height</label>
-                                    <div class="input-group">
-                                        <input type="number" class="form-control" id="bmi-other-m" value="1.8" step="0.01" min="0.5">
-                                        <span class="input-group-text bg-light">m</span>
+                                <div class="mb-2">
+                                    <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Height</label>
+                                    <div class="input-group input-group-sm">
+                                        <input type="number" class="form-control border-secondary-subtle fw-medium" id="bmi-other-m" value="1.8" step="0.01" min="0.5">
+                                        <span class="input-group-text bg-light border-secondary-subtle">m</span>
                                     </div>
                                 </div>
-                                <div class="mb-0">
-                                    <label class="form-label fw-bold text-dark">Weight</label>
-                                    <div class="input-group">
-                                        <input type="number" class="form-control" id="bmi-other-g" value="65000" min="1000">
-                                        <span class="input-group-text bg-light">g</span>
+                                <div class="mb-2">
+                                    <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Weight</label>
+                                    <div class="input-group input-group-sm">
+                                        <input type="number" class="form-control border-secondary-subtle fw-medium" id="bmi-other-g" value="65000" min="1000">
+                                        <span class="input-group-text bg-light border-secondary-subtle">g</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Shared Context Fields -->
-                        <div class="row g-2 mb-0 bg-white p-3 border rounded shadow-sm">
+                        <div class="row g-2 mb-0">
                             <div class="col-6">
-                                <label class="form-label fw-bold text-dark">Age</label>
-                                <input type="number" class="form-control" id="bmi-shared-age" value="25" min="2" max="120">
+                                <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Age</label>
+                                <input type="number" class="form-control form-control-sm border-secondary-subtle fw-medium" id="bmi-shared-age" value="25" min="2" max="120">
                             </div>
                             <div class="col-6">
-                                <label class="form-label fw-bold text-dark">Gender</label>
-                                <div class="d-flex gap-3 align-items-center mt-2">
-                                    <div class="form-check">
+                                <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Gender</label>
+                                <div class="d-flex gap-2 align-items-center mt-1">
+                                    <div class="form-check form-check-inline mb-0">
                                         <input class="form-check-input" type="radio" name="bmi-gender" id="gender-male" value="male" checked>
-                                        <label class="form-check-label text-dark" for="gender-male">Male</label>
+                                        <label class="form-check-label text-dark" style="font-size: 0.85rem;" for="gender-male">Male</label>
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check form-check-inline mb-0">
                                         <input class="form-check-input" type="radio" name="bmi-gender" id="gender-female" value="female">
-                                        <label class="form-check-label text-dark" for="gender-female">Female</label>
+                                        <label class="form-check-label text-dark" style="font-size: 0.85rem;" for="gender-female">Female</label>
                                     </div>
                                 </div>
                             </div>
@@ -182,11 +182,11 @@
                         <span class="literal-calc-icon">×</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
-                    <div class="w-100 text-center bg-white p-4 border rounded shadow-sm h-100 d-flex flex-column justify-content-center">
+                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                    <div class="w-100 text-center p-3 border-secondary-subtle rounded d-flex flex-column justify-content-center" style="border: 1px solid #ccc; background: #fdfdfd; height: 100%;">
 
                         <!-- Interactive SVG Gauge Chart -->
-                        <div class="d-flex justify-content-center mb-4">
+                        <div class="d-flex justify-content-center mb-2">
                             <svg style="width: 100%; max-width: 320px; height: auto;" viewBox="0 0 240 130">
                                 <!-- Colors arcs for BMI Zones -->
                                 <!-- Underweight (15 to 18.5) -->

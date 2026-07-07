@@ -166,21 +166,22 @@
                         </div>
                     </div>
                 </li>
+                
+                <li class="saas-nav-item">
+                    <a href="<?php echo URLROOT; ?>" class="saas-nav-link fw-bold text-primary">
+                        All Calculators
+                    </a>
+                </li>
             </ul>
         </nav>
 
         <!-- Actions -->
         <div class="saas-header-actions">
-            <div class="saas-desktop-search position-relative d-none d-lg-block">
-                <input type="text" class="saas-search-input form-control bg-light border-0" placeholder="Search..." style="border-radius:20px; padding: 6px 16px; width: 220px; font-size:0.875rem;">
-                <div class="saas-search-results position-absolute bg-white shadow-lg rounded w-100 mt-2 d-none" style="z-index: 1050; max-height:300px; overflow-y:auto; border:1px solid var(--border-subtle);"></div>
-            </div>
-            
             <button class="saas-btn-icon" id="theme-toggle" aria-label="Toggle dark mode">
                 <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
             </button>
             <button class="saas-mobile-toggle" id="mobile-menu-trigger" aria-label="Open menu">
-                <i class="bi bi-list"></i>
+                <i class="bi bi-list fs-3"></i>
             </button>
         </div>
     </div>
@@ -198,13 +199,11 @@
     </div>
     
     <div class="saas-mobile-body">
-        <div class="saas-mobile-search position-relative">
-            <i class="bi bi-search" style="position: absolute; left: 12px; top: 14px; color: var(--text-tertiary);"></i>
-            <input type="text" class="saas-search-input form-control bg-light border-0" placeholder="Search calculators..." style="padding: 10px 16px 10px 40px; border-radius: 8px;">
-            <div class="saas-search-results position-absolute bg-white shadow-lg rounded w-100 mt-1 d-none" style="z-index: 1050; max-height: 250px; overflow-y:auto; border:1px solid var(--border-subtle);"></div>
-        </div>
-
         <nav>
+            <a href="<?php echo URLROOT; ?>" class="saas-mobile-link fw-bold text-primary mb-3">
+                <i class="bi bi-grid-fill me-2"></i> All Calculators
+            </a>
+
             <div class="saas-mobile-group">
                 <div class="saas-mobile-group-title">Financial</div>
                 <a href="<?php echo URLROOT; ?>/calculators/emi" class="saas-mobile-link"><i class="bi bi-bank"></i> EMI Calculator</a>

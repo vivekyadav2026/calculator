@@ -11,53 +11,58 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-gradient: linear-gradient(135deg, #4f46e5, #ec4899);
-        }
+    <style>
         body {
             font-family: 'Inter', sans-serif;
-            background: var(--primary-gradient);
+            background-color: #FAFAFA;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: #111827;
         }
         .login-card {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 1.5rem;
-            color: #fff;
+            background: #FFFFFF;
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         }
         .form-control {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fff;
-            border-radius: 0.75rem;
+            border: 1px solid #D1D5DB;
+            border-radius: 8px;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.875rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            color: #111827;
         }
         .form-control:focus {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.5);
-            color: #fff;
-            box-shadow: none;
+            border-color: #6366F1;
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+            background: #FFFFFF;
         }
-        .form-control::placeholder {
-            color: rgba(255, 255, 255, 0.6);
+        .form-label {
+            font-weight: 500;
+            font-size: 0.875rem;
+            color: #374151;
+            margin-bottom: 0.25rem;
         }
         .btn-login {
-            background: #fff;
-            color: #4f46e5;
-            font-weight: 600;
-            border-radius: 0.75rem;
-            transition: all 0.3s;
+            background-color: #111827;
+            border-color: #111827;
+            color: #FFFFFF;
+            font-weight: 500;
+            font-size: 0.875rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            transition: all 0.2s;
         }
         .btn-login:hover {
-            background: rgba(255, 255, 255, 0.9);
-            transform: translateY(-2px);
+            background-color: #374151;
+            border-color: #374151;
+            color: #FFFFFF;
         }
         .text-light-muted {
-            color: rgba(255, 255, 255, 0.7);
+            color: #6B7280;
         }
     </style>
 </head>
@@ -65,25 +70,27 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-5 col-lg-4">
-                <div class="card login-card shadow-lg">
-                    <div class="card-body p-5">
-                        <div class="text-center mb-4">
-                            <i class="bi bi-shield-lock-fill fs-1"></i>
-                            <h3 class="fw-bold mt-2">Admin Login</h3>
+                <div class="card login-card">
+                    <div class="card-body p-4 p-md-5">
+                        <div class="text-center mb-4 pb-2">
+                            <div class="mb-3 d-inline-flex align-items-center justify-content-center bg-light rounded-circle" style="width: 56px; height: 56px; border: 1px solid #E5E7EB;">
+                                <i class="bi bi-shield-lock-fill text-dark fs-3"></i>
+                            </div>
+                            <h4 class="fw-bold text-dark">Welcome back</h4>
                             <p class="small text-light-muted">Sign in to manage your calculator site</p>
                         </div>
                         <form action="<?php echo URLROOT; ?>/admin/login" method="POST">
                             <div class="mb-3">
-                                <label for="username" class="form-label small fw-medium">Username</label>
+                                <label for="username" class="form-label">Username</label>
                                 <input type="text" name="username" id="username" class="form-control <?php echo (!empty($data['username_err'])) ? 'is-invalid' : ''; ?>" placeholder="Enter username" value="<?php echo htmlspecialchars($data['username']); ?>" required>
-                                <div class="invalid-feedback text-warning"><?php echo $data['username_err']; ?></div>
+                                <div class="invalid-feedback"><?php echo $data['username_err']; ?></div>
                             </div>
                             <div class="mb-4">
-                                <label for="password" class="form-label small fw-medium">Password</label>
+                                <label for="password" class="form-label">Password</label>
                                 <input type="password" name="password" id="password" class="form-control <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" placeholder="Enter password" required>
-                                <div class="invalid-feedback text-warning"><?php echo $data['password_err']; ?></div>
+                                <div class="invalid-feedback"><?php echo $data['password_err']; ?></div>
                             </div>
-                            <button type="submit" class="btn btn-login w-100 py-2.5">Login</button>
+                            <button type="submit" class="btn btn-login w-100 py-2">Sign in</button>
                         </form>
                     </div>
                 </div>

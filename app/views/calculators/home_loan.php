@@ -20,44 +20,44 @@
                         <span class="literal-calc-icon">×</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     <form id="home-loan-calculator-form">
                         <!-- Loan Amount -->
-                        <div class="mb-4 bg-white p-3 border rounded shadow-sm">
-                            <div class="d-flex justify-content-between mb-2">
-                                <label class="form-label fw-bold mb-0 text-dark">Home Loan Amount</label>
-                                <span class="text-primary fw-bold" id="hl-amount-val">₹3,500,000</span>
-                            </div>
-                            <input type="range" class="form-range mb-2" id="hl-amount" min="100000" max="100000000" step="50000" value="3500000">
-                            <div class="input-group">
-                                <span class="input-group-text bg-light">₹</span>
-                                <input type="number" class="form-control" id="hl-amount-input" value="3500000" min="100000">
+                        <div class="mb-3">
+                            <label class="form-label d-flex justify-content-between text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">
+                                <span>Home Loan Amount</span>
+                                <span class="text-primary" id="hl-amount-val">₹3,500,000</span>
+                            </label>
+                            <input type="range" class="form-range" id="hl-amount" min="100000" max="100000000" step="50000" value="3500000">
+                            <div class="input-group input-group-sm mt-1">
+                                <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                <input type="number" class="form-control border-secondary-subtle fw-medium" id="hl-amount-input" value="3500000" min="100000">
                             </div>
                         </div>
 
                         <!-- Interest Rate -->
-                        <div class="mb-4 bg-white p-3 border rounded shadow-sm">
-                            <div class="d-flex justify-content-between mb-2">
-                                <label class="form-label fw-bold mb-0 text-dark">Interest Rate (p.a.)</label>
-                                <span class="text-success fw-bold" id="hl-rate-val">8.5%</span>
-                            </div>
-                            <input type="range" class="form-range mb-2" id="hl-rate" min="1" max="25" step="0.1" value="8.5">
-                            <div class="input-group">
-                                <input type="number" class="form-control" id="hl-rate-input" value="8.5" step="0.1" min="1" max="25">
-                                <span class="input-group-text bg-light">%</span>
+                        <div class="mb-3">
+                            <label class="form-label d-flex justify-content-between text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">
+                                <span>Interest Rate (p.a.)</span>
+                                <span class="text-success" id="hl-rate-val">8.5%</span>
+                            </label>
+                            <input type="range" class="form-range" id="hl-rate" min="1" max="25" step="0.1" value="8.5">
+                            <div class="input-group input-group-sm mt-1">
+                                <input type="number" class="form-control border-secondary-subtle fw-medium" id="hl-rate-input" value="8.5" step="0.1" min="1" max="25">
+                                <span class="input-group-text bg-light border-secondary-subtle">%</span>
                             </div>
                         </div>
 
                         <!-- Tenure -->
-                        <div class="mb-0 bg-white p-3 border rounded shadow-sm">
-                            <div class="d-flex justify-content-between mb-2">
-                                <label class="form-label fw-bold mb-0 text-dark">Loan Tenure</label>
-                                <span class="text-warning fw-bold" id="hl-tenure-val">20 Years</span>
-                            </div>
-                            <input type="range" class="form-range mb-2" id="hl-tenure" min="1" max="30" step="1" value="20">
-                            <div class="input-group">
-                                <input type="number" class="form-control" id="hl-tenure-input" value="20" min="1" max="30">
-                                <select class="form-select bg-light" id="hl-tenure-type" style="max-width: 120px;">
+                        <div class="mb-3">
+                            <label class="form-label d-flex justify-content-between text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">
+                                <span>Loan Tenure</span>
+                                <span class="text-warning" id="hl-tenure-val">20 Years</span>
+                            </label>
+                            <input type="range" class="form-range" id="hl-tenure" min="1" max="30" step="1" value="20">
+                            <div class="input-group input-group-sm mt-1">
+                                <input type="number" class="form-control border-secondary-subtle fw-medium" id="hl-tenure-input" value="20" min="1" max="30">
+                                <select class="form-select bg-light border-secondary-subtle" id="hl-tenure-type" style="max-width: 120px;">
                                     <option value="years" selected>Years</option>
                                     <option value="months">Months</option>
                                 </select>
@@ -78,48 +78,48 @@
                         <span class="literal-calc-icon">×</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     
-                    <div class="row g-3 mb-4">
+                    <div class="row g-2 mb-3">
                         <div class="col-md-6">
-                            <div class="p-3 bg-white border rounded shadow-sm text-center">
-                                <span class="text-muted fw-bold d-block small text-uppercase mb-1">Monthly Home EMI</span>
-                                <span class="fw-bold fs-4 text-primary" id="res-hl-monthly">₹0</span>
+                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Monthly Home EMI</label>
+                            <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
+                                <div class="literal-display-main text-primary fs-5 text-end" id="res-hl-monthly">₹0</div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="p-3 bg-white border rounded shadow-sm text-center">
-                                <span class="text-muted fw-bold d-block small text-uppercase mb-1">Total Principal</span>
-                                <span class="fw-bold fs-5 text-dark" id="res-hl-principal">₹0</span>
+                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Total Principal</label>
+                            <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
+                                <div class="literal-display-main text-dark fs-5 text-end" id="res-hl-principal">₹0</div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="p-3 bg-white border rounded shadow-sm text-center">
-                                <span class="text-muted fw-bold d-block small text-uppercase mb-1">Total Interest</span>
-                                <span class="fw-bold fs-5 text-danger" id="res-hl-interest">₹0</span>
+                        <div class="col-md-6 mt-2">
+                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Total Interest</label>
+                            <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
+                                <div class="literal-display-main text-danger fs-5 text-end" id="res-hl-interest">₹0</div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="p-3 bg-white border rounded shadow-sm text-center">
-                                <span class="text-muted fw-bold d-block small text-uppercase mb-1">Total Amount Payable</span>
-                                <span class="fw-bold fs-5 text-success" id="res-hl-total">₹0</span>
+                        <div class="col-md-6 mt-2">
+                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Amount Payable</label>
+                            <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0; background-color: #f8f9ff;">
+                                <div class="literal-display-main text-success fs-5 text-end" id="res-hl-total">₹0</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Visual Representation: Graphs side-by-side or stacked -->
-                    <div class="row g-4 bg-white border rounded shadow-sm mx-0 p-3 align-items-center">
+                    <div class="row g-2 mt-2">
                         <!-- Bar Chart -->
-                        <div class="col-md-7 border-end">
-                            <h6 class="fw-bold text-center mb-3 text-dark">Loan Amortization Growth</h6>
-                            <div style="height: 200px; position: relative;">
+                        <div class="col-md-7 p-2 border-secondary-subtle" style="border: 1px solid #ccc; background: #fdfdfd; border-right: none;">
+                            <h6 class="fw-bold text-center mb-1 text-dark" style="font-size: 0.8rem;">Amortization Growth</h6>
+                            <div style="height: 150px; position: relative;">
                                 <canvas id="hlBarChartCustom"></canvas>
                             </div>
                         </div>
                         <!-- Pie Chart -->
-                        <div class="col-md-5">
-                            <h6 class="fw-bold text-center mb-3 text-dark">Payment Breakup</h6>
-                            <div style="height: 180px; position: relative;" class="d-flex justify-content-center">
+                        <div class="col-md-5 p-2 border-secondary-subtle" style="border: 1px solid #ccc; background: #fdfdfd;">
+                            <h6 class="fw-bold text-center mb-1 text-dark" style="font-size: 0.8rem;">Payment Breakup</h6>
+                            <div style="height: 150px; position: relative;" class="d-flex justify-content-center">
                                 <canvas id="hlPieChartCustom"></canvas>
                             </div>
                         </div>

@@ -22,12 +22,18 @@
             </div>
             
             <div class="saas-footer-newsletter">
-                <h4>Stay Updated</h4>
-                <p>Subscribe to our newsletter for the latest calculator releases and financial guides. No spam, ever.</p>
-                <form class="saas-newsletter-form">
-                    <input type="email" class="saas-newsletter-input" placeholder="you@company.com" required>
-                    <button type="submit" class="saas-newsletter-btn">Subscribe</button>
-                </form>
+                <h4>Lightning Fast. Always Free.</h4>
+                <p style="margin-bottom: 12px;">We believe in providing professional-grade calculation tools without the clutter. No intrusive ads, no paywalls, and absolutely no data tracking.</p>
+                <div style="display: flex; gap: 16px; margin-top: 16px;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <i class="bi bi-lightning-charge-fill" style="color: #F59E0B;"></i>
+                        <span style="font-size: 0.875rem; font-weight: 600; color: var(--text-primary);">Instant Results</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <i class="bi bi-shield-check" style="color: #10B981;"></i>
+                        <span style="font-size: 0.875rem; font-weight: 600; color: var(--text-primary);">Privacy First</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -45,20 +51,23 @@
             </div>
             
             <div class="saas-footer-col">
-                <h5>Health</h5>
+                <h5>Investment & Tax</h5>
                 <ul>
-                    <li><a href="<?php echo URLROOT; ?>/calculators/bmi">BMI Calculator</a></li>
-                    <li><a href="<?php echo URLROOT; ?>/calculators/calorie">Calorie Calculator</a></li>
-                    <li><a href="<?php echo URLROOT; ?>/calculators/macro">Macro Calculator</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/fd">FD Calculator</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/gst">GST Calculator</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/compound_interest">Compound Interest</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/simple_interest">Simple Interest</a></li>
                 </ul>
             </div>
 
             <div class="saas-footer-col">
-                <h5>Math</h5>
+                <h5>Health & Math</h5>
                 <ul>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/bmi">BMI Calculator</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/calorie">Calorie Calculator</a></li>
                     <li><a href="<?php echo URLROOT; ?>/calculators/percentage">Percentage</a></li>
                     <li><a href="<?php echo URLROOT; ?>/calculators/age">Age Calculator</a></li>
-                    <li><a href="<?php echo URLROOT; ?>/calculators/scientific">Scientific</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/calculators/love">Love Calculator</a></li>
                 </ul>
             </div>
 
@@ -66,19 +75,9 @@
                 <h5>Company</h5>
                 <ul>
                     <li><a href="<?php echo URLROOT; ?>/pages/about">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="saas-footer-col">
-                <h5>Resources</h5>
-                <ul>
-                    <li><a href="#">API Documentation</a></li>
-                    <li><a href="#">Widget Embed</a></li>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">System Status</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/pages/privacy">Privacy Policy</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/pages/terms">Terms of Service</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/admin/login">Admin Login</a></li>
                 </ul>
             </div>
         </div>

@@ -20,21 +20,21 @@
                         <span class="literal-calc-icon">×</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     <form id="gst-calculator-form">
                         <!-- Amount -->
-                        <div class="mb-4 bg-white p-3 border rounded shadow-sm">
-                            <label class="form-label fw-bold text-dark">Amount</label>
-                            <div class="input-group">
-                                <span class="input-group-text bg-light">₹</span>
-                                <input type="number" class="form-control" id="gst-amount-custom" value="10000" min="0" required>
+                        <div class="mb-3">
+                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Amount</label>
+                            <div class="input-group input-group-sm mt-1">
+                                <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                <input type="number" class="form-control border-secondary-subtle fw-medium" id="gst-amount-custom" value="10000" min="0" required>
                             </div>
                         </div>
 
                         <!-- GST Rate -->
-                        <div class="mb-4 bg-white p-3 border rounded shadow-sm">
-                            <label class="form-label fw-bold text-dark">GST Rate (%)</label>
-                            <select class="form-select bg-light" id="gst-rate-custom">
+                        <div class="mb-3">
+                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">GST Rate (%)</label>
+                            <select class="form-select form-select-sm border-secondary-subtle fw-medium" id="gst-rate-custom">
                                 <option value="5">5%</option>
                                 <option value="12">12%</option>
                                 <option value="18" selected>18%</option>
@@ -43,14 +43,14 @@
                         </div>
 
                         <!-- Add/Remove GST Toggle -->
-                        <div class="mb-0 bg-white p-3 border rounded shadow-sm text-center">
-                            <label class="form-label d-block fw-bold mb-3 text-dark">GST Type</label>
-                            <div class="btn-group w-100" role="group">
+                        <div class="mb-3 text-center">
+                            <label class="form-label d-block text-dark mb-2" style="font-size: 0.9rem; font-weight: 600;">GST Type</label>
+                            <div class="btn-group w-100 btn-group-sm" role="group">
                                 <input type="radio" class="btn-check" name="gst-type-custom" id="gst-add-custom" value="add" checked>
-                                <label class="btn btn-outline-primary py-2 fw-semibold" for="gst-add-custom">+ Add GST</label>
+                                <label class="btn btn-outline-primary fw-semibold" for="gst-add-custom">+ Add GST</label>
 
                                 <input type="radio" class="btn-check" name="gst-type-custom" id="gst-remove-custom" value="remove">
-                                <label class="btn btn-outline-danger py-2 fw-semibold" for="gst-remove-custom">- Remove GST</label>
+                                <label class="btn btn-outline-danger fw-semibold" for="gst-remove-custom">- Remove GST</label>
                             </div>
                         </div>
                     </form>
@@ -68,53 +68,53 @@
                         <span class="literal-calc-icon">×</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     
-                    <div class="row g-3 mb-4">
+                    <div class="row g-2 mb-3">
                         <div class="col-md-4">
-                            <div class="p-3 bg-white border rounded shadow-sm text-center">
-                                <span class="text-muted fw-bold d-block small text-uppercase mb-1">Net Amount</span>
-                                <span class="fw-bold fs-5 text-dark" id="res-gst-net">₹0</span>
+                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Net Amount</label>
+                            <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
+                                <div class="literal-display-main text-dark fs-5 text-end" id="res-gst-net">₹0</div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="p-3 bg-white border rounded shadow-sm text-center">
-                                <span class="text-muted fw-bold d-block small text-uppercase mb-1">Tax Amount</span>
-                                <span class="fw-bold fs-5 text-danger" id="res-gst-tax">₹0</span>
+                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Tax Amount</label>
+                            <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
+                                <div class="literal-display-main text-danger fs-5 text-end" id="res-gst-tax">₹0</div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="p-3 bg-white border rounded shadow-sm text-center">
-                                <span class="text-muted fw-bold d-block small text-uppercase mb-1">Gross Amount</span>
-                                <span class="fw-bold fs-5 text-success" id="res-gst-gross">₹0</span>
+                            <label class="form-label text-dark mb-1" style="font-size: 0.9rem; font-weight: 600;">Gross Amount</label>
+                            <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0; background-color: #f8f9ff;">
+                                <div class="literal-display-main text-success fs-5 text-end" id="res-gst-gross">₹0</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Visual Representation: Graphs side-by-side or stacked -->
-                    <div class="row g-4 bg-white border rounded shadow-sm mx-0 p-3 align-items-center">
+                    <div class="row g-2 mt-2">
                         <!-- Tax Breakdown Split Table -->
-                        <div class="col-md-6 border-end">
-                            <h6 class="fw-bold mb-3 text-dark">Indian Dual GST Split</h6>
-                            <div class="list-group list-group-flush border rounded small">
-                                <div class="list-group-item d-flex justify-content-between border-0 border-bottom border-light">
+                        <div class="col-md-6 p-2 border-secondary-subtle" style="border: 1px solid #ccc; background: #fdfdfd; border-right: none;">
+                            <h6 class="fw-bold mb-2 text-dark" style="font-size: 0.8rem;">Indian Dual GST Split</h6>
+                            <div class="list-group list-group-flush border rounded" style="font-size: 0.8rem;">
+                                <div class="list-group-item d-flex justify-content-between border-0 border-bottom border-light py-1">
                                     <span class="text-muted">Central GST (CGST 50%)</span>
                                     <span class="fw-semibold text-dark" id="res-gst-cgst">₹0</span>
                                 </div>
-                                <div class="list-group-item d-flex justify-content-between border-0 border-bottom border-light">
+                                <div class="list-group-item d-flex justify-content-between border-0 border-bottom border-light py-1">
                                     <span class="text-muted">State GST (SGST 50%)</span>
                                     <span class="fw-semibold text-dark" id="res-gst-sgst">₹0</span>
                                 </div>
-                                <div class="list-group-item d-flex justify-content-between bg-light fw-bold text-dark border-0">
+                                <div class="list-group-item d-flex justify-content-between bg-light fw-bold text-dark border-0 py-1">
                                     <span>Integrated GST (IGST 100%)</span>
                                     <span id="res-gst-igst">₹0</span>
                                 </div>
                             </div>
                         </div>
                         <!-- Pie Chart -->
-                        <div class="col-md-6">
-                            <h6 class="fw-bold text-center mb-3 text-dark">Cost Structure</h6>
-                            <div style="height: 180px; position: relative;" class="d-flex justify-content-center">
+                        <div class="col-md-6 p-2 border-secondary-subtle" style="border: 1px solid #ccc; background: #fdfdfd;">
+                            <h6 class="fw-bold text-center mb-1 text-dark" style="font-size: 0.8rem;">Cost Structure</h6>
+                            <div style="height: 120px; position: relative;" class="d-flex justify-content-center">
                                 <canvas id="gstPieChartCustom"></canvas>
                             </div>
                         </div>
