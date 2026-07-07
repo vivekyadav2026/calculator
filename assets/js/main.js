@@ -95,7 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (themeToggleBtns.length > 0) {
         const htmlElement = document.documentElement;
 
-        const savedTheme = localStorage.getItem('theme');
+        let savedTheme = null;
+        try {
+            savedTheme = localStorage.getItem('theme');
+        } catch (e) {}
+        
         if (savedTheme) {
             htmlElement.setAttribute('data-bs-theme', savedTheme);
             updateIcons(savedTheme);
@@ -108,7 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const newTheme = currentTheme === 'light' ? 'dark' : 'light';
                 
                 htmlElement.setAttribute('data-bs-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
+                try {
+                    localStorage.setItem('theme', newTheme);
+                } catch (e) {}
                 updateIcons(newTheme);
             });
         });
@@ -207,12 +213,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('mobile-menu');
 
     if (mobileMenuTrigger && mobileMenuClose && mobileMenu) {
-        mobileMenuTrigger.addEventListener('click', () => {
+        mobileMenuTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
             mobileMenu.classList.add('is-open');
             document.body.style.overflow = 'hidden'; // Prevent background scrolling
         });
 
-        mobileMenuClose.addEventListener('click', () => {
+        mobileMenuClose.addEventListener('click', (e) => {
+            e.preventDefault();
             mobileMenu.classList.remove('is-open');
             document.body.style.overflow = '';
         });
