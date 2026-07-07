@@ -9,73 +9,71 @@
         </ol>
     </nav>
 
-    <div class="row g-4">
+    <div class="row g-4 mb-4">
         <!-- Calculator Inputs (Tabbed Sub-Calculators) -->
         <div class="col-lg-6">
-            <div class="card calc-card shadow-sm border-0 h-100">
-                <div class="card-body p-4">
-                    <div class="d-flex align-items-center gap-3 mb-4">
-                        <div class="icon-circle bg-info-subtle text-info">
-                            <i class="bi bi-percent fs-3"></i>
-                        </div>
-                        <div>
-                            <h1 class="fw-bold h3 mb-1">Percentage Calculator</h1>
-                            <p class="text-muted small mb-0">Solve portions, ratios, and growth rates</p>
-                        </div>
+            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%;">
+                <div class="literal-calc-header">
+                    <h2 class="literal-calc-title">Percentage Calculator</h2>
+                    <div class="literal-calc-controls">
+                        <span class="literal-calc-icon">_</span>
+                        <span class="literal-calc-icon">×</span>
                     </div>
+                </div>
+                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
 
                     <!-- Navigation Pills for the 3 sub-calculators -->
-                    <ul class="nav nav-pills mb-4 nav-justified" id="perc-tab" role="tablist">
+                    <ul class="nav nav-pills mb-4 nav-justified bg-white p-1 rounded shadow-sm border" id="perc-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active small py-2" id="perc-portion-tab" data-bs-toggle="pill" data-bs-target="#perc-portion" type="button" role="tab">Portion</button>
+                            <button class="nav-link active small py-2 fw-bold text-dark" id="perc-portion-tab" data-bs-toggle="pill" data-bs-target="#perc-portion" type="button" role="tab">Portion</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link small py-2" id="perc-ratio-tab" data-bs-toggle="pill" data-bs-target="#perc-ratio" type="button" role="tab">Ratio</button>
+                            <button class="nav-link small py-2 fw-bold text-dark" id="perc-ratio-tab" data-bs-toggle="pill" data-bs-target="#perc-ratio" type="button" role="tab">Ratio</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link small py-2" id="perc-growth-tab" data-bs-toggle="pill" data-bs-target="#perc-growth" type="button" role="tab">Growth</button>
+                            <button class="nav-link small py-2 fw-bold text-dark" id="perc-growth-tab" data-bs-toggle="pill" data-bs-target="#perc-growth" type="button" role="tab">Growth</button>
                         </li>
                     </ul>
 
-                    <div class="tab-content" id="perc-tabContent">
+                    <div class="tab-content bg-white p-4 border rounded shadow-sm" id="perc-tabContent">
                         <!-- Sub-Calc 1: What is X% of Y? -->
                         <div class="tab-pane fade show active" id="perc-portion" role="tabpanel">
-                            <h5 class="fw-bold h6 mb-3 text-body">Calculate a Portion (What is X% of Y?)</h5>
+                            <h5 class="fw-bold h6 mb-3 text-dark border-bottom pb-2">Calculate a Portion (What is X% of Y?)</h5>
                             <div class="mb-3">
-                                <label class="form-label fw-bold">Percentage (X)</label>
+                                <label class="form-label fw-bold text-dark">Percentage (X)</label>
                                 <div class="input-group">
                                     <input type="number" class="form-control" id="portion-x" value="20" step="any">
-                                    <span class="input-group-text">%</span>
+                                    <span class="input-group-text bg-light">%</span>
                                 </div>
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label fw-bold">Total Amount (Y)</label>
+                            <div class="mb-0">
+                                <label class="form-label fw-bold text-dark">Total Amount (Y)</label>
                                 <input type="number" class="form-control" id="portion-y" value="250" step="any">
                             </div>
                         </div>
 
                         <!-- Sub-Calc 2: X is what % of Y? -->
                         <div class="tab-pane fade" id="perc-ratio" role="tabpanel">
-                            <h5 class="fw-bold h6 mb-3 text-body">Calculate a Ratio (X is what % of Y?)</h5>
+                            <h5 class="fw-bold h6 mb-3 text-dark border-bottom pb-2">Calculate a Ratio (X is what % of Y?)</h5>
                             <div class="mb-3">
-                                <label class="form-label fw-bold">Value (X)</label>
+                                <label class="form-label fw-bold text-dark">Value (X)</label>
                                 <input type="number" class="form-control" id="ratio-x" value="50" step="any">
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label fw-bold">Total Amount (Y)</label>
+                            <div class="mb-0">
+                                <label class="form-label fw-bold text-dark">Total Amount (Y)</label>
                                 <input type="number" class="form-control" id="ratio-y" value="200" step="any">
                             </div>
                         </div>
 
                         <!-- Sub-Calc 3: Percentage Increase/Decrease -->
                         <div class="tab-pane fade" id="perc-growth" role="tabpanel">
-                            <h5 class="fw-bold h6 mb-3 text-body">Calculate Growth Rate (From X to Y)</h5>
+                            <h5 class="fw-bold h6 mb-3 text-dark border-bottom pb-2">Calculate Growth Rate (From X to Y)</h5>
                             <div class="mb-3">
-                                <label class="form-label fw-bold">Initial Value (X)</label>
+                                <label class="form-label fw-bold text-dark">Initial Value (X)</label>
                                 <input type="number" class="form-control" id="growth-x" value="100" step="any">
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label fw-bold">New Value (Y)</label>
+                            <div class="mb-0">
+                                <label class="form-label fw-bold text-dark">New Value (Y)</label>
                                 <input type="number" class="form-control" id="growth-y" value="125" step="any">
                             </div>
                         </div>
@@ -86,30 +84,36 @@
 
         <!-- Calculator Results & Step-by-Step Explanation -->
         <div class="col-lg-6">
-            <div class="card calc-card shadow-sm border-0 h-100">
-                <div class="card-body p-4 p-md-5 d-flex flex-column justify-content-between">
-                    <div class="w-100">
-                        <h4 class="fw-bold mb-4 text-body border-bottom pb-2">Calculation Result</h4>
+            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%;">
+                <div class="literal-calc-header">
+                    <h2 class="literal-calc-title">Calculation Result</h2>
+                    <div class="literal-calc-controls">
+                        <span class="literal-calc-icon">_</span>
+                        <span class="literal-calc-icon">×</span>
+                    </div>
+                </div>
+                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                    <div class="w-100 bg-white p-4 border rounded shadow-sm h-100 d-flex flex-column justify-content-center">
 
-                        <div class="p-4 rounded-4 bg-light text-center mb-4 border">
-                            <span class="text-muted d-block small mb-1" id="res-perc-label">Result Value</span>
+                        <div class="p-4 rounded border bg-light text-center mb-4">
+                            <span class="text-muted d-block small mb-1 fw-bold text-uppercase" id="res-perc-label">Result Value</span>
                             <h2 class="fw-bold text-success mb-1" id="res-perc-val">50</h2>
                             <span class="text-muted extra-small" id="res-perc-helper">Explanation will appear here.</span>
                         </div>
 
                         <!-- Step-by-Step Formulation -->
-                        <h6 class="fw-bold mb-2">Step-by-Step Calculation Formula</h6>
-                        <div class="p-3 bg-light rounded-3 text-muted small mb-4">
-                            <pre class="mb-0 text-body" id="res-perc-steps">Formula details...</pre>
+                        <h6 class="fw-bold mb-2 text-dark">Step-by-Step Calculation Formula</h6>
+                        <div class="p-3 bg-light rounded border text-muted small mb-4">
+                            <pre class="mb-0 text-dark" id="res-perc-steps">Formula details...</pre>
                         </div>
 
                         <!-- Visual Proportional Progress Bar -->
-                        <h6 class="fw-bold mb-2" id="res-visual-title">Visual Ratio Split</h6>
-                        <div class="progress" style="height: 12px; border-radius: 8px;">
-                            <div class="progress-bar bg-primary" id="res-visual-bar1" role="progressbar" style="width: 20%;"></div>
-                            <div class="progress-bar bg-secondary-subtle" id="res-visual-bar2" role="progressbar" style="width: 80%;"></div>
+                        <h6 class="fw-bold mb-2 text-dark" id="res-visual-title">Visual Ratio Split</h6>
+                        <div class="progress border bg-light" style="height: 16px; border-radius: 8px;">
+                            <div class="progress-bar text-white fw-bold" style="background-color: #005A9E;" id="res-visual-bar1" role="progressbar" style="width: 20%;"></div>
+                            <div class="progress-bar bg-secondary" id="res-visual-bar2" role="progressbar" style="width: 80%;"></div>
                         </div>
-                        <div class="d-flex justify-content-between text-muted extra-small mt-2">
+                        <div class="d-flex justify-content-between text-muted extra-small mt-2 fw-bold">
                             <span id="res-visual-lbl1">Part (20%)</span>
                             <span id="res-visual-lbl2">Remaining (80%)</span>
                         </div>

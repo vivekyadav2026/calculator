@@ -9,32 +9,29 @@
         </ol>
     </nav>
 
-    <div class="row g-4">
+    <div class="row g-4 mb-4">
         <!-- Calculator Inputs -->
         <div class="col-lg-5">
-            <div class="card calc-card shadow-sm border-0 h-100">
-                <div class="card-body p-4">
-                    <div class="d-flex align-items-center gap-3 mb-4">
-                        <div class="icon-circle bg-primary-subtle text-primary">
-                            <i class="bi bi-calendar-event fs-3"></i>
-                        </div>
-                        <div>
-                            <h1 class="fw-bold h3 mb-1">Age Calculator</h1>
-                            <p class="text-muted small mb-0">Calculate exact age and birthday stats</p>
-                        </div>
+            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%;">
+                <div class="literal-calc-header">
+                    <h2 class="literal-calc-title">Age Calculator</h2>
+                    <div class="literal-calc-controls">
+                        <span class="literal-calc-icon">_</span>
+                        <span class="literal-calc-icon">×</span>
                     </div>
-
+                </div>
+                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     <form id="age-calculator-form">
                         <!-- Date of Birth -->
-                        <div class="mb-4">
-                            <label for="dob-custom" class="form-label fw-bold">Date of Birth</label>
-                            <input type="date" class="form-control border-2 form-control-lg" id="dob-custom" value="1995-10-15" required max="<?php echo date('Y-m-d'); ?>">
+                        <div class="mb-4 bg-white p-3 border rounded shadow-sm">
+                            <label for="dob-custom" class="form-label fw-bold text-dark">Date of Birth</label>
+                            <input type="date" class="form-control form-control-lg bg-light border-0" id="dob-custom" value="1995-10-15" required max="<?php echo date('Y-m-d'); ?>">
                         </div>
 
                         <!-- Target Date -->
-                        <div class="mb-4">
-                            <label for="target-date-custom" class="form-label fw-bold">Calculate Age at Date</label>
-                            <input type="date" class="form-control border-2 form-control-lg" id="target-date-custom" value="<?php echo date('Y-m-d'); ?>" required>
+                        <div class="mb-0 bg-white p-3 border rounded shadow-sm">
+                            <label for="target-date-custom" class="form-label fw-bold text-dark">Calculate Age at Date</label>
+                            <input type="date" class="form-control form-control-lg bg-light border-0" id="target-date-custom" value="<?php echo date('Y-m-d'); ?>" required>
                         </div>
                     </form>
                 </div>
@@ -43,66 +40,74 @@
 
         <!-- Calculator Results -->
         <div class="col-lg-7">
-            <div class="card calc-card shadow-sm border-0 h-100 bg-white">
-                <div class="card-body p-4 p-md-5">
-                    <h4 class="fw-bold mb-4 text-body border-bottom pb-2">Calculation Result</h4>
-
-                    <!-- Main Age display -->
-                    <div class="p-4 rounded-4 bg-primary-subtle text-center mb-4 border border-primary">
-                        <span class="text-primary-emphasis fw-bold d-block small mb-2">CHRONOLOGICAL AGE</span>
-                        <h2 class="fw-bold text-primary mb-1" id="res-age-string">0 Years, 0 Months, 0 Days</h2>
-                        <span class="text-muted extra-small" id="res-dob-day">Born on a Sunday</span>
+            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%;">
+                <div class="literal-calc-header">
+                    <h2 class="literal-calc-title">Calculation Result</h2>
+                    <div class="literal-calc-controls">
+                        <span class="literal-calc-icon">_</span>
+                        <span class="literal-calc-icon">×</span>
                     </div>
+                </div>
+                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                    <div class="w-100 bg-white p-4 border rounded shadow-sm h-100 d-flex flex-column justify-content-center">
 
-                    <!-- Side-by-Side Birthday Info -->
-                    <div class="row g-3 mb-4">
-                        <div class="col-md-6">
-                            <div class="p-3 bg-light rounded-4 border text-center h-100">
-                                <span class="text-muted d-block small mb-1">Next Birthday In</span>
-                                <h4 class="fw-bold text-success mb-1" id="res-next-birthday">0 Months, 0 Days</h4>
-                                <span class="text-muted extra-small" id="res-next-birthday-day">Weekday</span>
-                            </div>
+                        <!-- Main Age display -->
+                        <div class="p-4 rounded border text-center mb-4" style="background-color: #f0f4f8; border-color: #005A9E !important;">
+                            <span class="fw-bold d-block small mb-2 text-uppercase" style="color: #005A9E;">CHRONOLOGICAL AGE</span>
+                            <h2 class="fw-bold mb-1" id="res-age-string" style="color: #005A9E;">0 Years, 0 Months, 0 Days</h2>
+                            <span class="text-muted extra-small" id="res-dob-day">Born on a Sunday</span>
                         </div>
-                        <div class="col-md-6">
-                            <div class="p-3 bg-light rounded-4 border text-center h-100">
-                                <span class="text-muted d-block small mb-1">Half Birthday</span>
-                                <h4 class="fw-bold text-info mb-1" id="res-half-birthday">M 00, YYYY</h4>
-                                <span class="text-muted extra-small">6 months after birthday</span>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Breakdown Grid -->
-                    <h6 class="fw-bold mb-3 text-body">Detailed Time Breakdowns</h6>
-                    <div class="row g-2 text-center text-muted small">
-                        <div class="col-6 col-md-4">
-                            <div class="p-2 border rounded-3 bg-light">
-                                <span class="d-block text-body fw-bold" id="grid-months">0</span> Months
+                        <!-- Side-by-Side Birthday Info -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded border text-center h-100">
+                                    <span class="text-muted d-block small mb-1 fw-bold text-uppercase">Next Birthday In</span>
+                                    <h4 class="fw-bold text-success mb-1" id="res-next-birthday">0 Months, 0 Days</h4>
+                                    <span class="text-muted extra-small" id="res-next-birthday-day">Weekday</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded border text-center h-100">
+                                    <span class="text-muted d-block small mb-1 fw-bold text-uppercase">Half Birthday</span>
+                                    <h4 class="fw-bold text-info mb-1" id="res-half-birthday">M 00, YYYY</h4>
+                                    <span class="text-muted extra-small">6 months after birthday</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-6 col-md-4">
-                            <div class="p-2 border rounded-3 bg-light">
-                                <span class="d-block text-body fw-bold" id="grid-weeks">0</span> Weeks
+
+                        <!-- Breakdown Grid -->
+                        <h6 class="fw-bold mb-3 text-dark">Detailed Time Breakdowns</h6>
+                        <div class="row g-2 text-center text-muted small">
+                            <div class="col-6 col-md-4">
+                                <div class="p-2 border rounded bg-light">
+                                    <span class="d-block text-dark fw-bold fs-5" id="grid-months">0</span> Months
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="p-2 border rounded-3 bg-light">
-                                <span class="d-block text-body fw-bold" id="grid-days">0</span> Days
+                            <div class="col-6 col-md-4">
+                                <div class="p-2 border rounded bg-light">
+                                    <span class="d-block text-dark fw-bold fs-5" id="grid-weeks">0</span> Weeks
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="p-2 border rounded-3 bg-light">
-                                <span class="d-block text-body fw-bold" id="grid-hours">0</span> Hours
+                            <div class="col-6 col-md-4">
+                                <div class="p-2 border rounded bg-light">
+                                    <span class="d-block text-dark fw-bold fs-5" id="grid-days">0</span> Days
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="p-2 border rounded-3 bg-light">
-                                <span class="d-block text-body fw-bold" id="grid-minutes">0</span> Minutes
+                            <div class="col-6 col-md-4">
+                                <div class="p-2 border rounded bg-light">
+                                    <span class="d-block text-dark fw-bold fs-5" id="grid-hours">0</span> Hours
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="p-2 border rounded-3 bg-light">
-                                <span class="d-block text-body fw-bold" id="grid-seconds">0</span> Seconds
+                            <div class="col-6 col-md-4">
+                                <div class="p-2 border rounded bg-light">
+                                    <span class="d-block text-dark fw-bold fs-5" id="grid-minutes">0</span> Minutes
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="p-2 border rounded bg-light">
+                                    <span class="d-block text-dark fw-bold fs-5" id="grid-seconds">0</span> Seconds
+                                </div>
                             </div>
                         </div>
                     </div>

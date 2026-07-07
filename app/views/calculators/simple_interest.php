@@ -9,46 +9,43 @@
         </ol>
     </nav>
 
-    <div class="row g-4">
+    <div class="row g-4 mb-4">
         <!-- Calculator Inputs -->
         <div class="col-lg-5">
-            <div class="card calc-card shadow-sm border-0 h-100">
-                <div class="card-body p-4">
-                    <div class="d-flex align-items-center gap-3 mb-4">
-                        <div class="icon-circle bg-primary-subtle text-primary">
-                            <i class="bi bi-wallet2 fs-3"></i>
-                        </div>
-                        <div>
-                            <h1 class="fw-bold h3 mb-1">Simple Interest</h1>
-                            <p class="text-muted small mb-0">Calculate linear interest charges or returns</p>
-                        </div>
+            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%;">
+                <div class="literal-calc-header">
+                    <h2 class="literal-calc-title">Simple Interest Calculator</h2>
+                    <div class="literal-calc-controls">
+                        <span class="literal-calc-icon">_</span>
+                        <span class="literal-calc-icon">×</span>
                     </div>
-
+                </div>
+                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     <form id="si-calculator-form">
                         <!-- Principal Amount -->
-                        <div class="mb-4">
-                            <label class="form-label fw-bold">Principal Amount (P)</label>
+                        <div class="mb-4 bg-white p-3 border rounded shadow-sm">
+                            <label class="form-label fw-bold text-dark">Principal Amount (P)</label>
                             <div class="input-group">
-                                <span class="input-group-text">₹</span>
+                                <span class="input-group-text bg-light">₹</span>
                                 <input type="number" class="form-control" id="si-p-custom" value="10000" min="0" required>
                             </div>
                         </div>
 
                         <!-- Rate of Interest -->
-                        <div class="mb-4">
-                            <label class="form-label fw-bold">Rate of Interest (R) % p.a.</label>
+                        <div class="mb-4 bg-white p-3 border rounded shadow-sm">
+                            <label class="form-label fw-bold text-dark">Rate of Interest (R) % p.a.</label>
                             <div class="input-group">
                                 <input type="number" class="form-control" id="si-r-custom" value="6" step="0.1" min="0" required>
-                                <span class="input-group-text">%</span>
+                                <span class="input-group-text bg-light">%</span>
                             </div>
                         </div>
 
                         <!-- Time Period -->
-                        <div class="mb-4">
-                            <label class="form-label fw-bold">Time Period (T) in Years</label>
+                        <div class="mb-0 bg-white p-3 border rounded shadow-sm">
+                            <label class="form-label fw-bold text-dark">Time Period (T) in Years</label>
                             <div class="input-group">
                                 <input type="number" class="form-control" id="si-t-custom" value="5" step="0.5" min="0.1" required>
-                                <span class="input-group-text">Years</span>
+                                <span class="input-group-text bg-light">Years</span>
                             </div>
                         </div>
                     </form>
@@ -58,43 +55,49 @@
 
         <!-- Calculator Results, Charts and Graphs -->
         <div class="col-lg-7">
-            <div class="card calc-card shadow-sm border-0 h-100">
-                <div class="card-body p-4">
-                    <h4 class="fw-bold mb-3 text-body">Calculation Summary</h4>
+            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%;">
+                <div class="literal-calc-header">
+                    <h2 class="literal-calc-title">Calculation Summary</h2>
+                    <div class="literal-calc-controls">
+                        <span class="literal-calc-icon">_</span>
+                        <span class="literal-calc-icon">×</span>
+                    </div>
+                </div>
+                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     
                     <div class="row g-3 mb-4">
                         <div class="col-md-4">
-                            <div class="p-3 bg-light rounded-3 text-center">
-                                <span class="text-muted d-block small mb-1">Principal Amount</span>
-                                <span class="fw-bold fs-5 text-body" id="res-si-principal">₹0</span>
+                            <div class="p-3 bg-white border rounded shadow-sm text-center">
+                                <span class="text-muted fw-bold d-block small text-uppercase mb-1">Principal Amount</span>
+                                <span class="fw-bold fs-5 text-dark" id="res-si-principal">₹0</span>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="p-3 bg-light rounded-3 text-center">
-                                <span class="text-muted d-block small mb-1">Interest Earned</span>
+                            <div class="p-3 bg-white border rounded shadow-sm text-center">
+                                <span class="text-muted fw-bold d-block small text-uppercase mb-1">Interest Earned</span>
                                 <span class="fw-bold fs-5 text-success" id="res-si-interest">₹0</span>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="p-3 bg-primary-subtle rounded-3 text-center">
-                                <span class="text-primary-emphasis d-block small mb-1">Total Value</span>
+                            <div class="p-3 bg-white border rounded shadow-sm text-center">
+                                <span class="text-muted fw-bold d-block small text-uppercase mb-1">Total Value</span>
                                 <span class="fw-bold fs-5 text-primary" id="res-si-total">₹0</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Visual Representation: Graphs side-by-side or stacked -->
-                    <div class="row g-4 align-items-center">
+                    <div class="row g-4 bg-white border rounded shadow-sm mx-0 p-3 align-items-center">
                         <!-- Bar Chart -->
-                        <div class="col-md-7">
-                            <h6 class="fw-bold text-center mb-2">Yearly Growth Projections</h6>
-                            <div style="height: 220px; position: relative;">
+                        <div class="col-md-7 border-end">
+                            <h6 class="fw-bold text-center mb-3 text-dark">Yearly Growth Projections</h6>
+                            <div style="height: 200px; position: relative;">
                                 <canvas id="siBarChart"></canvas>
                             </div>
                         </div>
                         <!-- Pie Chart -->
                         <div class="col-md-5">
-                            <h6 class="fw-bold text-center mb-2">Portfolio Split</h6>
+                            <h6 class="fw-bold text-center mb-3 text-dark">Portfolio Split</h6>
                             <div style="height: 180px; position: relative;" class="d-flex justify-content-center">
                                 <canvas id="siPieChartCustom"></canvas>
                             </div>

@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Setup input slider interactions dynamically
-    const sliders = document.querySelectorAll('.premium-slider-input');
+    const sliders = document.querySelectorAll('.form-range');
     sliders.forEach(slider => {
         const valueId = slider.getAttribute('data-value-id');
         const valIndicator = document.getElementById(valueId);
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (valIndicator) {
                 // If it is percentage
                 if (slider.id.includes('rate') || slider.id.includes('interest')) {
-                    valIndicator.textContent = slider.value + ' %';
+                    valIndicator.textContent = slider.value + '%';
                 } else if (slider.id.includes('tenure') || slider.id.includes('time') || slider.id.includes('year')) {
                     valIndicator.textContent = slider.value + ' Yr';
                 } else {

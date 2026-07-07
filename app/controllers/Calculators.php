@@ -7,7 +7,7 @@ class Calculators extends Controller {
     }
 
     public function index() {
-        header('Location: ' . URLROOT);
+        $this->loadCalculatorPage('all-calculators', 'All Calculators', 'index', 'Browse our complete list of free online calculators for finance, health, and math.');
     }
 
     private function loadCalculatorPage($key, $title, $viewName, $desc = '') {

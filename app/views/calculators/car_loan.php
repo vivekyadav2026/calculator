@@ -9,58 +9,55 @@
         </ol>
     </nav>
 
-    <div class="row g-4">
+    <div class="row g-4 mb-4">
         <!-- Calculator Inputs -->
         <div class="col-lg-5">
-            <div class="card calc-card shadow-sm border-0 h-100">
-                <div class="card-body p-4">
-                    <div class="d-flex align-items-center gap-3 mb-4">
-                        <div class="icon-circle bg-primary-subtle text-primary">
-                            <i class="bi bi-car-front-fill fs-3"></i>
-                        </div>
-                        <div>
-                            <h1 class="fw-bold h3 mb-1">Car Loan EMI</h1>
-                            <p class="text-muted small mb-0">Calculate monthly vehicle installments</p>
-                        </div>
+            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%;">
+                <div class="literal-calc-header">
+                    <h2 class="literal-calc-title">Car Loan EMI</h2>
+                    <div class="literal-calc-controls">
+                        <span class="literal-calc-icon">_</span>
+                        <span class="literal-calc-icon">×</span>
                     </div>
-
+                </div>
+                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     <form id="car-loan-calculator-form">
                         <!-- Loan Amount -->
-                        <div class="mb-4">
+                        <div class="mb-4 bg-white p-3 border rounded shadow-sm">
                             <div class="d-flex justify-content-between mb-2">
-                                <label class="form-label fw-bold mb-0">Car Loan Amount</label>
+                                <label class="form-label fw-bold mb-0 text-dark">Car Loan Amount</label>
                                 <span class="text-primary fw-bold" id="cl-amount-val">₹800,000</span>
                             </div>
-                            <input type="range" class="form-range" id="cl-amount" min="50000" max="10000000" step="10000" value="800000">
-                            <div class="input-group mt-2">
-                                <span class="input-group-text">₹</span>
+                            <input type="range" class="form-range mb-2" id="cl-amount" min="50000" max="10000000" step="10000" value="800000">
+                            <div class="input-group">
+                                <span class="input-group-text bg-light">₹</span>
                                 <input type="number" class="form-control" id="cl-amount-input" value="800000" min="50000">
                             </div>
                         </div>
 
                         <!-- Interest Rate -->
-                        <div class="mb-4">
+                        <div class="mb-4 bg-white p-3 border rounded shadow-sm">
                             <div class="d-flex justify-content-between mb-2">
-                                <label class="form-label fw-bold mb-0">Interest Rate (p.a.)</label>
+                                <label class="form-label fw-bold mb-0 text-dark">Interest Rate (p.a.)</label>
                                 <span class="text-success fw-bold" id="cl-rate-val">9.5%</span>
                             </div>
-                            <input type="range" class="form-range" id="cl-rate" min="1" max="25" step="0.1" value="9.5">
-                            <div class="input-group mt-2">
+                            <input type="range" class="form-range mb-2" id="cl-rate" min="1" max="25" step="0.1" value="9.5">
+                            <div class="input-group">
                                 <input type="number" class="form-control" id="cl-rate-input" value="9.5" step="0.1" min="1" max="25">
-                                <span class="input-group-text">%</span>
+                                <span class="input-group-text bg-light">%</span>
                             </div>
                         </div>
 
                         <!-- Tenure -->
-                        <div class="mb-4">
+                        <div class="mb-0 bg-white p-3 border rounded shadow-sm">
                             <div class="d-flex justify-content-between mb-2">
-                                <label class="form-label fw-bold mb-0">Loan Tenure</label>
+                                <label class="form-label fw-bold mb-0 text-dark">Loan Tenure</label>
                                 <span class="text-warning fw-bold" id="cl-tenure-val">5 Years</span>
                             </div>
-                            <input type="range" class="form-range" id="cl-tenure" min="1" max="10" step="1" value="5">
-                            <div class="input-group mt-2">
+                            <input type="range" class="form-range mb-2" id="cl-tenure" min="1" max="10" step="1" value="5">
+                            <div class="input-group">
                                 <input type="number" class="form-control" id="cl-tenure-input" value="5" min="1" max="10">
-                                <select class="form-select" id="cl-tenure-type" style="max-width: 120px;">
+                                <select class="form-select bg-light" id="cl-tenure-type" style="max-width: 120px;">
                                     <option value="years" selected>Years</option>
                                     <option value="months">Months</option>
                                 </select>
@@ -73,49 +70,55 @@
 
         <!-- Results & Graphs -->
         <div class="col-lg-7">
-            <div class="card calc-card shadow-sm border-0 h-100">
-                <div class="card-body p-4">
-                    <h4 class="fw-bold mb-3 text-body">Calculation Summary</h4>
+            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%;">
+                <div class="literal-calc-header">
+                    <h2 class="literal-calc-title">Calculation Summary</h2>
+                    <div class="literal-calc-controls">
+                        <span class="literal-calc-icon">_</span>
+                        <span class="literal-calc-icon">×</span>
+                    </div>
+                </div>
+                <div class="literal-calc-body flex-grow-1 p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
                     
                     <div class="row g-3 mb-4">
                         <div class="col-md-6">
-                            <div class="p-3 bg-primary-subtle rounded-3 text-center">
-                                <span class="text-primary-emphasis d-block small mb-1">Monthly Car EMI</span>
+                            <div class="p-3 bg-white border rounded shadow-sm text-center">
+                                <span class="text-muted fw-bold d-block small text-uppercase mb-1">Monthly Car EMI</span>
                                 <span class="fw-bold fs-4 text-primary" id="res-cl-monthly">₹0</span>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="p-3 bg-light rounded-3 text-center">
-                                <span class="text-muted d-block small mb-1">Total Principal</span>
-                                <span class="fw-bold fs-5 text-body" id="res-cl-principal">₹0</span>
+                            <div class="p-3 bg-white border rounded shadow-sm text-center">
+                                <span class="text-muted fw-bold d-block small text-uppercase mb-1">Total Principal</span>
+                                <span class="fw-bold fs-5 text-dark" id="res-cl-principal">₹0</span>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="p-3 bg-light rounded-3 text-center">
-                                <span class="text-muted d-block small mb-1">Total Interest</span>
+                            <div class="p-3 bg-white border rounded shadow-sm text-center">
+                                <span class="text-muted fw-bold d-block small text-uppercase mb-1">Total Interest</span>
                                 <span class="fw-bold fs-5 text-danger" id="res-cl-interest">₹0</span>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="p-3 bg-success-subtle rounded-3 text-center">
-                                <span class="text-success-emphasis d-block small mb-1">Total Amount Payable</span>
+                            <div class="p-3 bg-white border rounded shadow-sm text-center">
+                                <span class="text-muted fw-bold d-block small text-uppercase mb-1">Total Amount Payable</span>
                                 <span class="fw-bold fs-5 text-success" id="res-cl-total">₹0</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Visual Representation: Graphs side-by-side or stacked -->
-                    <div class="row g-4 align-items-center">
+                    <div class="row g-4 bg-white border rounded shadow-sm mx-0 p-3 align-items-center">
                         <!-- Bar Chart -->
-                        <div class="col-md-7">
-                            <h6 class="fw-bold text-center mb-2">Loan Amortization Growth</h6>
-                            <div style="height: 220px; position: relative;">
+                        <div class="col-md-7 border-end">
+                            <h6 class="fw-bold text-center mb-3 text-dark">Loan Amortization Growth</h6>
+                            <div style="height: 200px; position: relative;">
                                 <canvas id="clBarChartCustom"></canvas>
                             </div>
                         </div>
                         <!-- Pie Chart -->
                         <div class="col-md-5">
-                            <h6 class="fw-bold text-center mb-2">Payment Breakup</h6>
+                            <h6 class="fw-bold text-center mb-3 text-dark">Payment Breakup</h6>
                             <div style="height: 180px; position: relative;" class="d-flex justify-content-center">
                                 <canvas id="clPieChartCustom"></canvas>
                             </div>
