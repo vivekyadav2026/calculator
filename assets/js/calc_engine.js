@@ -158,3 +158,39 @@ window.calcOp = calcOp;
 window.calcFunc = calcFunc;
 window.calcMem = calcMem;
 window.calcEval = calcEval;
+
+// Add physical keyboard support
+document.addEventListener('keydown', function(event) {
+    // Ignore keystrokes if the user is typing in an input field (e.g. EMI inputs)
+    if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+        return;
+    }
+
+    const key = event.key;
+    
+    // Numbers, decimal, and basic math operators
+    if (/^[0-9\.\+\-\*\/\(\)]$/.test(key)) {
+        calcInput(key);
+        event.preventDefault(); // Prevents scroll or other defaults
+    } 
+    // Evaluation (= or Enter)
+    else if (key === 'Enter' || key === '=') {
+        calcEval();
+        event.preventDefault();
+    } 
+    // Backspace to delete last character
+    else if (key === 'Backspace') {
+        calcOp('back');
+        event.preventDefault();
+    } 
+    // Escape to clear all (C)
+    else if (key === 'Escape') {
+        calcOp('C');
+        event.preventDefault();
+    }
+    // Delete to clear entry (CE)
+    else if (key === 'Delete') {
+        calcOp('CE');
+        event.preventDefault();
+    }
+});

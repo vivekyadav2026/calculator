@@ -1,4 +1,4 @@
-﻿<?php require APPROOT . '/views/admin/layouts/header.php'; ?>
+<?php require APPROOT . '/views/admin/layouts/header.php'; ?>
 
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h3 class="fw-bold mb-0 ">Manage FAQs</h3>

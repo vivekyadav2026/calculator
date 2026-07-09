@@ -1,4 +1,4 @@
-﻿<?php require APPROOT . '/views/layouts/header.php'; ?>
+<?php require APPROOT . '/views/layouts/header.php'; ?>
 
 <main class="container py-5 my-3">
     <!-- Breadcrumb -->

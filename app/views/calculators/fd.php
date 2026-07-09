@@ -1,4 +1,4 @@
-﻿<?php require APPROOT . '/views/layouts/header.php'; ?>
+<?php require APPROOT . '/views/layouts/header.php'; ?>
 
 <div class="container py-5">
     <nav aria-label="breadcrumb">

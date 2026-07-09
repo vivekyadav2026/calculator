@@ -1,4 +1,9 @@
-﻿<!-- FAQ Section (Clean light background above footer) -->
+<?php
+$currentUrl = isset($_GET['url']) ? rtrim(strtolower($_GET['url']), '/') : '';
+$hideFaqList = ['pages/about', 'pages/privacy', 'pages/terms', 'about', 'privacy', 'terms'];
+if (!in_array($currentUrl, $hideFaqList)):
+?>
+<!-- FAQ Section (Clean light background above footer) -->
 <section class="site-faq-section py-5">
     <div class="container" style="max-width: 850px;">
         <h2 class="fw-bold mb-2 text-center site-faq-title">Frequently Asked Questions</h2>
@@ -74,6 +79,7 @@
         </div>
     </div>
 </section>
+<?php endif; ?>
 
 <!-- Footer Section -->
 <footer class="saas-footer">
