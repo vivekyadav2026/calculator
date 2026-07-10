@@ -17,10 +17,10 @@
                     <h2 class="literal-calc-title">Love Calculator</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">×</span>
+                        <span class="literal-calc-icon">Ã—</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
                     <div class="text-center mb-3">
                         <p class="text-muted mb-0" style="font-size: 0.85rem;">Enter names to calculate relationship compatibility</p>
                     </div>
@@ -59,10 +59,10 @@
                     <h2 class="literal-calc-title">Match Analysis</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">×</span>
+                        <span class="literal-calc-icon">Ã—</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
                     <div class="w-100 text-center p-3 border-secondary-subtle rounded d-flex flex-column justify-content-center" style="border: 1px solid #ccc; background: #fdfdfd; height: 100%;">
 
                         <!-- Pulsing heart score -->
@@ -111,7 +111,7 @@
         <div class="col-12">
             <div class="card shadow-none border rounded-4 text-center p-4">
                 <h5 class="fw-bold text-body mb-2">How Relationship Compatibility is Calculated</h5>
-                <p class="text-muted small mb-0">Our fun love compatibility tool evaluates name matching patterns, character matches, and deterministic algorithms to return a percentage score. Note: This tool is purely for entertainment purposes and does not represent real-life guidance. Enjoy with friends and partner! 💕</p>
+                <p class="text-muted small mb-0">Our fun love compatibility tool evaluates name matching patterns, character matches, and deterministic algorithms to return a percentage score. Note: This tool is purely for entertainment purposes and does not represent real-life guidance. Enjoy with friends and partner! ðŸ’•</p>
             </div>
         </div>
     </div>
@@ -155,13 +155,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update messages
         if (score > 90) {
-            resMsg.textContent = "Soulmates! Made for each other. ❤️";
+            resMsg.textContent = "Soulmates! Made for each other. â¤ï¸";
         } else if (score > 80) {
-            resMsg.textContent = "Amazing compatibility! Strong chemistry. 💕";
+            resMsg.textContent = "Amazing compatibility! Strong chemistry. ðŸ’•";
         } else if (score > 70) {
-            resMsg.textContent = "Good match! Mutual respect and warmth. 💖";
+            resMsg.textContent = "Good match! Mutual respect and warmth. ðŸ’–";
         } else {
-            resMsg.textContent = "Workable match! Keep communicating. 🌸";
+            resMsg.textContent = "Workable match! Keep communicating. ðŸŒ¸";
         }
 
         // Sub stats

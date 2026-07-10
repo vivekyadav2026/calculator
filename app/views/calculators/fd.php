@@ -8,6 +8,11 @@
             <li class="breadcrumb-item active" aria-current="page">FD Calculator</li>
         </ol>
     </nav>
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-5 fw-bold mb-2">Fixed Deposit Calculator</h1>
+        </div>
+    </div>
 
     <div class="row g-4 mb-4">
         <!-- Calculator Inputs -->
@@ -17,16 +22,16 @@
                     <h2 class="literal-calc-title">FD Calculator</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">×</span>
+                        <span class="literal-calc-icon">Ãƒâ€”</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
                     <form id="fd-calculator-form">
                         <!-- Deposit Amount -->
                         <div class="mb-3">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Deposit Amount</label>
                             <div class="input-group input-group-sm mt-1">
-                                <span class="input-group-text bg-light border-secondary-subtle">₹</span>
+                                <span class="input-group-text bg-light border-secondary-subtle">Ã¢â€šÂ¹</span>
                                 <input type="number" class="form-control border-secondary-subtle fw-medium" id="fd-p-custom" value="100000" min="0" required>
                             </div>
                         </div>
@@ -64,28 +69,28 @@
                     <h2 class="literal-calc-title">Calculation Summary</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">×</span>
+                        <span class="literal-calc-icon">Ãƒâ€”</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
                     
                     <div class="row g-2 mb-3">
                         <div class="col-md-4">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Invested Amount</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main  fs-5 text-end" id="res-fd-principal">₹0</div>
+                                <div class="literal-display-main  fs-5 text-end" id="res-fd-principal">Ã¢â€šÂ¹0</div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Interest Earned</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main text-success fs-5 text-end" id="res-fd-interest">₹0</div>
+                                <div class="literal-display-main text-success fs-5 text-end" id="res-fd-interest">Ã¢â€šÂ¹0</div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Maturity Value</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0; background-color: #f8f9ff;">
-                                <div class="literal-display-main text-warning fs-5 text-end" id="res-fd-total">₹0</div>
+                                <div class="literal-display-main text-warning fs-5 text-end" id="res-fd-total">Ã¢â€šÂ¹0</div>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 <?php
 $currentUrl = isset($_GET['url']) ? rtrim(strtolower($_GET['url']), '/') : '';
-$hideFaqList = ['pages/about', 'pages/privacy', 'pages/terms', 'about', 'privacy', 'terms'];
-if (!in_array($currentUrl, $hideFaqList)):
+$hideFaqList = ['pages/about', 'pages/privacy', 'pages/terms', 'about', 'privacy', 'terms', 'blog', 'blog/post'];
+if (!in_array($currentUrl, $hideFaqList) && strpos($currentUrl, 'blog') === false):
 ?>
 <!-- FAQ Section (Clean light background above footer) -->
 <section class="site-faq-section py-5">

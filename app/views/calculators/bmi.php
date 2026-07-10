@@ -28,11 +28,11 @@
             </button>
             <div class="literal-calc-controls d-none d-md-flex">
                 <span class="literal-calc-icon">_</span>
-                <span class="literal-calc-icon">×</span>
+                <span class="literal-calc-icon">Ã—</span>
             </div>
         </div>
         <div class="collapse" id="unitConverterCollapse">
-            <div class="literal-calc-body p-4" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+            <div class="literal-calc-body p-4" style="border-radius: 0 0 4px 4px;">
                 <p class="text-muted small">Use this converter to convert to the units accepted by the calculator.</p>
                 
                 <!-- Converter Tabs -->
@@ -78,10 +78,10 @@
                     <h2 class="literal-calc-title">BMI Calculator</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">×</span>
+                        <span class="literal-calc-icon">Ã—</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
                     <!-- Tabs: US Units / Metric Units / Other Units -->
                     <ul class="nav nav-pills mb-3 nav-justified bg-white p-1 rounded shadow-sm border" id="bmiSystemTab" role="tablist">
                         <li class="nav-item"><button class="nav-link active small py-2 fw-bold " id="tab-us" data-bs-toggle="pill" data-bs-target="#pane-us" type="button" role="tab">US Units</button></li>
@@ -186,10 +186,10 @@
                     <h2 class="literal-calc-title">Results Summary</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">×</span>
+                        <span class="literal-calc-icon">Ã—</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
                     <div class="w-100 text-center p-3 border-secondary-subtle rounded d-flex flex-column justify-content-center" style="border: 1px solid #ccc; background: #fdfdfd; height: 100%;">
 
                         <!-- Interactive SVG Gauge Chart -->
@@ -228,12 +228,12 @@
 
                         <!-- Bullet Point Details -->
                         <div class="text-start bg-light p-4 rounded border">
-                            <h5 class="fw-bold mb-3 " id="res-header-msg">BMI = 20.1 kg/m² (<span class="text-success">Normal</span>)</h5>
+                            <h5 class="fw-bold mb-3 " id="res-header-msg">BMI = 20.1 kg/mÂ² (<span class="text-success">Normal</span>)</h5>
                             <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small text-muted">
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="">Healthy BMI range:</strong> 18.5 kg/m² - 25 kg/m²</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="">Healthy BMI range:</strong> 18.5 kg/mÂ² - 25 kg/mÂ²</li>
                                 <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="">Healthy weight for the height:</strong> <span id="bullet-healthy-weight">59.9 kg - 81 kg</span></li>
                                 <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="">BMI Prime:</strong> <span id="bullet-bmi-prime">0.8</span></li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="">Ponderal Index:</strong> <span id="bullet-ponderal-index">11.1 kg/m³</span></li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="">Ponderal Index:</strong> <span id="bullet-ponderal-index">11.1 kg/mÂ³</span></li>
                             </ul>
                         </div>
                     </div>
@@ -252,7 +252,7 @@
                         <table class="table table-hover align-middle mb-0 text-muted">
                             <thead class="table-light text-body">
                                 <tr>
-                                    <th>BMI Range (kg/m²)</th>
+                                    <th>BMI Range (kg/mÂ²)</th>
                                     <th>Classification</th>
                                     <th>Obesity Sub-Class</th>
                                     <th>Health Risk Profile</th>
@@ -266,13 +266,13 @@
                                     <td>Nutritional deficiencies, compromised immunity.</td>
                                 </tr>
                                 <tr>
-                                    <td>18.5 – 24.9</td>
+                                    <td>18.5 â€“ 24.9</td>
                                     <td class="text-success fw-bold">Normal Weight</td>
                                     <td>N/A</td>
                                     <td>Lowest overall health risk for metabolic conditions.</td>
                                 </tr>
                                 <tr>
-                                    <td>25.0 – 29.9</td>
+                                    <td>25.0 â€“ 29.9</td>
                                     <td class="text-warning fw-bold">Overweight</td>
                                     <td>Pre-obese</td>
                                     <td>Moderate risk of insulin resistance.</td>
@@ -297,7 +297,7 @@
             <div class="card shadow-none border rounded-4">
                 <div class="card-body p-4 p-md-5">
                     <h2 class="fw-bold h3 mb-4 text-body border-bottom pb-2">What is Body Mass Index (BMI)?</h2>
-                    <p class="text-muted">Body Mass Index (BMI) is a heuristic proxy for human body fatness based on an individual's weight and height. It is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m².</p>
+                    <p class="text-muted">Body Mass Index (BMI) is a heuristic proxy for human body fatness based on an individual's weight and height. It is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/mÂ².</p>
                 </div>
             </div>
         </div>
@@ -340,14 +340,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         temp: {
-            units: ['Celsius (°C)', 'Fahrenheit (°F)', 'Kelvin (K)']
+            units: ['Celsius (Â°C)', 'Fahrenheit (Â°F)', 'Kelvin (K)']
         },
         area: {
-            units: ['Square Meter (m²)', 'Square Kilometer (km²)', 'Square Mile (mi²)', 'Acre', 'Hectare'],
+            units: ['Square Meter (mÂ²)', 'Square Kilometer (kmÂ²)', 'Square Mile (miÂ²)', 'Acre', 'Hectare'],
             factors: {
-                'Square Meter (m²)': 1,
-                'Square Kilometer (km²)': 1000000,
-                'Square Mile (mi²)': 2589988.11,
+                'Square Meter (mÂ²)': 1,
+                'Square Kilometer (kmÂ²)': 1000000,
+                'Square Mile (miÂ²)': 2589988.11,
                 'Acre': 4046.85642,
                 'Hectare': 10000
             }
@@ -554,11 +554,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 colorClass = 'text-danger';
             }
 
-            headerMsg.innerHTML = `BMI = ${bmi.toFixed(1)} kg/m² (<span class="${colorClass}">${status}</span>)`;
+            headerMsg.innerHTML = `BMI = ${bmi.toFixed(1)} kg/mÂ² (<span class="${colorClass}">${status}</span>)`;
 
             bulletHealthyWeight.textContent = `${minHealthyStr} - ${maxHealthyStr}`;
             bulletBmiPrime.textContent = bmiPrime.toFixed(2);
-            bulletPonderalIndex.textContent = `${ponderalIndex.toFixed(1)} kg/m³`;
+            bulletPonderalIndex.textContent = `${ponderalIndex.toFixed(1)} kg/mÂ³`;
 
             // Needle angle (-90 deg to +90 deg based on BMI 15 to 40)
             let angle = -90 + ((bmi - 15) / (40 - 15)) * 180;

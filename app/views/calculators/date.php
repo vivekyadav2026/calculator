@@ -32,7 +32,7 @@
                 <div class="literal-calc-header" style="background-color: #4F46E5;">
                     <h2 class="literal-calc-title">Date Difference Inputs</h2>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
                     <form id="date-diff-form">
                         <div class="mb-3">
                             <label for="start-date" class="form-label  mb-1 fw-bold">Start Date</label>
@@ -58,7 +58,7 @@
                 <div class="literal-calc-header" style="background-color: #4F46E5;">
                     <h2 class="literal-calc-title">Add or Subtract Days</h2>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
                     <form id="date-addsub-form">
                         <div class="mb-3">
                             <label for="start-date-as" class="form-label  mb-1 fw-bold">Start Date</label>
@@ -108,7 +108,7 @@
                 <div class="literal-calc-header" style="background-color: #10B981;">
                     <h2 class="literal-calc-title">Difference Results</h2>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
                     <div class="mb-3">
                         <label class="form-label  mb-1 fw-bold">Date Range Duration</label>
                         <div class="literal-calc-displays" style="height: auto; padding: 12px; margin-bottom: 0;">
@@ -141,7 +141,7 @@
                 <div class="literal-calc-header" style="background-color: #10B981;">
                     <h2 class="literal-calc-title">New Date Result</h2>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
                     <div class="mb-3">
                         <label class="form-label  mb-1 fw-bold">Resulting Date</label>
                         <div class="literal-calc-displays" style="height: auto; padding: 12px; margin-bottom: 0;">

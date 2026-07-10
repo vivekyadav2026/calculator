@@ -8,6 +8,11 @@
             <li class="breadcrumb-item active" aria-current="page">Percentage Calculator</li>
         </ol>
     </nav>
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-5 fw-bold mb-2">Percentage Calculator</h1>
+        </div>
+    </div>
 
     <div class="row g-4 mb-4">
         <!-- Calculator Inputs (Tabbed Sub-Calculators) -->
@@ -17,10 +22,10 @@
                     <h2 class="literal-calc-title">Percentage Calculator</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">×</span>
+                        <span class="literal-calc-icon">Ãƒâ€”</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
 
                     <!-- Navigation Pills for the 3 sub-calculators -->
                     <ul class="nav nav-pills mb-3 nav-justified bg-white p-1 rounded shadow-sm border" id="perc-tab" role="tablist">
@@ -86,10 +91,10 @@
                     <h2 class="literal-calc-title">Calculation Result</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">×</span>
+                        <span class="literal-calc-icon">Ãƒâ€”</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
                     <div class="w-100 text-center p-3 border-secondary-subtle rounded d-flex flex-column justify-content-center" style="border: 1px solid #ccc; background: #fdfdfd; height: 100%;">
 
                         <div class="p-3 rounded border bg-light text-center mb-3">

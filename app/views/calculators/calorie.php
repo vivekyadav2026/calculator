@@ -8,6 +8,11 @@
             <li class="breadcrumb-item active" aria-current="page">Calorie Calculator</li>
         </ol>
     </nav>
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-5 fw-bold mb-2">Calorie Calculator</h1>
+        </div>
+    </div>
 
     <div class="row g-4 mb-4">
         <!-- Calculator Inputs -->
@@ -17,10 +22,10 @@
                     <h2 class="literal-calc-title">Calorie Calculator</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">×</span>
+                        <span class="literal-calc-icon">Ãƒâ€”</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
                     <form id="calorie-calculator-form">
                         <div class="row g-2">
                             <!-- Age -->
@@ -70,10 +75,10 @@
                     <h2 class="literal-calc-title">Daily Calorie Recommendations</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">×</span>
+                        <span class="literal-calc-icon">Ãƒâ€”</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="background-color: #e5e5e5; border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
                     
                     <div class="row g-2 mb-3">
                         <div class="col-md-6">

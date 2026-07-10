@@ -333,8 +333,8 @@ body {
 
 /* Classic Literal Calculator Widget */
 .literal-calc-wrapper {
-    background-color: #d1d1d1;
-    border: 1px solid #a0a0a0;
+    background-color: var(--bs-secondary-bg);
+    border: 1px solid var(--bs-border-color);
     border-radius: 4px;
     width: 100%;
     max-width: 600px;
@@ -372,7 +372,7 @@ body {
 }
 
 .literal-calc-help {
-    background-color: #73A8F7;
+    background-color: rgba(255,255,255,0.2);
     color: white;
     border: none;
     padding: 2px 8px;
@@ -391,6 +391,7 @@ body {
 .literal-calc-body {
     padding: 15px;
     min-width: max-content; /* Force minimum width to prevent grid squishing */
+    background-color: var(--bs-tertiary-bg);
 }
 
 .literal-calc-displays {
@@ -398,8 +399,8 @@ body {
 }
 
 .literal-display-top, .literal-display-main {
-    background-color: white;
-    border: 1px solid #b0b0b0;
+    background-color: var(--bs-body-bg);
+    border: 1px solid var(--bs-border-color);
     border-radius: 3px;
     width: 100%;
     padding: 5px 10px;
@@ -411,14 +412,14 @@ body {
 .literal-display-top {
     height: 28px;
     font-size: 14px;
-    color: #666;
+    color: var(--bs-secondary-color);
     margin-bottom: 5px;
 }
 
 .literal-display-main {
     height: 38px;
     font-size: 20px;
-    color: #000;
+    color: var(--bs-body-color);
 }
 
 .literal-calc-grid {
@@ -428,6 +429,15 @@ body {
 }
 
 /* Base button */
+html[data-bs-theme="dark"] .lit-btn {
+    background: linear-gradient(to bottom, #444, #333);
+    border-color: #555;
+    color: #eee;
+}
+html[data-bs-theme="dark"] .lit-btn:active {
+    background: #222;
+}
+
 .lit-btn {
     background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
     border: 1px solid #b0b0b0;
@@ -527,6 +537,14 @@ body {
     .container.py-5, main.container.py-5 {
         padding-top: 0.5rem !important;
         padding-bottom: 1.5rem !important;
+    }
+
+    .calculator-container {
+        padding: 10px !important; /* reduce p-4 (24px) to 10px on mobile to give more room for calc */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        max-width: 100vw !important;
+        width: 100% !important;
     }
 
     /* Fix huge gap on homepage */
