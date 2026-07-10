@@ -19,8 +19,8 @@
                         <h2 class="literal-calc-title">Scientific Calculator</h2>
                         <div class="literal-calc-controls">
                             <button class="literal-calc-help">Help</button>
-                            <span class="literal-calc-icon">_</span>
-                            <span class="literal-calc-icon">×</span>
+                            <i class="bi bi-dash-lg literal-calc-icon"></i>
+                            <span class="literal-calc-icon">Ã—</span>
                         </div>
                     </div>
                     <div class="literal-calc-body">
@@ -115,8 +115,8 @@
                     <div class="literal-calc-header">
                         <h2 class="literal-calc-title">Standard Calculator</h2>
                         <div class="literal-calc-controls">
-                            <span class="literal-calc-icon">_</span>
-                            <span class="literal-calc-icon">×</span>
+                            <i class="bi bi-dash-lg literal-calc-icon"></i>
+                            <span class="literal-calc-icon">Ã—</span>
                         </div>
                     </div>
                     <div class="literal-calc-body">

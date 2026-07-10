@@ -9,6 +9,11 @@
         </ol>
     </nav>
 
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-5 fw-bold mb-2">Love Calculator</h1>
+        </div>
+    </div>
     <div class="row g-4 justify-content-center mb-4">
         <!-- Calculator Inputs -->
         <div class="col-lg-5">
