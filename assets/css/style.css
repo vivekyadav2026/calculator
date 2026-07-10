@@ -560,9 +560,8 @@ body {
     /* Adjust calculator grid for mobile */
     .literal-calc-wrapper {
         max-width: 100vw !important;
-        margin: 0 -15px !important; /* pull out of bootstrap container padding slightly */
-        width: calc(100% + 30px) !important;
-        border-radius: 0;
+        width: 100% !important;
+        border-radius: 4px !important;
     }
     .literal-calc-header, .literal-calc-body {
         min-width: unset !important; /* Allow it to shrink below max-content */
