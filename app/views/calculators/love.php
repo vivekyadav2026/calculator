@@ -17,7 +17,7 @@
                     <h2 class="literal-calc-title">Love Calculator</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">Ã—</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
@@ -59,7 +59,7 @@
                     <h2 class="literal-calc-title">Match Analysis</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">Ã—</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
@@ -111,7 +111,7 @@
         <div class="col-12">
             <div class="card shadow-none border rounded-4 text-center p-4">
                 <h5 class="fw-bold text-body mb-2">How Relationship Compatibility is Calculated</h5>
-                <p class="text-muted small mb-0">Our fun love compatibility tool evaluates name matching patterns, character matches, and deterministic algorithms to return a percentage score. Note: This tool is purely for entertainment purposes and does not represent real-life guidance. Enjoy with friends and partner! ðŸ’•</p>
+                <p class="text-muted small mb-0">Our fun love compatibility tool evaluates name matching patterns, character matches, and deterministic algorithms to return a percentage score. Note: This tool is purely for entertainment purposes and does not represent real-life guidance. Enjoy with friends and partner! &hearts;</p>
             </div>
         </div>
     </div>
@@ -155,13 +155,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update messages
         if (score > 90) {
-            resMsg.textContent = "Soulmates! Made for each other. â¤ï¸";
+            resMsg.textContent = "Soulmates! Made for each other. &hearts;";
         } else if (score > 80) {
-            resMsg.textContent = "Amazing compatibility! Strong chemistry. ðŸ’•";
+            resMsg.textContent = "Amazing compatibility! Strong chemistry. &hearts;";
         } else if (score > 70) {
-            resMsg.textContent = "Good match! Mutual respect and warmth. ðŸ’–";
+            resMsg.textContent = "Good match! Mutual respect and warmth. &hearts;";
         } else {
-            resMsg.textContent = "Workable match! Keep communicating. ðŸŒ¸";
+            resMsg.textContent = "Workable match! Keep communicating. &hearts;";
         }
 
         // Sub stats

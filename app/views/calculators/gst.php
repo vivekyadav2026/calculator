@@ -22,7 +22,7 @@
                     <h2 class="literal-calc-title">GST Calculator</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">Ãƒâ€”</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
@@ -31,7 +31,7 @@
                         <div class="mb-3">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Amount</label>
                             <div class="input-group input-group-sm mt-1">
-                                <span class="input-group-text bg-light border-secondary-subtle">Ã¢â€šÂ¹</span>
+                                <span class="input-group-text bg-light border-secondary-subtle">&#8377;</span>
                                 <input type="number" class="form-control border-secondary-subtle fw-medium" id="gst-amount-custom" value="10000" min="0" required>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                     <h2 class="literal-calc-title">Calculation Summary</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">Ãƒâ€”</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
@@ -79,19 +79,19 @@
                         <div class="col-md-4">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Net Amount</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main  fs-5 text-end" id="res-gst-net">Ã¢â€šÂ¹0</div>
+                                <div class="literal-display-main  fs-5 text-end" id="res-gst-net">&#8377;0</div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Tax Amount</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main text-danger fs-5 text-end" id="res-gst-tax">Ã¢â€šÂ¹0</div>
+                                <div class="literal-display-main text-danger fs-5 text-end" id="res-gst-tax">&#8377;0</div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Gross Amount</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0; background-color: #f8f9ff;">
-                                <div class="literal-display-main text-success fs-5 text-end" id="res-gst-gross">Ã¢â€šÂ¹0</div>
+                                <div class="literal-display-main text-success fs-5 text-end" id="res-gst-gross">&#8377;0</div>
                             </div>
                         </div>
                     </div>
@@ -104,15 +104,15 @@
                             <div class="list-group list-group-flush border rounded" style="font-size: 0.8rem;">
                                 <div class="list-group-item d-flex justify-content-between border-0 border-bottom border-light py-1">
                                     <span class="text-muted">Central GST (CGST 50%)</span>
-                                    <span class="fw-semibold " id="res-gst-cgst">Ã¢â€šÂ¹0</span>
+                                    <span class="fw-semibold " id="res-gst-cgst">&#8377;0</span>
                                 </div>
                                 <div class="list-group-item d-flex justify-content-between border-0 border-bottom border-light py-1">
                                     <span class="text-muted">State GST (SGST 50%)</span>
-                                    <span class="fw-semibold " id="res-gst-sgst">Ã¢â€šÂ¹0</span>
+                                    <span class="fw-semibold " id="res-gst-sgst">&#8377;0</span>
                                 </div>
                                 <div class="list-group-item d-flex justify-content-between bg-light fw-bold  border-0 py-1">
                                     <span>Integrated GST (IGST 100%)</span>
-                                    <span id="res-gst-igst">Ã¢â€šÂ¹0</span>
+                                    <span id="res-gst-igst">&#8377;0</span>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +135,7 @@
             <div class="card shadow-none border rounded-4">
                 <div class="card-body p-4 p-md-5">
                     <h2 class="fw-bold h3 mb-4 text-body border-bottom pb-2">What is Goods and Services Tax (GST)?</h2>
-                    <p class="text-muted">Goods and Services Tax (GST) is a comprehensive, multi-stage, destination-based indirect tax levied on the supply of goods and services. It is designed to create a unified domestic market by absorbing multiple layers of state and central taxesÃ¢â‚¬â€such as Central Excise duty, Service Tax, State Value Added Tax (VAT), purchase tax, entry tax, and luxury tax.</p>
+                    <p class="text-muted">Goods and Services Tax (GST) is a comprehensive, multi-stage, destination-based indirect tax levied on the supply of goods and services. It is designed to create a unified domestic market by absorbing multiple layers of state and central taxes&#8377;such as Central Excise duty, Service Tax, State Value Added Tax (VAT), purchase tax, entry tax, and luxury tax.</p>
                     <p class="text-muted">The core mechanism of GST is the <strong>Input Tax Credit (ITC)</strong>. GST is levied on every stage of value addition in the supply chain. However, at each stage, businesses can claim a credit for the tax they paid on inputs, offset it against the tax they collect on outputs, and pay only the net difference to the government.</p>
 
                     <h2 class="fw-bold h3 mt-5 mb-4 text-body border-bottom pb-2">How GST is Calculated</h2>

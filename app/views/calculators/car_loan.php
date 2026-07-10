@@ -24,7 +24,7 @@
                     <h2 class="literal-calc-title">Car Loan EMI</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">Ã—</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
@@ -33,11 +33,11 @@
                         <div class="mb-3">
                             <label class="form-label d-flex justify-content-between  mb-1" style="font-size: 0.9rem; font-weight: 600;">
                                 <span>Car Loan Amount</span>
-                                <span class="text-primary" id="cl-amount-val">â‚¹800,000</span>
+                                <span class="text-primary" id="cl-amount-val">&#8377;800,000</span>
                             </label>
                             <input type="range" class="form-range" id="cl-amount" min="50000" max="10000000" step="10000" value="800000">
                             <div class="input-group input-group-sm mt-1">
-                                <span class="input-group-text bg-light border-secondary-subtle">â‚¹</span>
+                                <span class="input-group-text bg-light border-secondary-subtle">&#8377;</span>
                                 <input type="number" class="form-control border-secondary-subtle fw-medium" id="cl-amount-input" value="800000" min="50000">
                             </div>
                         </div>
@@ -82,7 +82,7 @@
                     <h2 class="literal-calc-title">Calculation Summary</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">Ã—</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
@@ -91,25 +91,25 @@
                         <div class="col-md-6">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Monthly Car EMI</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main text-primary fs-5 text-end" id="res-cl-monthly">â‚¹0</div>
+                                <div class="literal-display-main text-primary fs-5 text-end" id="res-cl-monthly">&#8377;0</div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Total Principal</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main  fs-5 text-end" id="res-cl-principal">â‚¹0</div>
+                                <div class="literal-display-main  fs-5 text-end" id="res-cl-principal">&#8377;0</div>
                             </div>
                         </div>
                         <div class="col-md-6 mt-2">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Total Interest</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main text-danger fs-5 text-end" id="res-cl-interest">â‚¹0</div>
+                                <div class="literal-display-main text-danger fs-5 text-end" id="res-cl-interest">&#8377;0</div>
                             </div>
                         </div>
                         <div class="col-md-6 mt-2">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Amount Payable</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0; background-color: #f8f9ff;">
-                                <div class="literal-display-main text-success fs-5 text-end" id="res-cl-total">â‚¹0</div>
+                                <div class="literal-display-main text-success fs-5 text-end" id="res-cl-total">&#8377;0</div>
                             </div>
                         </div>
                     </div>
@@ -183,15 +183,15 @@
                     </ul>
 
                     <h3 class="fw-bold h5 mt-4 mb-3 text-body">Step-by-Step Example Calculation</h3>
-                    <p class="text-muted">Let's calculate the EMI for a Car Loan of <strong>â‚¹8 Lakhs</strong> at <strong>9.5% p.a.</strong> interest rate for a tenure of <strong>5 Years</strong>:</p>
+                    <p class="text-muted">Let's calculate the EMI for a Car Loan of <strong>&#8377;8 Lakhs</strong> at <strong>9.5% p.a.</strong> interest rate for a tenure of <strong>5 Years</strong>:</p>
                     <ol class="text-muted text-start">
-                        <li class="mb-2"><strong>P</strong> = â‚¹8,00,000</li>
+                        <li class="mb-2"><strong>P</strong> = &#8377;8,00,000</li>
                         <li class="mb-2"><strong>R</strong> = 9.5% p.a. = 9.5 / 12 / 100 = 0.007917 per month</li>
                         <li class="mb-2"><strong>N</strong> = 5 Years = 60 Months</li>
                         <li class="mb-2">Plugging values into the formula:<br>
                             <code>EMI = [8,00,000 x 0.007917 x (1.007917)^60] / [(1.007917)^60 - 1]</code>
                         </li>
-                        <li class="mb-2">This results in a monthly payment of approximately <strong>â‚¹16,804</strong>.</li>
+                        <li class="mb-2">This results in a monthly payment of approximately <strong>&#8377;16,804</strong>.</li>
                     </ol>
 
                     <h3 class="fw-bold h5 mt-4 mb-3 text-body">Key Considerations</h3>

@@ -28,7 +28,7 @@
             </button>
             <div class="literal-calc-controls d-none d-md-flex">
                 <span class="literal-calc-icon">_</span>
-                <span class="literal-calc-icon">Ã—</span>
+                <span class="literal-calc-icon">&times;</span>
             </div>
         </div>
         <div class="collapse" id="unitConverterCollapse">
@@ -78,7 +78,7 @@
                     <h2 class="literal-calc-title">BMI Calculator</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">Ã—</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
@@ -186,7 +186,7 @@
                     <h2 class="literal-calc-title">Results Summary</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">Ã—</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
@@ -228,12 +228,12 @@
 
                         <!-- Bullet Point Details -->
                         <div class="text-start bg-light p-4 rounded border">
-                            <h5 class="fw-bold mb-3 " id="res-header-msg">BMI = 20.1 kg/mÂ² (<span class="text-success">Normal</span>)</h5>
+                            <h5 class="fw-bold mb-3 " id="res-header-msg">BMI = 20.1 kg/m&#8377; (<span class="text-success">Normal</span>)</h5>
                             <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small text-muted">
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="">Healthy BMI range:</strong> 18.5 kg/mÂ² - 25 kg/mÂ²</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="">Healthy BMI range:</strong> 18.5 kg/m&#8377; - 25 kg/m&#8377;</li>
                                 <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="">Healthy weight for the height:</strong> <span id="bullet-healthy-weight">59.9 kg - 81 kg</span></li>
                                 <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="">BMI Prime:</strong> <span id="bullet-bmi-prime">0.8</span></li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="">Ponderal Index:</strong> <span id="bullet-ponderal-index">11.1 kg/mÂ³</span></li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="">Ponderal Index:</strong> <span id="bullet-ponderal-index">11.1 kg/m&#8377;</span></li>
                             </ul>
                         </div>
                     </div>
@@ -252,7 +252,7 @@
                         <table class="table table-hover align-middle mb-0 text-muted">
                             <thead class="table-light text-body">
                                 <tr>
-                                    <th>BMI Range (kg/mÂ²)</th>
+                                    <th>BMI Range (kg/m&#8377;)</th>
                                     <th>Classification</th>
                                     <th>Obesity Sub-Class</th>
                                     <th>Health Risk Profile</th>
@@ -266,13 +266,13 @@
                                     <td>Nutritional deficiencies, compromised immunity.</td>
                                 </tr>
                                 <tr>
-                                    <td>18.5 â€“ 24.9</td>
+                                    <td>18.5 - 24.9</td>
                                     <td class="text-success fw-bold">Normal Weight</td>
                                     <td>N/A</td>
                                     <td>Lowest overall health risk for metabolic conditions.</td>
                                 </tr>
                                 <tr>
-                                    <td>25.0 â€“ 29.9</td>
+                                    <td>25.0 &#8377; 29.9</td>
                                     <td class="text-warning fw-bold">Overweight</td>
                                     <td>Pre-obese</td>
                                     <td>Moderate risk of insulin resistance.</td>
@@ -297,7 +297,7 @@
             <div class="card shadow-none border rounded-4">
                 <div class="card-body p-4 p-md-5">
                     <h2 class="fw-bold h3 mb-4 text-body border-bottom pb-2">What is Body Mass Index (BMI)?</h2>
-                    <p class="text-muted">Body Mass Index (BMI) is a heuristic proxy for human body fatness based on an individual's weight and height. It is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/mÂ².</p>
+                    <p class="text-muted">Body Mass Index (BMI) is a heuristic proxy for human body fatness based on an individual's weight and height. It is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m&#8377;.</p>
                 </div>
             </div>
         </div>
@@ -340,14 +340,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         temp: {
-            units: ['Celsius (Â°C)', 'Fahrenheit (Â°F)', 'Kelvin (K)']
+            units: ['Celsius (&#8377;C)', 'Fahrenheit (&#8377;F)', 'Kelvin (K)']
         },
         area: {
-            units: ['Square Meter (mÂ²)', 'Square Kilometer (kmÂ²)', 'Square Mile (miÂ²)', 'Acre', 'Hectare'],
+            units: ['Square Meter (m&#8377;)', 'Square Kilometer (km&#8377;)', 'Square Mile (mi&#8377;)', 'Acre', 'Hectare'],
             factors: {
-                'Square Meter (mÂ²)': 1,
-                'Square Kilometer (kmÂ²)': 1000000,
-                'Square Mile (miÂ²)': 2589988.11,
+                'Square Meter (m&#8377;)': 1,
+                'Square Kilometer (km&#8377;)': 1000000,
+                'Square Mile (mi&#8377;)': 2589988.11,
                 'Acre': 4046.85642,
                 'Hectare': 10000
             }
@@ -554,11 +554,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 colorClass = 'text-danger';
             }
 
-            headerMsg.innerHTML = `BMI = ${bmi.toFixed(1)} kg/mÂ² (<span class="${colorClass}">${status}</span>)`;
+            headerMsg.innerHTML = `BMI = ${bmi.toFixed(1)} kg/m&#8377; (<span class="${colorClass}">${status}</span>)`;
 
             bulletHealthyWeight.textContent = `${minHealthyStr} - ${maxHealthyStr}`;
             bulletBmiPrime.textContent = bmiPrime.toFixed(2);
-            bulletPonderalIndex.textContent = `${ponderalIndex.toFixed(1)} kg/mÂ³`;
+            bulletPonderalIndex.textContent = `${ponderalIndex.toFixed(1)} kg/m&#8377;`;
 
             // Needle angle (-90 deg to +90 deg based on BMI 15 to 40)
             let angle = -90 + ((bmi - 15) / (40 - 15)) * 180;

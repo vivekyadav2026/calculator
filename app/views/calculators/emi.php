@@ -24,7 +24,7 @@
                     <h2 class="literal-calc-title">EMI Calculator</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">Ã—</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
@@ -33,11 +33,11 @@
                         <div class="mb-3">
                             <label class="form-label d-flex justify-content-between  mb-1" style="font-size: 0.9rem; font-weight: 600;">
                                 <span>Loan Amount</span>
-                                <span class="text-primary" id="emi-amount-val">â‚¹1,000,000</span>
+                                <span class="text-primary" id="emi-amount-val">&#8377;1,000,000</span>
                             </label>
                             <input type="range" class="form-range" id="emi-amount" min="10000" max="50000000" step="10000" value="1000000">
                             <div class="input-group input-group-sm mt-1">
-                                <span class="input-group-text bg-light border-secondary-subtle">â‚¹</span>
+                                <span class="input-group-text bg-light border-secondary-subtle">&#8377;</span>
                                 <input type="number" class="form-control border-secondary-subtle fw-medium" id="emi-amount-input" value="1000000" min="10000">
                             </div>
                         </div>
@@ -82,7 +82,7 @@
                     <h2 class="literal-calc-title">Calculation Summary</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">Ã—</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
@@ -91,25 +91,25 @@
                         <div class="col-md-6">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Monthly EMI</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main text-primary fs-5 text-end" id="res-emi-monthly">â‚¹0</div>
+                                <div class="literal-display-main text-primary fs-5 text-end" id="res-emi-monthly">&#8377;0</div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Total Principal</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main  fs-5 text-end" id="res-emi-principal">â‚¹0</div>
+                                <div class="literal-display-main  fs-5 text-end" id="res-emi-principal">&#8377;0</div>
                             </div>
                         </div>
                         <div class="col-md-6 mt-2">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Total Interest</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main text-danger fs-5 text-end" id="res-emi-interest">â‚¹0</div>
+                                <div class="literal-display-main text-danger fs-5 text-end" id="res-emi-interest">&#8377;0</div>
                             </div>
                         </div>
                         <div class="col-md-6 mt-2">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Amount Payable</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0; background-color: #f8f9ff;">
-                                <div class="literal-display-main text-success fs-5 text-end" id="res-emi-total">â‚¹0</div>
+                                <div class="literal-display-main text-success fs-5 text-end" id="res-emi-total">&#8377;0</div>
                             </div>
                         </div>
                     </div>
@@ -189,7 +189,7 @@
                     </div>
 
                     <h4 class="fw-bold h5 text-body mt-4 mb-2">Step-by-Step Calculation Example</h4>
-                    <p class="text-muted">Suppose you borrow â‚¹100,000 at an annual interest rate of 12% p.a. for a tenure of 1 year (12 months):</p>
+                    <p class="text-muted">Suppose you borrow &#8377;100,000 at an annual interest rate of 12% p.a. for a tenure of 1 year (12 months):</p>
                     <div class="p-3 bg-light rounded-3 mb-3">
                         <pre class="mb-0"><code class="text-primary fw-bold">Step 1: Calculate the monthly interest rate (r)
 r = 12% / 12 / 100 = 0.01 per month
@@ -200,25 +200,25 @@ n = 12 months
 Step 3: Plug values into the EMI formula
 EMI = [100,000 * 0.01 * (1 + 0.01)^12] / [(1 + 0.01)^12 - 1]
 EMI = [1,000 * (1.01)^12] / [(1.01)^12 - 1]
-Since (1.01)^12 â‰ˆ 1.126825:
+Since (1.01)^12 &#8377; 1.126825:
 EMI = [1,000 * 1.126825] / [1.126825 - 1]
-EMI = 1,126.825 / 0.126825 â‰ˆ â‚¹8,884.88 per month
+EMI = 1,126.825 / 0.126825 &#8377; &#8377;8,884.88 per month
 
 Step 4: Understand the Month 1 amortization breakdown
-- Monthly Interest Component = P * r = 100,000 * 0.01 = â‚¹1,000
-- Principal Repayment Component = EMI - Interest = 8,884.88 - 1,000 = â‚¹7,884.88
-- Remaining Loan Balance for Month 2 = 100,000 - 7,884.88 = â‚¹92,115.12</code></pre>
+- Monthly Interest Component = P * r = 100,000 * 0.01 = &#8377;1,000
+- Principal Repayment Component = EMI - Interest = 8,884.88 - 1,000 = &#8377;7,884.88
+- Remaining Loan Balance for Month 2 = 100,000 - 7,884.88 = &#8377;92,115.12</code></pre>
                     </div>
 
                     <h2 class="fw-bold h3 mt-5 mb-4 text-body border-bottom pb-2">Reducing Balance vs. Flat Rate Interest</h2>
                     <p class="text-muted">It is essential to distinguish between reducing balance and flat rate calculations, as the difference significantly affects the total interest payable:</p>
                     <ul class="text-muted">
                         <li><strong>Reducing Balance EMI:</strong> The interest is calculated monthly on the outstanding loan balance. As you pay off the principal, the interest charge drops, making this method much cheaper for the borrower.</li>
-                        <li><strong>Flat Rate EMI:</strong> The interest is calculated on the initial principal throughout the entire tenure. For example, a 12% flat interest rate on a â‚¹100,000 loan for 1 year means you pay â‚¹12,000 in interest, resulting in an EMI of:
+                        <li><strong>Flat Rate EMI:</strong> The interest is calculated on the initial principal throughout the entire tenure. For example, a 12% flat interest rate on a &#8377;100,000 loan for 1 year means you pay &#8377;12,000 in interest, resulting in an EMI of:
                             <div class="p-2 bg-light rounded-3 text-center my-2">
-                                <code class="fw-bold text-danger">Flat EMI = (100,000 + 12,000) / 12 = â‚¹9,333.33</code>
+                                <code class="fw-bold text-danger">Flat EMI = (100,000 + 12,000) / 12 = &#8377;9,333.33</code>
                             </div>
-                            This is significantly higher than the reducing balance EMI of â‚¹8,884.88, even though the nominal rates are the same.
+                            This is significantly higher than the reducing balance EMI of &#8377;8,884.88, even though the nominal rates are the same.
                         </li>
                     </ul>
 

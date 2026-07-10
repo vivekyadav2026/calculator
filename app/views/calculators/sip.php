@@ -25,7 +25,7 @@
                     <h2 class="literal-calc-title">SIP Calculator</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">×</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style=" border-radius: 0 0 4px 4px;">
@@ -33,11 +33,11 @@
                         <div class="mb-3">
                             <label for="input-sip-amt" class="form-label d-flex justify-content-between  mb-1" style="font-size: 0.9rem; font-weight: 600;">
                                 <span>Monthly Investment</span>
-                                <span class="text-primary" id="label-sip-amt">₹5,000</span>
+                                <span class="text-primary" id="label-sip-amt">&#8377;5,000</span>
                             </label>
                             <input type="range" class="form-range" id="slide-sip-amt" min="500" max="100000" step="500" value="5000">
                             <div class="input-group input-group-sm mt-1">
-                                <span class="input-group-text bg-body-tertiary border-secondary-subtle">₹</span>
+                                <span class="input-group-text bg-body-tertiary border-secondary-subtle">&#8377;</span>
                                 <input type="number" class="form-control border-secondary-subtle fw-medium" id="input-sip-amt" value="5000" min="500">
                             </div>
                         </div>
@@ -77,7 +77,7 @@
                     <h2 class="literal-calc-title">Investment Summary</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">×</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style=" border-radius: 0 0 4px 4px;">
@@ -86,26 +86,26 @@
                         <div class="col-md-12">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Total Invested</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main  fs-5 text-end" id="res-invested">₹ 6,00,000</div>
+                                <div class="literal-display-main  fs-5 text-end" id="res-invested">&#8377; 6,00,000</div>
                             </div>
                         </div>
                         <div class="col-md-12 mt-2">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Est. Returns</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main text-success fs-5 text-end" id="res-returns">₹ 5,61,695</div>
+                                <div class="literal-display-main text-success fs-5 text-end" id="res-returns">&#8377; 5,61,695</div>
                             </div>
                         </div>
                         <div class="col-md-12 mt-2">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Total Maturity Value</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0; ">
-                                <div class="literal-display-main text-primary fs-4 text-end" id="res-maturity">₹ 11,61,695</div>
+                                <div class="literal-display-main text-primary fs-4 text-end" id="res-maturity">&#8377; 11,61,695</div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="d-flex align-items-center mb-0 mt-3 p-2 bg-body-tertiary border-secondary-subtle" style=" font-size: 0.85rem;">
                         <i class="bi bi-info-circle-fill text-primary me-2"></i>
-                        <p class="mb-0 ">By investing <strong id="txt-invested">₹5,000</strong> monthly for <strong id="txt-years">10 years</strong>, your wealth grows by <strong class="text-success" id="txt-growth">93.6%</strong> thanks to compounding.</p>
+                        <p class="mb-0 ">By investing <strong id="txt-invested">&#8377;5,000</strong> monthly for <strong id="txt-years">10 years</strong>, your wealth grows by <strong class="text-success" id="txt-growth">93.6%</strong> thanks to compounding.</p>
                     </div>
                     
                     <div class="mt-3 p-2 border-secondary-subtle d-flex justify-content-center" style=" ">
@@ -126,7 +126,7 @@
                     <h2 class="literal-calc-title">Year-by-Year Projection</h2>
                     <div class="literal-calc-controls d-none d-md-flex">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">×</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body p-0 bg-body border border-secondary-subtle border-top-0" style="border-radius: 0 0 4px 4px;">
@@ -243,7 +243,7 @@
                                         <i class="bi bi-check-circle-fill text-success fs-5"></i>
                                         <div>
                                             <strong class="text-body d-block">Flexible & Low Entry Barrier</strong>
-                                            <span class="text-secondary" style="font-size: 0.875rem;">Start small with as little as ₹500 per month, and increase or pause your investment anytime.</span>
+                                            <span class="text-secondary" style="font-size: 0.875rem;">Start small with as little as &#8377;500 per month, and increase or pause your investment anytime.</span>
                                         </div>
                                     </div>
                                 </div>
@@ -270,7 +270,7 @@
             input.value = val;
             slider.value = val;
             if (inputId.includes('amt')) {
-                label.innerText = '₹' + formatter.format(val);
+                label.innerText = '&#8377;' + formatter.format(val);
             } else {
                 label.innerText = val + suffix;
             }

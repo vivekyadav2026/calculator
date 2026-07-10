@@ -22,7 +22,7 @@
                     <h2 class="literal-calc-title">FD Calculator</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">Ãƒâ€”</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
@@ -31,7 +31,7 @@
                         <div class="mb-3">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Deposit Amount</label>
                             <div class="input-group input-group-sm mt-1">
-                                <span class="input-group-text bg-light border-secondary-subtle">Ã¢â€šÂ¹</span>
+                                <span class="input-group-text bg-light border-secondary-subtle">&#8377;</span>
                                 <input type="number" class="form-control border-secondary-subtle fw-medium" id="fd-p-custom" value="100000" min="0" required>
                             </div>
                         </div>
@@ -69,7 +69,7 @@
                     <h2 class="literal-calc-title">Calculation Summary</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">Ãƒâ€”</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
@@ -78,19 +78,19 @@
                         <div class="col-md-4">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Invested Amount</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main  fs-5 text-end" id="res-fd-principal">Ã¢â€šÂ¹0</div>
+                                <div class="literal-display-main  fs-5 text-end" id="res-fd-principal">&#8377;0</div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Interest Earned</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main text-success fs-5 text-end" id="res-fd-interest">Ã¢â€šÂ¹0</div>
+                                <div class="literal-display-main text-success fs-5 text-end" id="res-fd-interest">&#8377;0</div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Maturity Value</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0; background-color: #f8f9ff;">
-                                <div class="literal-display-main text-warning fs-5 text-end" id="res-fd-total">Ã¢â€šÂ¹0</div>
+                                <div class="literal-display-main text-warning fs-5 text-end" id="res-fd-total">&#8377;0</div>
                             </div>
                         </div>
                     </div>

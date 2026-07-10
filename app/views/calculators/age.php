@@ -24,7 +24,7 @@
                     <h2 class="literal-calc-title">Age Calculator</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">×</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style=" border-radius: 0 0 4px 4px;">
@@ -52,7 +52,7 @@
                     <h2 class="literal-calc-title">Calculation Result</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">×</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style=" border-radius: 0 0 4px 4px;">
@@ -137,7 +137,7 @@
             <div class="card shadow-none border rounded-4">
                 <div class="card-body p-4 p-md-5">
                     <h2 class="fw-bold h3 mb-4 text-body border-bottom pb-2">What is Age and How is it Calculated?</h2>
-                    <p class="text-secondary">Age is a measure of elapsed time from the moment of birth or initiation to a specific target date. In most of the modern world, age is calculated under the international standard age system, where a person’s age increments on their birthday. However, calculating the exact difference between two calendar dates involves complex logic due to the irregularities of the Gregorian calendar system.</p>
+                    <p class="text-secondary">Age is a measure of elapsed time from the moment of birth or initiation to a specific target date. In most of the modern world, age is calculated under the international standard age system, where a person's age increments on their birthday. However, calculating the exact difference between two calendar dates involves complex logic due to the irregularities of the Gregorian calendar system.</p>
                     
                     <h2 class="fw-bold h3 mt-5 mb-4 text-body border-bottom pb-2">Step-by-Step Date Subtraction Example</h2>
                     <div class="p-3 bg-body-tertiary rounded-3 mb-3">

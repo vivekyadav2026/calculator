@@ -22,7 +22,7 @@
                     <h2 class="literal-calc-title">Compound Interest Calculator</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">Ãƒâ€”</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
@@ -31,7 +31,7 @@
                         <div class="mb-3">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Principal Amount (P)</label>
                             <div class="input-group input-group-sm mt-1">
-                                <span class="input-group-text bg-light border-secondary-subtle">Ã¢â€šÂ¹</span>
+                                <span class="input-group-text bg-light border-secondary-subtle">&#8377;</span>
                                 <input type="number" class="form-control border-secondary-subtle fw-medium" id="ci-p-custom" value="10000" min="0" required>
                             </div>
                         </div>
@@ -77,7 +77,7 @@
                     <h2 class="literal-calc-title">Calculation Summary</h2>
                     <div class="literal-calc-controls">
                         <span class="literal-calc-icon">_</span>
-                        <span class="literal-calc-icon">Ãƒâ€”</span>
+                        <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
                 <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
@@ -86,19 +86,19 @@
                         <div class="col-md-4">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Principal Amount</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main  fs-5 text-end" id="res-ci-principal">Ã¢â€šÂ¹0</div>
+                                <div class="literal-display-main  fs-5 text-end" id="res-ci-principal">&#8377;0</div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Interest Earned</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0;">
-                                <div class="literal-display-main text-success fs-5 text-end" id="res-ci-interest">Ã¢â€šÂ¹0</div>
+                                <div class="literal-display-main text-success fs-5 text-end" id="res-ci-interest">&#8377;0</div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <label class="form-label  mb-1" style="font-size: 0.9rem; font-weight: 600;">Total Value</label>
                             <div class="literal-calc-displays" style="height: auto; padding: 6px 12px; margin-bottom: 0; background-color: #f8f9ff;">
-                                <div class="literal-display-main text-primary fs-5 text-end" id="res-ci-total">Ã¢â€šÂ¹0</div>
+                                <div class="literal-display-main text-primary fs-5 text-end" id="res-ci-total">&#8377;0</div>
                             </div>
                         </div>
                     </div>
@@ -230,7 +230,7 @@
                     <h2 class="fw-bold h3 mt-5 mb-4 text-body border-bottom pb-2">The Rule of 72</h2>
                     <p class="text-muted">The Rule of 72 is a quick shortcut to estimate how long it will take for an investment to double in value, given a fixed annual rate of interest. Divide 72 by the annual rate of interest to get the approximate number of years for doubling:</p>
                     <div class="p-3 bg-light rounded-3 text-center mb-3">
-                        <code class="fw-bold text-primary fs-5">Years to Double Ã¢â€°Ë† 72 / Interest Rate</code>
+                        <code class="fw-bold text-primary fs-5">Years to Double &#8377; 72 / Interest Rate</code>
                     </div>
                     <p class="text-muted">For example, an investment with a 6% fixed interest rate will take approximately <code>72 / 6 = 12 years</code> to double in value.</p>
                     
