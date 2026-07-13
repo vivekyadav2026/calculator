@@ -14,16 +14,16 @@
                 </div>
 
                 <!-- Scientific Calculator -->
-                <div class="literal-calc-wrapper" id="calc-scientific" style="display: none;">
+                <div class="literal-calc-wrapper" id="calc-scientific" style="display: none; max-width: 100%; overflow: hidden;">
                     <div class="literal-calc-header">
                         <h2 class="literal-calc-title">Scientific Calculator</h2>
                         <div class="literal-calc-controls">
                             <button class="literal-calc-help">Help</button>
                             <i class="bi bi-dash-lg literal-calc-icon"></i>
-                            <span class="literal-calc-icon">Ã—</span>
+                            <span class="literal-calc-icon">&times;</span>
                         </div>
                     </div>
-                    <div class="literal-calc-body">
+                    <div class="literal-calc-body" style="min-width: unset;">
                         <div class="literal-calc-displays">
                             <div class="literal-display-top" id="sci-disp-hist"></div>
                             <div class="literal-display-main" id="sci-disp-main">0</div>
@@ -111,15 +111,15 @@
                 </div>
 
                 <!-- Normal Calculator (Hidden by default) -->
-                <div class="literal-calc-wrapper" id="calc-normal" style="max-width: 350px;">
+                <div class="literal-calc-wrapper" id="calc-normal" style="max-width: 350px; overflow: hidden;">
                     <div class="literal-calc-header">
                         <h2 class="literal-calc-title">Standard Calculator</h2>
                         <div class="literal-calc-controls">
                             <i class="bi bi-dash-lg literal-calc-icon"></i>
-                            <span class="literal-calc-icon">Ã—</span>
+                            <span class="literal-calc-icon">&times;</span>
                         </div>
                     </div>
-                    <div class="literal-calc-body">
+                    <div class="literal-calc-body" style="min-width: unset;">
                         <div class="literal-calc-displays">
                             <div class="literal-display-top" id="norm-disp-hist"></div>
                             <div class="literal-display-main" id="norm-disp-main">0</div>

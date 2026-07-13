@@ -391,7 +391,11 @@ body {
 .literal-calc-body {
     padding: 15px;
     min-width: max-content; /* Force minimum width to prevent grid squishing */
-    background-color: var(--bs-tertiary-bg);
+    background-color: #cccccc; /* Classic gray background */
+}
+
+[data-bs-theme="dark"] .literal-calc-body {
+    background-color: #2b3035; /* Keep dark theme background in dark mode */
 }
 
 .literal-calc-displays {

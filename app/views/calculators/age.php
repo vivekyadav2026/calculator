@@ -19,15 +19,15 @@
     <div class="row g-4 mb-4">
         <!-- Calculator Inputs -->
         <div class="col-lg-5">
-            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%;">
+            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%; overflow: hidden;">
                 <div class="literal-calc-header">
                     <h2 class="literal-calc-title">Age Calculator</h2>
                     <div class="literal-calc-controls">
-                        <span class="literal-calc-icon">_</span>
+                        <span class="literal-calc-icon">&#8722;</span>
                         <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style=" border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style=" border-radius: 0 0 4px 4px; min-width: unset;">
                     <form id="age-calculator-form">
                         <!-- Date of Birth -->
                         <div class="mb-3">
@@ -47,15 +47,15 @@
 
         <!-- Calculator Results -->
         <div class="col-lg-7">
-            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%;">
+            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%; overflow: hidden;">
                 <div class="literal-calc-header">
                     <h2 class="literal-calc-title">Calculation Result</h2>
                     <div class="literal-calc-controls">
-                        <span class="literal-calc-icon">_</span>
+                        <span class="literal-calc-icon">&#8722;</span>
                         <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style=" border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style=" border-radius: 0 0 4px 4px; min-width: unset;">
                     
                     <!-- Main Age display -->
                     <div class="row g-2 mb-3">

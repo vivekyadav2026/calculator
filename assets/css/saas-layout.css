@@ -71,7 +71,7 @@
 .saas-header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1030; /* Set above Bootstrap's sticky-top (z-index: 1020) so table headers scroll underneath it */
   background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   --text-primary: #ffffff;

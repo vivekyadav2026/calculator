@@ -19,15 +19,15 @@
     <div class="row g-4 mb-4">
         <!-- Calculator Inputs -->
         <div class="col-lg-5">
-            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%;">
+            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%; overflow: hidden;">
                 <div class="literal-calc-header">
                     <h2 class="literal-calc-title">Personal Loan Calculator</h2>
                     <div class="literal-calc-controls">
-                        <span class="literal-calc-icon">_</span>
+                        <span class="literal-calc-icon">&#8722;</span>
                         <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px; min-width: unset;">
                     <form id="personal-loan-calculator-form">
                         <!-- Loan Amount -->
                         <div class="mb-3">
@@ -77,15 +77,15 @@
 
         <!-- Results & Graphs -->
         <div class="col-lg-7">
-            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%;">
+            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%; overflow: hidden;">
                 <div class="literal-calc-header">
                     <h2 class="literal-calc-title">Calculation Summary</h2>
                     <div class="literal-calc-controls">
-                        <span class="literal-calc-icon">_</span>
+                        <span class="literal-calc-icon">&#8722;</span>
                         <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style="border-radius: 0 0 4px 4px; min-width: unset;">
                     
                     <div class="row g-2 mb-3">
                         <div class="col-md-6">
@@ -117,17 +117,22 @@
                     <!-- Visual Representation: Graphs side-by-side or stacked -->
                     <div class="row g-2 mt-2">
                         <!-- Bar Chart -->
-                        <div class="col-md-7 p-2 border-secondary-subtle" style="border: 1px solid #ccc; background: #fdfdfd; border-right: none;">
-                            <h6 class="fw-bold text-center mb-1 " style="font-size: 0.8rem;">Amortization Growth</h6>
-                            <div style="height: 150px; position: relative;">
-                                <canvas id="plBarChartCustom"></canvas>
+                        <!-- Bar Chart -->
+                        <div class="col-7">
+                            <div class="p-2 border rounded" style="background: #fdfdfd;">
+                                <h6 class="fw-bold text-center mb-1" style="font-size: 0.8rem;">Amortization Growth</h6>
+                                <div style="height: 150px; position: relative;">
+                                    <canvas id="plBarChartCustom"></canvas>
+                                </div>
                             </div>
                         </div>
                         <!-- Pie Chart -->
-                        <div class="col-md-5 p-2 border-secondary-subtle" style="border: 1px solid #ccc; background: #fdfdfd;">
-                            <h6 class="fw-bold text-center mb-1 " style="font-size: 0.8rem;">Payment Breakup</h6>
-                            <div style="height: 150px; position: relative;" class="d-flex justify-content-center">
-                                <canvas id="plPieChartCustom"></canvas>
+                        <div class="col-5">
+                            <div class="p-2 border rounded" style="background: #fdfdfd;">
+                                <h6 class="fw-bold text-center mb-1" style="font-size: 0.8rem;">Payment Breakup</h6>
+                                <div style="height: 150px; position: relative;">
+                                    <canvas id="plPieChartCustom"></canvas>
+                                </div>
                             </div>
                         </div>
                     </div>

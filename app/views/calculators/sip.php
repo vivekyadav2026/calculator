@@ -20,15 +20,15 @@
     <div class="row g-4 mb-5">
         <!-- Left Column: Inputs -->
         <div class="col-lg-5">
-            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%;">
+            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%; overflow: hidden;">
                 <div class="literal-calc-header">
                     <h2 class="literal-calc-title">SIP Calculator</h2>
                     <div class="literal-calc-controls">
-                        <span class="literal-calc-icon">_</span>
+                        <span class="literal-calc-icon">&#8722;</span>
                         <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style=" border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style=" border-radius: 0 0 4px 4px; min-width: unset;">
                     <form id="modern-sip-form">
                         <div class="mb-3">
                             <label for="input-sip-amt" class="form-label d-flex justify-content-between  mb-1" style="font-size: 0.9rem; font-weight: 600;">
@@ -72,15 +72,15 @@
         
         <!-- Right Column: Outputs -->
         <div class="col-lg-7">
-            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%;">
+            <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%; overflow: hidden;">
                 <div class="literal-calc-header">
                     <h2 class="literal-calc-title">Investment Summary</h2>
                     <div class="literal-calc-controls">
-                        <span class="literal-calc-icon">_</span>
+                        <span class="literal-calc-icon">&#8722;</span>
                         <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
-                <div class="literal-calc-body flex-grow-1 p-3" style=" border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body flex-grow-1 p-3" style=" border-radius: 0 0 4px 4px; min-width: unset;">
                     
                     <div class="row g-2 mb-3">
                         <div class="col-md-12">
@@ -121,15 +121,15 @@
     <!-- Projection Table -->
     <div class="row">
         <div class="col-12">
-            <div class="literal-calc-wrapper mx-0 d-flex flex-column mb-5" style="max-width: 100%;">
+            <div class="literal-calc-wrapper mx-0 d-flex flex-column mb-5" style="max-width: 100%; overflow: hidden;">
                 <div class="literal-calc-header">
                     <h2 class="literal-calc-title">Year-by-Year Projection</h2>
                     <div class="literal-calc-controls d-none d-md-flex">
-                        <span class="literal-calc-icon">_</span>
+                        <span class="literal-calc-icon">&#8722;</span>
                         <span class="literal-calc-icon">&times;</span>
                     </div>
                 </div>
-                <div class="literal-calc-body p-0 bg-body border border-secondary-subtle border-top-0" style="border-radius: 0 0 4px 4px;">
+                <div class="literal-calc-body p-0 bg-body border border-secondary-subtle border-top-0" style="border-radius: 0 0 4px 4px; min-width: unset;">
                     <div class="table-responsive">
                         <table class="table table-hover mb-0" id="sip-table">
                             <thead class="table-light">
@@ -270,7 +270,7 @@
             input.value = val;
             slider.value = val;
             if (inputId.includes('amt')) {
-                label.innerText = '&#8377;' + formatter.format(val);
+                label.innerText = '₹' + formatter.format(val);
             } else {
                 label.innerText = val + suffix;
             }
