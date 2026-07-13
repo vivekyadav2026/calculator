@@ -30,4 +30,9 @@ class Pages extends Controller {
         $data = ['title' => 'Privacy Policy'];
         $this->view('pages/privacy', $data);
     }
+
+    public function contact() {
+        $data = ['title' => 'Contact Us', 'description' => 'Get in touch with CalculatorTube. Report bugs, request features, or send us a message.'];
+        $this->view('pages/contact', $data);
+    }
 }

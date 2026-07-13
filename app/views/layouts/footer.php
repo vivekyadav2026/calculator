@@ -1,6 +1,6 @@
 <?php
 $currentUrl = isset($_GET['url']) ? rtrim(strtolower($_GET['url']), '/') : '';
-$hideFaqList = ['pages/about', 'pages/privacy', 'pages/terms', 'about', 'privacy', 'terms', 'blog', 'blog/post'];
+$hideFaqList = ['pages/about', 'pages/privacy', 'pages/terms', 'pages/contact', 'about', 'privacy', 'terms', 'contact', 'blog', 'blog/post'];
 if (!in_array($currentUrl, $hideFaqList) && strpos($currentUrl, 'blog') === false):
 ?>
 <!-- FAQ Section (Clean light background above footer) -->
@@ -130,11 +130,11 @@ if (!in_array($currentUrl, $hideFaqList) && strpos($currentUrl, 'blog') === fals
                 </ul>
             </div>
 
-            <!-- Col 4: Company -->
             <div class="saas-footer-col">
                 <h5>Company</h5>
                 <ul>
                     <li><a href="<?php echo URLROOT; ?>/pages/about">About Us</a></li>
+                    <li><a href="<?php echo URLROOT; ?>/pages/contact">Contact Us</a></li>
                     <li><a href="<?php echo URLROOT; ?>/pages/privacy">Privacy Policy</a></li>
                     <li><a href="<?php echo URLROOT; ?>/pages/terms">Terms of Service</a></li>
                     <li><a href="<?php echo URLROOT; ?>/admin/login">Admin Login</a></li>

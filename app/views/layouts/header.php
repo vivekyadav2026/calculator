@@ -182,7 +182,8 @@
                     </a>
                 </li>
 
-                <!-- <li class="saas-nav-item">
+                <!-- Pages Nav Item -->
+                <li class="saas-nav-item">
                     <a href="#" class="saas-nav-link" aria-haspopup="true" aria-expanded="false">
                         Pages <i class="bi bi-chevron-down saas-nav-icon"></i>
                     </a>
@@ -191,6 +192,11 @@
                             <a href="<?php echo URLROOT; ?>/pages/about" class="saas-mega-item">
                                 <div class="saas-mega-content">
                                     <span class="saas-mega-title">About Us</span>
+                                </div>
+                            </a>
+                            <a href="<?php echo URLROOT; ?>/pages/contact" class="saas-mega-item">
+                                <div class="saas-mega-content">
+                                    <span class="saas-mega-title">Contact Us</span>
                                 </div>
                             </a>
                             <a href="<?php echo URLROOT; ?>/pages/privacy" class="saas-mega-item">
@@ -206,12 +212,6 @@
                         </div>
                     </div>
                 </li>
-
-                <li class="saas-nav-item">
-                    <a href="<?php echo URLROOT; ?>/calculators" class="saas-nav-link">
-                        All Calculators
-                    </a>
-                </li> -->
             </ul>
         </nav>
 
@@ -280,6 +280,7 @@
             <div class="saas-mobile-group" style="margin-top: 32px;">
                 <div class="saas-mobile-group-title">Pages</div>
                 <a href="<?php echo URLROOT; ?>/pages/about" class="saas-mobile-link"><i class="bi bi-info-circle"></i> About Us</a>
+                <a href="<?php echo URLROOT; ?>/pages/contact" class="saas-mobile-link"><i class="bi bi-envelope"></i> Contact Us</a>
                 <a href="<?php echo URLROOT; ?>/pages/privacy" class="saas-mobile-link"><i class="bi bi-shield-lock"></i> Privacy Policy</a>
                 <a href="<?php echo URLROOT; ?>/pages/terms" class="saas-mobile-link"><i class="bi bi-file-earmark-ruled"></i> Terms of Service</a>
             </div>

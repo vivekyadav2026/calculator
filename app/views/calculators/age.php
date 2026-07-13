@@ -1,6 +1,6 @@
 <?php require APPROOT . '/views/layouts/header.php'; ?>
 
-<div class="container py-5">
+<div class="container py-5" style="overflow-x: hidden;">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo URLROOT; ?>">Home</a></li>
@@ -18,7 +18,7 @@
 
     <div class="row g-4 mb-4">
         <!-- Calculator Inputs -->
-        <div class="col-lg-5">
+        <div class="col-md-5">
             <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%; overflow: hidden;">
                 <div class="literal-calc-header">
                     <h2 class="literal-calc-title">Age Calculator</h2>
@@ -46,7 +46,7 @@
         </div>
 
         <!-- Calculator Results -->
-        <div class="col-lg-7">
+        <div class="col-md-7">
             <div class="literal-calc-wrapper mx-0 h-100 d-flex flex-column" style="max-width: 100%; overflow: hidden;">
                 <div class="literal-calc-header">
                     <h2 class="literal-calc-title">Calculation Result</h2>

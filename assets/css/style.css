@@ -27,6 +27,11 @@ body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     color: var(--text-main);
+    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+}
+
+html {
+    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
 }
 
 /* Header Tweaks */
@@ -355,7 +360,7 @@ body {
     gap: 8px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    min-width: max-content; /* Ensure header doesn't shrink more than body */
+    min-width: unset; /* Responsive: no forced min-width on mobile */
 }
 
 .literal-calc-title {
@@ -390,7 +395,7 @@ body {
 
 .literal-calc-body {
     padding: 15px;
-    min-width: max-content; /* Force minimum width to prevent grid squishing */
+    min-width: unset; /* Responsive: no forced min-width on mobile */
     background-color: #cccccc; /* Classic gray background */
 }
 
